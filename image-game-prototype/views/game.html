@@ -1,0 +1,38 @@
+<div class="view-game">
+	<div class="timer">
+		<div class="timer-bar" ng-style="{'width': game.timerWidth}">
+			<!-- {{game.currentTime/1000}}s -->
+		</div>
+	</div>
+	<div class="game-area">
+
+		<div class="play-photo" ng-click="addPenalty()">
+	 		<img ng-src="/img/side2/{{game.currentImg.src}}" alt="kitten">
+			<div class="blank" ng-repeat="(index, coord) in game.currentImg.spots">
+				<div class="touch-area" ng-click="foundOne(index); $event.stopPropagation();" ng-style="{'left': coord.x, 'top': coord.y}" ng-class="{selected: game.selectedSpots[index]}"></div>
+			</div>
+		</div><!-- comment to remove spacing
+
+	 --><div class="ref-photo">
+	 		<img ng-src="/img/side1/{{game.currentImg.src}}" alt="kitten">
+			<div class="blank" ng-repeat="(index, coord) in game.currentImg.spots">
+				<div class="touch-area" ng-style="{'left': coord.x, 'top': coord.y}" ng-class="{selected: game.selectedSpots[index]}"></div>
+			</div>
+		</div>
+
+	</div>
+	<div class="status-bar">
+		<div class="checkboxes">
+			<div class="box" ng-repeat="(index, coord) in game.currentImg.spots">
+				<div class="box-check" ng-class="{checked: game.selectedSpots[index]}"></div>
+			</div>
+		</div>
+
+		<button ng-click="game.giveUp()">I GIVE UP</button>
+	</div>
+
+	<div class="message-overlay" ng-show="game.message">
+		<div class="message">{{game.message.prompt}}</div>
+		<button ng-click="startNextImage()">{{game.message.button}}</button>
+	</div>
+</div>

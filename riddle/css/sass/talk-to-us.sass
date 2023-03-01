@@ -1,0 +1,805 @@
+@import "media-queries"
+@import "prefixes"
+
+.ttu-page
+  .main-wrapper
+    position: relative
+  .sh-header
+    .logo
+      +tablet-portrait
+        margin: 1px 0 0 34px
+      +mobile-landscape
+        margin: 1px 0 0 34px
+
+.talk
+  .sh-sub-nav
+    box-shadow: none
+
+    .sh-sub-nav-items
+      .item
+        &.active::before
+          box-shadow: none
+
+  .page-title
+    border-bottom: solid 1px #c3c2c1
+    color: #4c4949
+    font-size: 40px
+    padding: 0 0 10px 0
+    position: relative
+    text-align: center
+    text-transform: uppercase
+    +tablet-portrait
+      font-size: 29px
+
+    &:after,
+    &:before
+      bottom: -17px
+      left: 50%
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+
+    &:after
+      border-color: rgba(24, 19, 20, 0)
+      border-width: 5px
+      margin-left: -5px
+      background: transparent url('../img/light-bg-400.jpg') repeat
+      @include transform(rotate(45deg))
+      bottom: -5px
+
+    &:before
+      border-color: rgba(24, 19, 20, 0)
+      border-top-color: #c3c2c1
+      border-width: 8px
+      margin-left: -8px
+
+  .email-content
+    font-family: 'Zemestro Std book'
+    margin: 0 auto
+    padding: 30px 0
+    position: relative
+    width: 1200px
+    +tablet-landscape
+      width: 100%
+    +tablet-portrait
+      width: 100%
+    +mobile-landscape
+      width: 100%
+    +mobile-portrait
+      width: 100%
+
+    .page-title
+      +tablet-portrait
+        margin: 0 auto
+        width: 660px
+
+    .form-container
+      color: #2d2b28
+      margin: 50px 0
+      position: relative
+      width: 100%
+      +mobile-landscape
+        padding: 0 20px
+        @include box-sizing (border-box)
+      +mobile-portrait
+        padding: 0 20px
+        @include box-sizing (border-box)
+
+      .form-block,
+      .form-top
+        margin: 0 auto
+        width: 660px
+        +mobile-landscape
+          width: 100%
+        +mobile-portrait
+          width: 100%
+
+      .form-type
+        font-size: 14px
+        position: relative
+        text-transform: uppercase
+
+        .radio-box
+          margin-left: 28px
+          position: relative
+          +mobile-landscape
+            display: block
+            margin: 30px 0 0
+          +mobile-portrait
+            display: block
+            margin: 30px 0 0
+
+          .custom
+            display: inline-block
+            height: 20px
+            opacity: 0
+            position: relative
+            width: 20px
+            top: 3px
+            z-index: 9
+
+          .element
+            &:before
+              background: transparent url(../img/talk-to-us/radio-custom.png) 0 0 no-repeat
+              content: ''
+              display: inline-block
+              height: 20px
+              left: 0
+              position: absolute
+              top: -5px
+              width: 20px
+              +mobile-landscape
+                top: 5px
+              +mobile-portrait
+                top: 5px
+              +retina
+                background: transparent url(../img/talk-to-us/radio-custom@2x.png) 0 0 no-repeat
+                background-size: 20px
+
+          .custom:checked + .element
+            &:before
+              background-position: 0 -20px
+              +retina
+                background: transparent url(../img/talk-to-us/radio-custom@2x.png) 0 0 no-repeat
+                background-position: 0 -20px
+                background-size: 20px
+
+      .required
+        border-top: solid 1px #cfd0ce
+        color: #999
+        font-size: 14px
+        margin: 35px 0 0
+        padding: 10px 0 0
+
+      .user-location-block
+        position: relative
+        .location
+          display: table
+          .location-row
+            float: left
+            margin: 25px 0 0
+            position: relative
+            width: 100%
+            .select-holder
+              position: relative
+              .location-fields
+                display: inline-block !important
+                opacity: 0
+                position: absolute
+                top: -15px
+              label.error
+                bottom: -100px
+            .label
+              display: block
+              font-size: 14px
+              margin: 0 0 8px
+              text-align: left
+              text-transform: uppercase
+            .date-block
+              float: left
+              width: 210px
+              +mobile-landscape
+                width: 100%
+              +mobile-portrait
+                width: 100%
+              .date-picker
+                -webkit-border-radius: 0
+                background: #fff url(../img/talk-to-us/calendar-icon.png) right center no-repeat
+                border: none
+                color: #2d2b28
+                font-family: 'Zemestro Std book'
+                font-size: 20px
+                height: 55px
+                margin: 0 0 !important
+                padding: 0
+                text-indent: 20px
+                width: 210px
+                +mobile-landscape
+                  width: 100%
+                +mobile-portrait
+                  width: 100%
+                +retina
+                  background: #fff url(../img/talk-to-us/calendar-icon@2x.png) right center no-repeat
+                  background-size: 44px
+              .date-picker.error
+                border: solid 2px #fe6666
+                height: 51px
+                text-indent: 18px
+                width: 206px
+
+            .time-block
+              float: left
+              margin-left: 14px
+              width: 436px
+              +mobile-landscape
+                margin: 20px 0 0
+                width: 100%
+              +mobile-portrait
+                margin: 20px 0 0
+                width: 100%
+          .timing
+            .location-fields
+              top: 5px
+            .ui-selectmenu-button
+              width: 134px !important
+              +mobile-landscape
+                margin: 0 2% 0 0 !important
+                width: 30% !important
+              +mobile-portrait
+                margin: 0 2% 0 0 !important
+                width: 30% !important
+            .custom-select-toggle.first
+              +mobile-landscape
+                margin-left: 0
+              +mobile-portrait
+                margin-left: 0
+
+        .form-row
+          display: table
+          margin: 20px 0 0
+          position: relative
+          width: 100%
+          .label
+            display: block
+            font-size: 14px
+            margin: 0 0 8px
+            text-align: left
+            text-transform: uppercase
+          .label.top
+            display: none
+            +mobile-landscape
+              display: block
+            +mobile-portrait
+              display: block
+            .help
+              color: #939191
+              font-size: 14px
+              text-decoration: underline
+              text-transform: capitalize
+          .label.left
+            display: block
+            +mobile-landscape
+              display: none
+            +mobile-portrait
+              display: none
+            .help
+              color: #939191
+              font-size: 14px
+              text-decoration: underline
+              text-transform: capitalize
+          .input
+            -webkit-border-radius: 0
+            background: #fff
+            border: none
+            @include box-sizing (border-box)
+            color: #2d2b28
+            font-family: 'Zemestro Std book'
+            font-size: 20px
+            height: 55px
+            margin: 0
+            padding: 0 20px
+            width: 100%
+          .input.error,
+          .textarea.error
+            border: solid 2px #fe6666
+            padding: 0 18px
+          .textarea
+            -webkit-border-radius: 0
+            background: #fff
+            border: none
+            @include box-sizing (border-box)
+            color: #2d2b28
+            font-size: 20px
+            font-family: 'Zemestro Std book'
+            height: 200px
+            margin: 0
+            padding: 20px
+            width: 100%
+          .half-block
+            float: left
+            margin-left: 2%
+            position: relative
+            width: 49%
+            &:first-child
+              margin-left: 0
+              +mobile-landscape
+                margin: 10px 0 0
+            +mobile-landscape
+              margin: 20px 0 0
+              width: 100%
+            +mobile-portrait
+              margin: 20px 0 0
+              width: 100%
+            .label
+              font-size: 13px
+          #recaptcha_image
+            float: left
+            height: 55px !important
+            width: 100% !important
+            +mobile-landscape
+              width: 100% !important
+            +mobile-portrait
+              width: 100% !important
+            #recaptcha_challenge_image
+              height: 55px !important
+              width: 100% !important
+              +mobile-landscape
+                width: 100% !important
+              +mobile-portrait
+                width: 100% !important
+          .captcha-bottom
+            float: left
+            margin: 10px 0 0
+            width: 100%
+            .captcha-reload
+              @include box-sizing (border-box)
+              background: #939191
+              color: #fff
+              float: left
+              font-size: 13px
+              height: 31px
+              padding: 7px 0 0 0
+              text-align: center
+              text-transform: uppercase
+              width: 154px
+              +mobile-landscape
+                width: 48%
+              +mobile-portrait
+                width: 48%
+              .refresh
+                background: transparent url(../img/talk-to-us/captcha-reload.png) 0 0 no-repeat
+                display: inline-block
+                height: 17px
+                line-height: 21px
+                padding-left: 25px
+            .captcha-audio
+              @include box-sizing (border-box)
+              background: #939191
+              color: #fff
+              float: left
+              font-size: 13px
+              height: 31px
+              margin-left: 10px
+              padding: 7px 0 0 0
+              text-align: center
+              text-transform: uppercase
+              width: 159px
+              +mobile-portrait
+                margin-left: 4%
+                width: 48%
+              +mobile-landscape
+                margin-left: 4%
+                width: 48%
+              .audio
+                background: transparent url(../img/talk-to-us/captcha-audio.png) 0 0 no-repeat
+                display: inline-block
+                height: 17px
+                line-height: 21px
+                padding-left: 28px
+            .captcha-image
+              @include box-sizing (border-box)
+              background: #939191
+              color: #fff
+              float: left
+              font-size: 13px
+              height: 31px
+              margin-left: 10px
+              padding: 7px 0 0 0
+              text-align: center
+              text-transform: uppercase
+              width: 159px
+              +mobile-portrait
+                margin-left: 4%
+                width: 48%
+              +mobile-landscape
+                margin-left: 4%
+                width: 48%
+              .image
+                background: transparent url(../img/talk-to-us/captcha-image.png) 0 0 no-repeat
+                display: inline-block
+                height: 17px
+                line-height: 21px
+                padding-left: 28px
+
+
+      .button-row
+        margin: 28px 0 0
+        position: relative
+        text-align: center
+        input[type=submit]
+          -webkit-border-radius: 0
+          background: #939191
+          border: none
+          color: #fff
+          cursor: pointer
+          font-family: 'Zemestro Std book'
+          font-size: 14px
+          height: 56px
+          text-align: center
+          text-transform: uppercase
+          width: 288px
+          -webkit-appearance: none
+          +tablet-landscape
+            @include border-radius (0)
+          +tablet-portrait
+            @include border-radius (0)
+          +mobile-portrait
+            width: 280px
+        .disabled
+          pointer-events: none
+
+  .faq-content
+    font-family: 'Zemestro Std book'
+    margin: 0 auto
+    padding: 30px 0
+    position: relative
+    width: 1200px
+    +tablet-landscape
+      width: 100%
+    +tablet-portrait
+      width: 100%
+    +mobile-landscape
+      width: 100%
+    +mobile-portrait
+      width: 100%
+
+    .faq-block
+      color: #666
+      font-size: 18px
+      margin: 30px auto
+      position: relative
+      width: 660px
+      +tablet-portrait
+        font-size: 14px
+        width: 520px
+      +mobile-landscape
+        font-size: 14px
+        width: 100%
+      +mobile-portrait
+        font-size: 14px
+        width: 100%
+
+      .listing
+        position: relative
+        width: 100%
+        .row
+          background: transparent url(../img/talk-to-us/faq-row-bg.png) 0 bottom repeat-x
+          @include box-sizing (border-box)
+          padding: 24px 0 24px 0
+          position: relative
+          width: 100%
+          +mobile-landscape
+            padding: 18px 0 18px 20px
+          +mobile-portrait
+            padding: 14px 0 14px 20px
+
+          .arrow
+            background: transparent url(../img/talk-to-us/faq-arrow-down.png) 0 0 no-repeat
+            cursor: pointer
+            display: inline-block
+            height: 9px
+            margin: -4px 0 0
+            position: absolute
+            right: 20px
+            top: 50%
+            width: 16px
+            +retina
+              background: transparent url(../img/talk-to-us/faq-arrow-down@2x.png) 0 0 no-repeat
+              background-size: 16px
+          &.expanded
+            .arrow
+              background: transparent url(../img/talk-to-us/faq-arrow-top.png) 0 0 no-repeat
+              +retina
+                background: transparent url(../img/talk-to-us/faq-arrow-top@2x.png) 0 0 no-repeat
+                background-size: 16px
+
+          .question
+            color: #4c4949
+            display: block
+            padding-right: 80px
+            font-size: 26px
+            +tablet-portrait
+              font-size: 20px
+            +mobile-landscape
+              display: block
+              font-size: 20px
+              padding-right: 60px
+            +mobile-portrait
+              display: block
+              font-size: 20px
+              padding-right: 60px
+
+          .answer
+            display: none
+            line-height: 24px
+            padding: 15px 80px 0 0
+            +tablet-portrait    
+              line-height: 20px
+            +mobile-landscape
+              line-height: 20px
+              padding-right: 60px
+            +mobile-portrait
+              line-height: 20px
+              padding-right: 60px
+
+            .inline-faq
+              color: #666
+              font-family: 'Zemestro Std Medium'
+              text-decoration: underline
+
+a
+  text-decoration: none
+
+.mleft10
+  margin-left: 10px
+
+input::-webkit-calendar-picker-indicator
+  display: none
+
+.custom-select-toggle.error
+  border: solid 2px #fe6666
+  height: 55px
+  .select-toggle-button
+    height: 51px
+    line-height: 51px
+    .select-toggle-text
+      text-indent: 18px
+    .marker
+      &:before
+        right: 18px
+        top: 22px
+
+.ui-selectmenu-button.error
+  border: solid 2px #fe6666
+  width: 206px
+.ui-selectmenu-button
+  @include box-sizing (border-box)
+  @include border-radius(0 !important)
+  border: none !important
+  color: #2d2b28 !important
+  display: inline-block !important
+  font-family: 'Zemestro Std book' !important
+  font-weight: normal !important
+  position: relative !important
+  vertical-align: top
+  margin: 0 7px 0 0
+  width: 210px !important
+  +mobile-landscape
+    margin: 0 0 10px !important
+    width: 100% !important
+  +mobile-portrait
+    margin: 0 0 10px !important
+    width: 100% !important
+  .ui-selectmenu-text
+    background: #b9b8b5 !important
+    display: block
+    font-size: 20px
+    height: 55px !important
+    line-height: 58px !important
+    padding: 0 !important
+    position: relative
+    text-align: left
+    text-indent: 20px !important
+  .ui-icon
+    background: none !important
+    border: solid 8px transparent !important
+    border-top: solid 8px #2d2b28 !important
+    content: '' !important
+    display: inline-block !important
+    margin-top: 0 !important
+    position: absolute !important
+    right: 20px !important
+    top: 24px !important
+    width: 0 !important
+    z-index: 1
+    
+.ui-selectmenu-menu
+  @include box-sizing (border-box)
+  border-top: solid 10px transparent
+  position: absolute
+  padding: 2px 0
+  top: 65px
+  width: 210px
+  z-index: 9
+  +mobile-landscape
+    width: 100%
+  +mobile-portrait
+    width: 100%
+  .ui-menu
+    background: #b9b8b5 !important
+    @include border-radius(0 !important)
+    +mobile-landscape-and-below
+      width: 87%
+    .ui-state-focus
+      background: none !important
+      border: none !important
+      font-weight: normal !important
+    .ui-menu-item
+      color: #fff !important
+      font-size: 16px !important
+      height: 40px !important
+      line-height: 42px !important
+      margin: 0 2px !important
+      text-decoration: none !important
+      &:hover
+        color: #2d2b28 !important
+      &:first-child
+        display: none
+
+  #ui-id-4-menu,
+  #ui-id-5-menu,
+  #ui-id-6-menu
+    +mobile-landscape-and-below
+      width: 25%
+    +tablet-landscape-and-below
+      width: 20%
+
+.page-tabs
+  background: #343330
+  display: table
+  height: 70px
+  position: relative
+  width: 100%
+
+  .tabs
+    float: left
+    position: relative
+    width: 100%
+
+    .tab
+      float: left
+      width: 50%
+
+      .tab-links
+        color: #b0b0b0
+        float: left
+        font-size: 20px
+        height: 70px
+        line-height: 80px
+        position: relative
+        text-align: center
+        width: 100%
+
+    .tab.active
+      .tab-links
+        background: #5a5a57
+        &:before
+          content: ''
+          border: solid 10px transparent
+          border-top: solid 10px #5a5a57
+          content: ''
+          display: inline-block
+          margin-left: -10px
+          position: absolute
+          left: 50%
+          bottom: -20px
+
+label.error
+  background: #f44e4e
+  color: #fff
+  font-size: 13px
+  left: 0
+  padding: 20px 16px 17px
+  position: absolute
+  bottom: -54px
+  z-index: 8
+  &:before
+    border: solid 10px transparent
+    border-bottom: solid 10px #f44e4e
+    content: ''
+    display: inline-block
+    position: absolute
+    left: 20px
+    top: -20px
+
+label.label-form-update.error
+  background: transparent
+  bottom: 0
+  color: #000
+  font-size: 14px
+  left: 0
+  padding: 0
+  position: static
+  z-index: 8
+  &:before
+    border: none
+    border-bottom: none
+    content: ''
+    display: none
+    position: absolute
+    left: 20px
+    top: -20px
+  strong
+    position: relative
+    z-index: 2
+
+.thanks-block
+  font-size: 22px
+  height: 100%
+  margin: 70px 0 200px
+  position: relative
+  text-align: center
+  width: 100%
+  .graphic
+    margin-bottom: 20px
+
+.ui-datepicker,
+.ui-widget-content
+  font-family: 'Zemestro Std book' !important
+
+.ui-datepicker
+  z-index: 9 !important
+  +mobile-portrait
+    left: 6px !important
+
+.ui-widget-header.ui-datepicker-header
+  background: #383734 !important
+  border: solid 1px #383734 !important
+
+.ui-widget-header.ui-datepicker-header
+  .ui-state-disabled
+    .ui-icon
+      border-top: none !important
+
+.ui-datepicker
+  th
+    color: #2d2b28 !important
+
+.ui-widget-content
+  .ui-state-default
+    color: #383734 !important
+
+.ui-widget-content
+  .ui-state-highlight
+    background: #e76020 !important
+    border: solid 1px #e76020 !important
+    color: #fff !important
+
+.ui-widget-content
+  .ui-state-active
+    border: solid 1px #e76020 !important
+
+.ui-widget-content
+  .ui-state-hover
+    background: #e76020 !important
+    border: solid 1px #e76020 !important
+    color: #fff !important
+
+.ui-datepicker-header
+  .ui-state-hover
+    background: #383734 !important
+    border: solid 1px #383734 !important
+    cursor: pointer
+
+.ui-datepicker-calendar
+  .ui-datepicker-week-end
+    .ui-state-default
+      color: #383734 !important
+
+.ui-datepicker-calendar
+  .ui-datepicker-week-end.ui-state-disabled
+    .ui-state-default
+      color: #9d9d9d !important
+
+.ui-state-disabled
+  opacity: 1 !important
+  pointer-events: none
+  .ui-selectmenu-text
+    color: #dddddc !important
+  .ui-icon
+    border-top: solid 8px #dddddc !important
+  .ui-state-default
+    color: #9d9d9d !important
+
+.thanks-page
+  .faq-content
+    height: auto
+    padding: 30px 0 0
+
+  .sh-footer
+    position: fixed
+    top: auto !important
+    bottom: 0 !important

@@ -1,0 +1,378 @@
+@import "media-queries"
+@import "prefixes"
+
+@font-face
+  font-family: test
+  src: url("../fonts/test.eot")
+  src: url("../fonts/test.eot?#iefix") format("embedded-opentype"), url("../fonts/test.woff") format("woff"), url("../fonts/test.ttf") format("truetype")
+
+@font-face
+  font-family: TypeWriter2
+  src: url("../fonts/typewriter2.eot")
+  src: url("../fonts/typewriter2.eot?#iefix") format("embedded-opentype"), url("../fonts/typewriter2.woff") format("woff"), url("../fonts/typewriter2.ttf") format("truetype")
+
+@font-face
+  font-family: 'Zemestro Std Book'
+  src: url("../fonts/Zemestro Regular.eot")
+  src: url("../fonts/Zemestro Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Zemestro Regular.woff") format("woff"), url("../fonts/Zemestro Regular.ttf") format("truetype")
+
+@font-face
+  font-family: 'Zemestro Std Medium'
+  src: url("../fonts/Zemestro Medium.eot")
+  src: url("../fonts/Zemestro Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Zemestro Medium.woff") format("woff"), url("../fonts/Zemestro Medium.ttf") format("truetype")
+
+@font-face
+  font-family: 'Zemestro Std Bold'
+  src: url("../fonts/Zemestro Bold.eot")
+  src: url("../fonts/Zemestro Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Zemestro Bold.woff") format("woff"), url("../fonts/Zemestro Bold.ttf") format("truetype")
+
+html,body
+  color: #fff
+  font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+
+  .h1
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    text-transform: uppercase
+    font-size: 44px
+    color: #fff
+    line-height: 1.2
+
+    +mobile-landscape-and-below
+      font-size: 28px
+      line-height: 1.1
+
+  .h2
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    text-transform: uppercase
+    font-size: 40px
+    letter-spacing: 1.5px
+    color: #fff
+    line-height: 1.2
+
+    +tablet-landscape
+      font-size: 36px
+      line-height: 1.1
+
+    +tablet-portrait
+      font-size: 28px
+      line-height: 1.1
+
+    +mobile-landscape-and-below
+      font-size: 24px
+      line-height: 1.1
+
+  .h3
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    text-transform: uppercase
+    font-size: 28px
+    line-height: 1.2
+    letter-spacing: 1.5px
+
+    +tablet-landscape
+      font-size: 26px
+      letter-spacing: 0.5px
+      line-height: 1.1
+
+    +tablet-portrait
+      font-size: 24px
+      line-height: 1.1
+      letter-spacing: 0.5px
+
+    +mobile-landscape-and-below
+      font-size: 24px
+      line-height: 1.1
+      letter-spacing: 0.5px
+
+  .h4
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 26px
+    color: #fff
+
+    +tablet-landscape
+      font-size: 24px
+
+    +tablet-portrait
+      font-size: 20px
+
+    +mobile-landscape-and-below
+      font-size: 22px
+
+
+  .n1
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 16px
+    text-transform: uppercase
+    letter-spacing: 1.5px
+
+    +tablet-landscape
+      font-size: 16px
+
+    +tablet-portrait
+      font-size: 22px
+
+    +mobile-landscape-and-below
+      font-size: 22px
+
+  .active
+    .n1
+      font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+
+  .n2
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 14px
+    text-transform: capitalize
+
+    +tablet-portrait
+      font-size: 18px
+
+    +mobile-landscape-and-below
+      font-size: 18px
+
+  .n5
+    font-size: 20px
+    color: #B0B0B0
+    line-height: 3.8
+    text-decoration: none
+
+    +tablet-landscape-and-down
+      font-size: 18px
+      line-height: 3
+
+  .n6
+    font-family: 'Zemestro Std Bold', Helvetica, Arial, 'sans-serif'
+    font-size: 14px
+    letter-spacing: 1.5px
+
+    +mobile-landscape-and-below
+      font-size: 13px
+
+  .n7
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 14px
+
+    +mobile-landscape-and-below
+      font-size: 12px
+
+  .n8
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 22px
+
+  .t1
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 36px
+    line-height: 1.1
+    color: #f06423
+
+    +tablet-landscape
+      font-size: 28px
+
+    +tablet-portrait
+      font-size: 26px
+
+    +mobile-landscape-and-below
+      font-size: 28px
+
+  .t2
+    font-family: TypeWriter2, Georgia, serif
+    line-height: 1.3
+    font-size: 16px
+
+    +mobile-landscape-and-below
+      font-size: 15px
+      line-height: 1.3
+
+  .t4
+    font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+    font-size: 14px
+
+  .t5
+    font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+    font-size: 18px
+    letter-spacing: 1px
+
+    +tablet-portrait
+      font-size: 16px
+
+  .t6
+    font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+    font-size: 14px
+    color: #7e7e7e
+    text-transform: uppercase
+
+  .t7
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 14px
+    line-height: 1.1
+    color: #7e7e7e
+
+    +tablet-landscape
+      font-size: 16px
+
+    +tablet-portrait
+      font-size: 13px
+
+    +mobile-landscape-and-below
+      font-size: 14px
+      line-height: 1.1
+
+  .t8
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 26px
+    line-height: 1.2
+
+    +tablet-portrait
+      font-size: 24px
+      line-height: 1.1
+
+    +mobile-landscape
+      font-size: 20px
+      line-height: 1.1
+
+    +mobile-portrait
+      font-size: 26px
+
+  .t9
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 16px
+    line-height: 1.5
+    letter-spacing: 1px
+
+    +tablet-landscape
+      line-height: 1.4
+
+    +tablet-portrait
+      font-size: 14px
+      line-height: 1.4
+
+  .t9b
+    font-family: 'Zemestro Std Bold', Helvetica, Arial, 'sans-serif'
+    font-size: 16px
+    line-height: 1.5
+    letter-spacing: 1px
+
+    +tablet-landscape
+      line-height: 1.4
+
+    +tablet-portrait
+      font-size: 14px
+      line-height: 1.4
+
+  .t10
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 16px
+    line-height: 1.1
+
+    +tablet-portrait
+      line-height: 1.4
+
+    +mobile-landscape-and-below
+      font-size: 14px
+
+  .t10b
+    font-family: 'Zemestro Std Bold', Helvetica, Arial, 'sans-serif'
+    font-size: 16px
+    line-height: 1.1
+    letter-spacing: 0.5px
+
+    +tablet-portrait
+      line-height: 1.4
+
+    +mobile-landscape-and-below
+      font-size: 14px
+
+  .t12
+    font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+    font-size: 18px
+
+    +tablet-landscape
+      font-size: 15px
+
+    +tablet-portrait
+      font-size: 13px
+
+    +mobile-landscape-and-below
+      font-size: 18px
+
+  .t13
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 26px
+
+    +tablet-landscape
+      font-size: 22px
+
+    +tablet-portrait
+      font-size: 20px
+
+    +mobile-landscape-and-below
+      font-size: 20px
+
+  .t14
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 18px
+
+    +tablet-landscape
+      font-size: 16px
+
+    +tablet-portrait
+      font-size: 14px
+
+  .t15
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 22px
+    line-height: 1.4
+
+    +tablet-portrait
+      font-size: 20px
+      line-height: 1.3
+
+    +mobile-landscape-and-below
+      font-size: 20px
+      line-height: 1.3
+
+  .t16
+    font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+    font-size: 11px
+
+    +tablet-portrait
+      font-size: 10px
+
+  .sh-nav
+
+    .item
+      line-height: 4.7
+
+      +tablet-landscape-and-down
+        line-height: 2.5
+      .n1
+        color: #fff
+        text-decoration: none
+
+        &:hover
+          color: #B0B0B0
+
+    .social-items
+      .item
+        .n2
+          color: #fff
+          text-decoration: none
+
+          &:hover
+            color: #fff
+
+        +tablet-landscape-and-down
+          line-height: 3
+
+          .n2
+            color: #999
+            font-size: 18px
+
+  .sh-footer
+    color: #7e7e7e
+    .item
+
+      a
+        font-size: 14px
+        color: #7e7e7e
+        text-decoration: none
+        text-transform: uppercase
+

@@ -1,0 +1,88 @@
+
+<!-- Profile Goals -->
+
+<div class="profile-main container-fluid" id="profile-goals">
+
+	<div class="row">
+		
+		<!-- Left Column -->
+		<div class="col-sm-9">
+
+			<div class="profile-module new-goal-module">
+				<h5>START A NEW GOAL</h5>
+				<div class="input-group">
+					<input type="text" ng-model="newGoal">
+					<button type="button" ng-click="createNewGoal(newGoal)">CREATE</button>
+				</div>
+			</div>
+
+			<div class="profile-module list-module in-progress-module">
+				<h5>IN PROGRESS</h5>
+				
+				<div class="module-row" ng-repeat="goal in goals.inProgress">
+					<div class="goal-info-cont">
+						<div class="row-entry-title">
+							{{goal.goal}}
+						</div>
+						<div class="row-details">
+							<strong>Date Created:</strong> {{goal.date}}
+						</div>
+					</div>
+					<div class="button-cont">
+						<button class="goal-button" ng-click="completeGoal(goal)">COMPLETE</button>
+					</div>
+				</div>
+
+			</div> <!-- end module -->
+
+			<div class="profile-module list-module complete-module">
+				<h5>ACCOMPLISHED</h5>
+
+				<div class="module-row" ng-repeat="goal in goals.finished">
+					<div class="goal-info-cont">
+						<div class="row-entry-title">
+							{{goal.goal}}
+						</div>
+						<div class="row-details">
+								<strong>Date Created:</strong> {{goal.date}}
+						</div>
+					</div>
+					<div class="goal-complete-cont">
+						<div class="complete-text">COMPLETED</div>
+						<div class="row-details">
+							<strong>Date:</strong> {{goal.completed}}
+						</div>
+					</div>
+				</div>
+
+			</div> <!-- end module -->
+
+		</div> <!-- end left col -->
+
+		
+		<!-- Right Column -->
+		<div class="col-sm-3">
+			<div class="goals-status-module">
+				<div class="status-half">
+					<div class="status-number">
+						{{goals.inProgress.length}}
+					</div>
+					<div class="status-unit">
+						GOALS IN PROGRESS
+					</div>
+				</div>
+
+				<div class="status-half">
+					<div class="status-number green">
+						{{goals.finished.length}}
+					</div>
+					<div class="status-unit">
+						GOALS ACCOMPLISHED
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>

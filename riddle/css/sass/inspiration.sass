@@ -1,0 +1,831 @@
+@import "media-queries"
+@import "prefixes"
+
+.inspiration-page
+
+  .inspiration
+    position: relative
+    display: block
+    left: 0
+    @include transition(left 0.5s ease-in-out)
+    margin: 0 0 67px 0
+
+    +mobile-landscape
+      margin: 0 0 67px 0
+
+    +mobile-portrait
+      margin: 0 0 32px 0
+
+    .main-img
+      margin: 0
+
+      +mobile-landscape-and-below
+        display: none
+
+    .main-img-bg
+      display: none
+      background: transparent url('../img/inspiration/splash.jpg') no-repeat 0 0
+
+      +mobile-landscape-and-below
+        display: block
+        margin: 0
+        height: 230px
+        width: inherit
+        background-size: 645px
+        background-position: 0 0
+
+      +mobile-portrait
+        background-size: 665px
+        background-position: -100px 0
+
+    .main-header
+      padding: 34px 0 0 0
+      margin: 0 auto
+      width: 930px
+      text-align: center
+
+      +tablet-landscape
+        padding: 56px 0 0 0
+        width: 930px
+
+      +tablet-portrait
+        padding: 56px 0 0 0
+        width: 700px
+
+      +mobile-landscape
+        width: 455px
+
+      +mobile-portrait
+        width: 300px
+
+      .dot
+        position: relative
+        top: -11px
+
+    .pronunciation
+      display: block
+      margin: 0 auto
+      width: 930px
+      text-align: center
+      color: #9f9f9f
+      padding: 0 0 13px 0
+
+      +tablet-landscape
+        width: 930px
+
+      +tablet-portrait
+        width: 700px
+
+      +mobile-landscape
+        width: 455px
+
+      +mobile-portrait
+        width: 300px
+
+    .foot-note
+      display: block
+      margin: 0 auto
+      width: 540px
+      text-align: center
+      padding: 0 0 40px 0
+      color: #999
+
+      +mobile-landscape
+        width: 455px
+
+      +mobile-portrait
+        width: 300px
+
+    .inspiration-content
+      position: relative
+      border-top: 1px solid #6e6e6d
+      width: 1200px
+      margin: 0 auto
+      padding: 20px 0 0 0
+
+      +tablet-landscape
+        width: 952px
+
+      +tablet-portrait
+        width: 700px
+
+      +mobile-landscape
+        width: 455px
+
+      +mobile-portrait
+        width: 300px
+
+      /* bordered triangle */
+      &:after,
+      &:before
+        top: 0
+        left: 50%
+        border: solid transparent
+        content: " "
+        height: 0
+        width: 0
+        position: absolute
+        pointer-events: none
+
+      &:after
+        border-color: rgba(255, 255, 255, 0)
+        border-width: 5px
+        margin-left: -5px
+        background: transparent url('../img/dark-bg-400.jpg') repeat
+        @include transform(rotate(45deg))
+        top: -6px
+
+        +mobile-landscape-and-below
+          top: -7px
+
+      &:before
+        border-color: rgba(110, 110, 109, 0)
+        border-top-color: #6e6e6d
+        border-width: 8px
+        margin-left: -8px
+
+      +mobile-landscape-and-below
+        border-top: 2px solid #6e6e6d
+
+      .image-a
+        width: 600px
+        height: 440px
+
+        +tablet-landscape
+          width: 628px
+          height: 460px
+
+        +tablet-portrait
+          width: 460px
+          height: 338px
+
+        +mobile-landscape-and-below
+          width: 300px
+          height: 220px
+
+      .image-b
+        width: 290px
+        height: 440px
+
+        +tablet-landscape
+          width: 304px
+          height: 460px
+
+        +tablet-portrait
+          width: 220px
+          height: 338px
+
+        +mobile-landscape-and-below
+          width: 145px
+          height: 220px
+
+      .image-c
+        width: 290px
+        height: 210px
+
+        +tablet-landscape
+          width: 304px
+          height: 220px
+
+        +tablet-portrait
+          width: 220px
+          height: 164px
+
+        +mobile-landscape-and-below
+          width: 145px
+          height: 105px
+
+      .copy,
+      .copy-a,
+      .copy-b
+        color: #9f9f9f
+
+      .caps
+        text-transform: uppercase
+
+      .row-one,
+      .row-two,
+      .row-three,
+      .row-four,
+      .row-five,
+      .row-six,
+      .row-seven,
+      .row-eight,
+      .row-nine,
+      .row-ten,
+      .row-eleven
+        width: 100%
+        height: 440px
+        position: relative
+        margin: 20px 0 0 0
+
+        +tablet-landscape
+          height: 460px
+
+        +tablet-portrait
+          height: 338px
+
+        +mobile-landscape
+          height: 220px
+          margin: 10px 0 0 0
+
+        +mobile-portrait
+          height: auto
+          margin: 13px 0 0 0
+
+      .row-one
+        +mobile-landscape
+          height: auto
+          margin: 0
+
+        +mobile-portrait
+          margin: 0
+
+        .image-a
+          float: left
+          margin: 0 0 0 190px
+
+          +tablet-landscape
+            margin: 0
+
+          +tablet-portrait
+            margin: 0
+
+          +mobile-landscape
+            margin: 0
+
+          +mobile-portrait
+            margin: 0
+            float: none
+
+        .copy
+          width: 400px
+          position: absolute
+          bottom: -60px
+          left: 190px
+
+          +tablet-landscape
+            left: 0
+
+          +tablet-portrait
+            left: 0
+
+          +mobile-landscape
+            left: 0
+            bottom: 0
+            top: 226px
+            width: 146px
+
+          +mobile-portrait
+            position: relative
+            width: 100%
+            bottom: 0
+            left: 0
+            top: 3px
+
+        .header
+          padding: 0 20px
+          width: 290px
+          float: right
+          position: absolute
+          bottom: 20px
+          right: 80px
+
+          +tablet-landscape
+            padding: 0 14px 0 0
+            right: 0
+
+          +tablet-portrait
+            width: 200px
+            padding: 0 20px 0 0
+            right: 0
+
+          +mobile-landscape
+            width: 135px
+            padding: 0 10px 0 0
+            position: static
+            margin: -2px 0 0 0
+
+          +mobile-portrait
+            position: relative
+            width: 300px
+            bottom: 0
+            right: 0
+            padding: 17px 0 0 0
+
+      .row-two
+        +mobile-portrait
+          height: 219px
+          margin: 17px 0 0 0
+
+        +mobile-landscape
+          margin: 14px 0 0 0
+
+        .image-b
+          position: absolute
+          top: 0
+          left: 500px
+
+          +tablet-landscape
+            left: 324px
+
+          +tablet-portrait
+            left: 240px
+
+          +mobile-landscape
+            left: 155px
+
+          +mobile-portrait
+            left: 0
+
+        .image-c
+          position: absolute
+          top: 0
+          left: 810px
+
+          +tablet-landscape
+            left: 648px
+
+          +tablet-portrait
+            left: 480px
+
+          +mobile-landscape
+            left: 310px
+
+          +mobile-portrait
+            left: 155px
+
+        .copy
+          position: absolute
+          left: 810px
+          top: 230px
+
+          +tablet-landscape
+            left: 648px
+            top: 238px
+
+          +tablet-portrait
+            left: 480px
+            top: 184px
+
+          +mobile-landscape
+            left: 310px
+            top: 111px
+
+          +mobile-portrait
+            left: 155px
+            top: 111px
+
+      .row-three
+        +mobile-portrait
+          margin: 0
+          padding: 19px 0 0 0
+
+        .header
+          width: 240px
+          padding: 20px 50px 0 0
+          float: left
+
+          +tablet-portrait
+            width: 200px
+            padding: 20px 20px 0 0
+
+          +mobile-landscape
+            width: 145px
+            padding: 2px 10px 0 0
+
+          +mobile-portrait
+            width: 100%
+            padding: 0 0 12px 0
+            float: none
+
+        .image-a
+
+          +tablet-landscape-and-below
+            float: right
+            margin: 0
+
+          +mobile-landscape
+            margin: 0
+
+          +mobile-portrait
+            float: none
+            margin: 0
+
+      .row-four
+        +mobile-portrait
+          margin: 6px 0 0 0
+
+        .image-b
+          float: left
+          margin: 0 0 0 290px
+
+          +tablet-landscape
+            margin: 0
+
+          +tablet-portrait
+            margin: 0
+
+          +mobile-landscape
+            margin: 0
+
+          +mobile-portrait
+            float: left
+            margin: 0
+
+        .image-c
+          float: left
+          margin: 0 0 0 20px
+
+          +mobile-landscape
+            margin: 0 0 0 10px
+
+          +mobile-portrait
+            float: right
+            margin: 0 0 10px 0
+
+          &:last-child
+
+            +tablet-landscape
+              margin: 0
+              float: right
+
+            +tablet-portrait
+              margin: 0
+              float: right
+
+            +mobile-landscape
+              margin: 10px 0 0 10px
+              float: right
+
+      .row-five
+        +mobile-portrait
+          margin: 0
+
+        +mobile-landscape
+          height: auto
+
+        .image-a
+          float: left
+          margin: 0 0 0 150px
+
+          +tablet-landscape
+            margin: 0
+
+          +tablet-portrait
+            margin: 0
+
+          +mobile-landscape
+            margin: 0
+
+          +mobile-portrait
+            margin: 0
+            float: none
+
+        .header
+          width: 240px
+          padding: 20px 0 0 20px
+          float: left
+
+          +tablet-portrait
+            width: 220px
+
+          +mobile-landscape
+            width: 145px
+            padding: 0 0 0 10px
+            margin: -2px 0 9px 0
+
+          +mobile-portrait
+            width: 100%
+            padding: 13px 0 0 0
+
+      .row-six
+        +mobile-portrait
+          height: 420px
+          margin: 17px 0 0 0
+
+        .image-a
+          position: absolute
+          top: 0
+          left: 460px
+
+          +tablet-landscape
+            left: 325px
+
+          +tablet-portrait
+            left: 240px
+
+          +mobile-landscape
+            left: 155px
+
+          +mobile-portrait
+            left: 0
+            top: 193px
+
+        .image-c
+          position: absolute
+          top: 0
+          left: 150px
+
+          +tablet-landscape
+            left: 0
+
+          +tablet-portrait
+            left: 0
+
+          +mobile-landscape
+            left: 0
+
+          +mobile-portrait
+            left: 0
+
+        .copy
+          position: absolute
+          top: 230px
+          left: 150px
+
+          +tablet-landscape
+            left: 0
+
+          +tablet-portrait
+            left: 0
+            top: 184px
+
+          +mobile-landscape
+            left: 0
+            top: 111px
+            width: 150px
+
+          +mobile-portrait
+            left: 0
+            width: 145px
+            top: 111px
+
+      .row-seven
+        +mobile-portrait
+          margin: 10px 0 0 0
+
+        .image-b
+          margin: 0
+
+        .header
+          width: 270px
+          padding: 20px 40px 0 45px
+          margin: 0 0 0 105px
+          float: left
+
+          +tablet-landscape
+            width: 285px
+            padding: 20px 40px 0 0
+            margin: 0
+
+          +tablet-portrait
+            width: 220px
+            padding: 20px 20px 0 0
+            margin: 0
+
+          +mobile-landscape
+            width: 145px
+            padding: 0 10px 0 0
+            margin: -2px 0 0 0
+
+          +mobile-portrait
+            width: 100%
+            float: none
+            padding: 0 0 17px 0
+            margin: 0
+
+      .row-eight
+        +mobile-landscape
+          height: auto
+
+        +mobile-portrait
+          margin: 3px 0 0 0
+
+        .image-a,
+        .image-c
+          float: left
+
+          +mobile-portrait
+            float: none
+
+        .image-c
+          +mobile-landscape
+            position: absolute
+            top: -230px
+            right: 0
+
+          +mobile-portrait
+            position: absolute
+            top: -227px
+            right: 0
+
+        .image-a
+          margin: 0 0 0 20px
+
+          +mobile-landscape
+            margin: 0 0 0 155px
+
+          +mobile-portrait
+            margin: 3px 0 0 0
+
+      .row-nine
+        height: 500px
+
+        +tablet-landscape
+          height: 520px
+
+        +tablet-portrait
+          height: 398px
+          overflow: visible
+
+        +mobile-landscape
+          height: 280px
+          overflow: visible
+
+        +mobile-portrait
+          height: auto
+          margin: 6px 0 0 0
+
+        .image-a,
+        .image-b,
+        .copy-a,
+        .copy-b
+          position: absolute
+          top: 0
+
+          +mobile-portrait
+            position: static
+
+        .image-a
+          left: 620px
+
+          +tablet-landscape
+            left: 324px
+
+          +tablet-portrait
+            left: 240px
+
+          +mobile-landscape
+            left: 155px
+
+        .copy-a
+          top: 460px
+          left: 620px
+
+          +tablet-landscape
+            left: 324px
+            top: 480px
+
+          +tablet-portrait
+            left: 240px
+            top: 358px
+
+          +mobile-landscape
+            left: 155px
+            top: 226px
+
+          +mobile-portrait
+            padding: 2px 0 0 0
+
+        .image-b
+          left: 310px
+
+          +tablet-landscape
+            left: 0
+
+          +tablet-portrait
+            left: 0
+
+          +mobile-landscape
+            left: 0
+
+        .copy-b
+          top: 460px
+          left: 310px
+
+          +tablet-landscape
+            left: 0
+            top: 480px
+
+          +tablet-portrait
+            left: 0
+            top: 358px
+            width: 220px
+
+          +mobile-landscape
+            left: 0
+            top: 226px
+            width: 145px
+
+          +mobile-portrait
+            padding: 3px 0 7px 0
+
+      .row-ten
+        +mobile-portrait
+          margin: 7px 0 0 0
+
+        .image-b
+          float: left
+          margin: 0 20px 0 310px
+
+          +tablet-landscape
+            margin: 0 20px 0 324px
+
+          +tablet-portrait
+            margin: 0 20px 0 240px
+
+          +mobile-landscape
+            margin: 0 10px 0 155px
+
+          +mobile-portrait
+            margin: 0
+
+          &:last-child
+            margin: 0 20px 0 0
+
+            +tablet-landscape
+              margin: 0
+
+            +tablet-portrait
+              margin: 0
+
+            +mobile-landscape
+              margin: 0
+
+            +mobile-portrait
+              margin: 0
+              float: right
+
+      .row-eleven
+        height: 500px
+
+        +tablet-landscape
+          height: 555px
+
+        +tablet-portrait
+          height: 415px
+
+        +mobile-landscape
+          height: 280px
+
+        +mobile-portrait
+          height: auto
+
+        .image-a
+          float: left
+          margin: 0 0 0 150px
+
+          +tablet-landscape
+            margin: 0
+
+          +tablet-portrait
+            margin: 0
+
+          +mobile-landscape
+            margin: 0
+
+          +mobile-portrait
+            float: none
+            margin: 0
+
+        .header
+          width: 300px
+          padding: 20px 0 0 20px
+          float: left
+
+          +tablet-portrait
+            width: 220px
+
+          +mobile-landscape
+            width: 145px
+            padding: 0 0 0 10px
+            margin: -2px 0 0 0
+
+          +mobile-portrait
+            float: none
+            padding: 5px 0 20px 0
+            width: 300px
+
+        .copy
+          position: absolute
+          top: 460px
+          left: 150px
+          padding: 0 0 7px 0
+
+          +tablet-landscape
+            left: 0
+            top: 480px
+
+          +tablet-portrait
+            left: 0
+            top: 358px
+
+          +mobile-landscape
+            top: 226px
+            left: 0
+            width: 300px
+
+          +mobile-portrait
+            position: static
+            padding: 3px 0 9px 0

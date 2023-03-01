@@ -1,0 +1,301 @@
+
+<!-- CONTACTS SECTION -->
+
+<section class="section-main-header contacts-header">
+  <div class="main-title-holder">
+    <h1>CONTACTS</h1>
+    <h5>65 in network</h5>
+  </div>
+
+  <div class="collage-side">
+
+    <div class="header-collage">
+      <div class="collage-col">
+        <img src="/assets/img/doctor5.png" alt="" class="collage-big">
+      
+        <img src="/assets/img/doctor2.png" alt="Robert Anthony" class="collage-half">
+        <img src="/assets/img/doctor1.png" alt="Lauren Andrews" class="collage-half">
+      </div>
+      
+      <div class="collage-col">
+        <img src="/assets/img/doctor6.png" alt="Robert Anthony" class="collage-half">
+        <img src="/assets/img/doctor4.png" alt="Lauren Andrews" class="collage-half">
+
+        <img src="/assets/img/doctor3.png" alt="" class="collage-big">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-header-boxes">
+  <div class="box">
+    <div class="box-number">8</div>
+    <div class="box-label">Nurses</div>
+    <div class="box-hover-text">VIEW CONTACTS</div>
+  </div>
+  <div class="box">
+    <div class="box-number">10</div>
+    <div class="box-label">Primary Care</div>
+    <div class="box-hover-text">VIEW CONTACTS</div>
+  </div>
+  <div class="box">
+    <div class="box-number">3</div>
+    <div class="box-label">Specialists</div>
+    <div class="box-hover-text">VIEW CONTACTS</div>
+  </div>
+  <div class="box">
+    <div class="box-number">2</div>
+    <div class="box-label">Surgeons</div>
+    <div class="box-hover-text">VIEW CONTACTS</div>
+  </div>
+  <div class="box">
+    <div class="box-number">12</div>
+    <div class="box-label">Company</div>
+    <div class="box-hover-text">VIEW CONTACTS</div>
+  </div>
+</section>
+
+<section class="section-person-list">
+  <nav class="top-level-arrow-nav">
+    <a href="" class="top-level-left">
+      <i class="fa fa-angle-left"></i>
+    </a>
+    <a href="" scroll-to="list-title" offset="30" class="top-level-center">
+      VIEW CONTACTS
+    </a>
+    <a href="" class="top-level-right">
+      <i class="fa fa-angle-right"></i>
+    </a>
+  </nav>
+
+  <h3 class="list-title max-width" id="list-title">PROFESSIONAL CONTACTS</h3>
+
+  <div class="person-filter-inputs" id="#patientList">
+    <div class="input-group groupings-input">
+      <label for="groupings">GROUPINGS</label>
+      <div class="btn-select-group">
+        <button type="button" class="plus-button" ng-class="{open: showAddGroup}" ng-click="showAddGroup=!showAddGroup">+</button>
+        <div class="styled-select-cont">
+          <select name="group-filter" id="groupings">
+            <option value="all">All Contacts</option>
+            <option value="custom1">Custom Group 1</option>
+            <option value="custom2">Custom Group 2</option>
+            <option value="nurse">Nurses</option>
+            <option value="primary">Primary Care</option>
+            <option value="specialist">Specialists</option>
+            <option value="surgeon">Surgeons</option>
+            <option value="medtronic">Medtronic</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-group search-input">
+      <label for="person-filter" for="person-filter">SEARCH</label>
+      <span class="search-icon"></span>
+      <input type="text" name="person-filter" id="person-filter" placeholder="Find Contact">
+    </div>
+
+    <div class="view-change-container">
+      <div class="label">VIEW</div>
+      <div class="select-list" ng-class="{current: !contactsGrid}" ng-click="contactsGrid=false">
+        <div class="list-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+      <div class="select-grid" ng-class="{current: contactsGrid}" ng-click="contactsGrid=true">
+        <div class="grid-icon">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <jd-create-new-group ng-show="showAddGroup"></jd-create-new-group>
+
+  <div class="person-list max-width" ng-class="{grid: contactsGrid}">
+    <div class="group-count">
+      All Contacts: 65 Contacts
+    </div>
+
+    <div class="list-letter-group">
+
+      <div class="list-labels">
+        <div class="letter-label name-col">A</div>
+        <div class="icon-cont">
+          <!-- Kept for space -->
+        </div>
+      </div>
+
+      <div class="person-item">
+        <div class="name-col">
+          <img class="photo-person" src="/assets/img/doctor2.png" alt="Anne Adkins">
+          <div class="name-copy-container">
+            <div class="full-name">Adkins, Anne, CPNP</div>
+            <div class="phone">Certified Pediatric Nurse Practitioner</div>
+            <div class="notification"></div>
+          </div>
+        </div>
+        <div class="icon-cont">
+          <div class="icon-col">
+            <a href="#" class="icon video-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon email-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon schedule-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="person-item notify">
+        <div class="name-col">
+          <img class="photo-person" src="/assets/img/doctor1.png" alt="Lauren Andrews">
+          <div class="name-copy-container">
+            <div class="full-name">Andrews, Lauren S., MD</div>
+            <div class="phone">Professor of Urology and Chief, Pediatric Urology</div>
+            <div class="notification"></div>
+          </div>
+        </div>
+        <div class="icon-cont">
+          <div class="icon-col">
+            <a href="#" class="icon video-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon email-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon schedule-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="person-item">
+        <div class="name-col">
+          <img class="photo-person" src="/assets/img/doctor6.png" alt="Robert Anthony">
+          <div class="name-copy-container">
+            <div class="full-name">Anthony, Robert, MD, PhD</div>
+            <div class="phone">Professor of Urology; Ob/Gyn &amp; Reproductive Sciences; Pathology</div>
+            <div class="notification"></div>
+          </div>
+        </div>
+        <div class="icon-cont">
+          <div class="icon-col">
+            <a href="#" class="icon video-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon email-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon schedule-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="person-item">
+        <div class="name-col">
+          <img class="photo-person" src="/assets/img/doctor5.png" alt="Carolina Atkins">
+          <div class="name-copy-container">
+            <div class="full-name">Atkins, Carolina, ARNP</div>
+            <div class="phone">Nurse Practitioner</div>
+            <div class="notification"></div>
+          </div>
+        </div>
+        <div class="icon-cont">
+          <div class="icon-col">
+            <a href="#" class="icon video-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon email-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon schedule-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="person-item">
+        <div class="name-col">
+          <img class="photo-person" src="/assets/img/default_profile.png" alt="Larry Austin">
+          <div class="name-copy-container">
+            <div class="full-name">Austin, Larry, MD</div>
+            <div class="phone">Urology</div>
+            <div class="notification"></div>
+          </div>
+        </div>
+        <div class="icon-cont">
+          <div class="icon-col">
+            <a href="#" class="icon video-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon email-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon schedule-icon"></a>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end .list-letter-group -->
+
+    <div class="list-letter-group">
+
+      <div class="list-labels">
+        <div class="letter-label name-col">B</div>
+      </div>
+
+      <div class="person-item">
+        <div class="name-col">
+          <img class="photo-person" src="/assets/img/doctor4.png" alt="Dr. Robert Anthony">
+          <div class="name-copy-container">
+            <div class="full-name">Barrs, Jason</div>
+            <div class="phone">Care Rep</div>
+            <div class="notification"></div>
+          </div>
+        </div>
+        <div class="icon-cont">
+          <div class="icon-col">
+            <a href="#" class="icon video-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon email-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon schedule-icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="person-item">
+        <div class="name-col">
+          <img class="photo-person" src="/assets/img/doctor3.png" alt="Dr. Robert Anthony">
+          <div class="name-copy-container">
+            <div class="full-name">Burns, Charlotte</div>
+            <div class="phone">Primary Care, Ob/Gyn</div>
+            <div class="notification"></div>
+          </div>
+        </div>
+        <div class="icon-cont">
+          <div class="icon-col">
+            <a href="#" class="icon video-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon email-icon"></a>
+          </div>
+          <div class="icon-col">
+            <a href="#" class="icon schedule-icon"></a>
+          </div>
+        </div>
+      </div>
+    	
+    </div> <!-- end .list-letter-group -->
+  </div>
+	
+</section>

@@ -1,0 +1,199 @@
+@import "media-queries"
+@import "prefixes"
+
+.sh-sub-nav
+  height: 70px
+  width: 100%
+  background: #343330
+  position: relative
+  z-index: 1
+  @include box-shadow(0, 3px, 3px, rgba(0,0,0,.2))
+
+  &.sticky
+    position: fixed
+    top: 0
+    z-index: 15
+
+  &.subnav-modal-wrapper
+    width: 100%
+    height: 168px
+    position: relative
+    top: 0
+    left: 0
+    background: #2d2b28
+
+    .sh-sub-nav-items
+      .item
+        height: 54px
+        border-top: 1px solid #353231
+        border-bottom: 1px solid #2a2826
+        display: block
+        width: 100%
+        position: relative
+        top: 56px
+
+        &.active
+          border-bottom: none
+          border-top: none
+          a
+            color: #fff
+
+        a
+          text-align: center
+          width: 100%
+          height: 100%
+          display: block
+          line-height: 3
+          border: none medium
+          background: transparent
+          cursor: pointer
+          position: relative
+
+          +mobile-landscape-and-below
+            line-height: 3.3
+
+        &:first-child
+          border-top: none medium
+          height: 56px
+
+        &:last-child
+          border-bottom: none medium
+
+  &.open
+
+    .sh-sub-nav-items
+
+      .item
+        cursor: default
+
+        &.active::after
+          display: none
+          width: 0
+          height: 0
+          border-style: solid
+          border-width: 0 8px 8px 8px
+          border-color: transparent transparent #afafae transparent
+          content: ' '
+          position: absolute
+          top: 24px
+          left: 290px
+
+          +mobile-landscape-and-below
+            display: block
+
+          +mobile-landscape
+            left: 93.5%
+
+  +tablet-landscape-and-down
+    height: 56px
+
+  .sh-sub-nav-items
+    height: 100%
+    width: 100%
+
+    .item
+      display: block
+      height: 100%
+      width: 33%
+      float: left
+      position: relative
+      background: #343330
+
+      +mobile-landscape-and-below
+        display: none
+
+      a
+        height: 100%
+        display: block
+        text-align: center
+        border-right: 1px solid #5e5d5d
+        &:hover
+          color: #fff
+
+        +tablet-portrait
+          line-height: 3.3
+
+        +mobile-landscape-and-below
+          line-height: 3.3
+          width: 100%
+
+      &:last-child
+        a
+          border: none medium
+
+      &.active
+        background: #5a5a57
+
+        +mobile-landscape-and-below
+          display: block
+          width: 100%
+          position: absolute
+          top: 0
+
+        a
+          color: #fff
+          border: none medium
+
+      &.active::after
+        border: solid transparent
+        content: ' '
+        height: 0
+        width: 0
+        position: absolute
+        border-color: transparent
+        border-top-color: #5a5a57
+        border-width: 8px
+        margin-left: -8px
+        left: 50%
+
+        +mobile-landscape-and-below
+          border-top-color: #afafae
+          left: 290px
+          top: 24px
+
+        +mobile-landscape
+          left: 93.5%
+
+        +mobile-portrait
+          left: 290px
+
+      &.active::before
+        @include box-shadow(2px, 2px, 2px, rgba(0,0,0,.2))
+        border: solid transparent
+        content: ' '
+        height: 0
+        width: 0
+        position: absolute
+        border-color: transparent
+        border-width: 6px
+        margin-left: -6px
+        left: 50%
+        bottom: -6px
+        @include transform(rotate(45deg))
+
+        +mobile-landscape-and-below
+          display: none
+
+      &:last-child
+        width: 34%
+
+        +mobile-landscape-and-below
+          width: 100%
+
+        a
+          border-color: #5e5d5d
+
+  .sh-sub-nav-items.tts
+    height: 100%
+    width: 100%
+
+    .item
+      display: block
+      height: 100%
+      width: 50%
+      float: left
+      position: relative
+      background: #343330
+
+      &.active
+        background: #5a5a57

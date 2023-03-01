@@ -1,0 +1,874 @@
+@-o-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.inspiration-page .inspiration {
+  position: relative;
+  display: block;
+  left: 0;
+  -moz-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+  -ms-transition: left 0.5s ease-in-out;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+  margin: 0 0 67px 0; }
+  @media only screen and (min-width: 464px) and (max-width: 767px) {
+    .inspiration-page .inspiration {
+      margin: 0 0 67px 0; } }
+  @media only screen and (min-width: 320px) and (max-width: 463px) {
+    .inspiration-page .inspiration {
+      margin: 0 0 32px 0; } }
+  .inspiration-page .inspiration .main-img {
+    margin: 0; }
+    @media only screen and (max-width: 1023px) {
+      .inspiration-page .inspiration .main-img {
+        display: none; } }
+  .inspiration-page .inspiration .main-img-bg {
+    display: none;
+    background: transparent url("../img/inspiration/splash.jpg") no-repeat 0 0; }
+    @media only screen and (max-width: 1023px) {
+      .inspiration-page .inspiration .main-img-bg {
+        display: block;
+        margin: 0;
+        height: 230px;
+        width: inherit;
+        background-size: 645px;
+        background-position: 0 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .main-img-bg {
+        background-size: 665px;
+        background-position: -100px 0; } }
+  .inspiration-page .inspiration .main-header {
+    padding: 34px 0 0 0;
+    margin: 0 auto;
+    width: 930px;
+    text-align: center; }
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+      .inspiration-page .inspiration .main-header {
+        padding: 56px 0 0 0;
+        width: 930px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .inspiration-page .inspiration .main-header {
+        padding: 56px 0 0 0;
+        width: 700px; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .main-header {
+        width: 455px; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .main-header {
+        width: 300px; } }
+    .inspiration-page .inspiration .main-header .dot {
+      position: relative;
+      top: -11px; }
+  .inspiration-page .inspiration .pronunciation {
+    display: block;
+    margin: 0 auto;
+    width: 930px;
+    text-align: center;
+    color: #9f9f9f;
+    padding: 0 0 13px 0; }
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+      .inspiration-page .inspiration .pronunciation {
+        width: 930px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .inspiration-page .inspiration .pronunciation {
+        width: 700px; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .pronunciation {
+        width: 455px; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .pronunciation {
+        width: 300px; } }
+  .inspiration-page .inspiration .foot-note {
+    display: block;
+    margin: 0 auto;
+    width: 540px;
+    text-align: center;
+    padding: 0 0 40px 0;
+    color: #999; }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .foot-note {
+        width: 455px; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .foot-note {
+        width: 300px; } }
+  .inspiration-page .inspiration .inspiration-content {
+    position: relative;
+    border-top: 1px solid #6e6e6d;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0 0 0;
+    /* bordered triangle */ }
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+      .inspiration-page .inspiration .inspiration-content {
+        width: 952px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .inspiration-page .inspiration .inspiration-content {
+        width: 700px; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .inspiration-content {
+        width: 455px; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content {
+        width: 300px; } }
+    .inspiration-page .inspiration .inspiration-content:after,
+    .inspiration-page .inspiration .inspiration-content:before {
+      top: 0;
+      left: 50%;
+      border: solid transparent;
+      content: " ";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none; }
+    .inspiration-page .inspiration .inspiration-content:after {
+      border-color: rgba(255, 255, 255, 0);
+      border-width: 5px;
+      margin-left: -5px;
+      background: transparent url("../img/dark-bg-400.jpg") repeat;
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: -6px; }
+      @media only screen and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content:after {
+          top: -7px; } }
+    .inspiration-page .inspiration .inspiration-content:before {
+      border-color: rgba(110, 110, 109, 0);
+      border-top-color: #6e6e6d;
+      border-width: 8px;
+      margin-left: -8px; }
+    @media only screen and (max-width: 1023px) {
+      .inspiration-page .inspiration .inspiration-content {
+        border-top: 2px solid #6e6e6d; } }
+    .inspiration-page .inspiration .inspiration-content .image-a {
+      width: 600px;
+      height: 440px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .image-a {
+          width: 628px;
+          height: 460px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .image-a {
+          width: 460px;
+          height: 338px; } }
+      @media only screen and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .image-a {
+          width: 300px;
+          height: 220px; } }
+    .inspiration-page .inspiration .inspiration-content .image-b {
+      width: 290px;
+      height: 440px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .image-b {
+          width: 304px;
+          height: 460px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .image-b {
+          width: 220px;
+          height: 338px; } }
+      @media only screen and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .image-b {
+          width: 145px;
+          height: 220px; } }
+    .inspiration-page .inspiration .inspiration-content .image-c {
+      width: 290px;
+      height: 210px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .image-c {
+          width: 304px;
+          height: 220px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .image-c {
+          width: 220px;
+          height: 164px; } }
+      @media only screen and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .image-c {
+          width: 145px;
+          height: 105px; } }
+    .inspiration-page .inspiration .inspiration-content .copy,
+    .inspiration-page .inspiration .inspiration-content .copy-a,
+    .inspiration-page .inspiration .inspiration-content .copy-b {
+      color: #9f9f9f; }
+    .inspiration-page .inspiration .inspiration-content .caps {
+      text-transform: uppercase; }
+    .inspiration-page .inspiration .inspiration-content .row-one,
+    .inspiration-page .inspiration .inspiration-content .row-two,
+    .inspiration-page .inspiration .inspiration-content .row-three,
+    .inspiration-page .inspiration .inspiration-content .row-four,
+    .inspiration-page .inspiration .inspiration-content .row-five,
+    .inspiration-page .inspiration .inspiration-content .row-six,
+    .inspiration-page .inspiration .inspiration-content .row-seven,
+    .inspiration-page .inspiration .inspiration-content .row-eight,
+    .inspiration-page .inspiration .inspiration-content .row-nine,
+    .inspiration-page .inspiration .inspiration-content .row-ten,
+    .inspiration-page .inspiration .inspiration-content .row-eleven {
+      width: 100%;
+      height: 440px;
+      position: relative;
+      margin: 20px 0 0 0; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-one,
+        .inspiration-page .inspiration .inspiration-content .row-two,
+        .inspiration-page .inspiration .inspiration-content .row-three,
+        .inspiration-page .inspiration .inspiration-content .row-four,
+        .inspiration-page .inspiration .inspiration-content .row-five,
+        .inspiration-page .inspiration .inspiration-content .row-six,
+        .inspiration-page .inspiration .inspiration-content .row-seven,
+        .inspiration-page .inspiration .inspiration-content .row-eight,
+        .inspiration-page .inspiration .inspiration-content .row-nine,
+        .inspiration-page .inspiration .inspiration-content .row-ten,
+        .inspiration-page .inspiration .inspiration-content .row-eleven {
+          height: 460px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-one,
+        .inspiration-page .inspiration .inspiration-content .row-two,
+        .inspiration-page .inspiration .inspiration-content .row-three,
+        .inspiration-page .inspiration .inspiration-content .row-four,
+        .inspiration-page .inspiration .inspiration-content .row-five,
+        .inspiration-page .inspiration .inspiration-content .row-six,
+        .inspiration-page .inspiration .inspiration-content .row-seven,
+        .inspiration-page .inspiration .inspiration-content .row-eight,
+        .inspiration-page .inspiration .inspiration-content .row-nine,
+        .inspiration-page .inspiration .inspiration-content .row-ten,
+        .inspiration-page .inspiration .inspiration-content .row-eleven {
+          height: 338px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-one,
+        .inspiration-page .inspiration .inspiration-content .row-two,
+        .inspiration-page .inspiration .inspiration-content .row-three,
+        .inspiration-page .inspiration .inspiration-content .row-four,
+        .inspiration-page .inspiration .inspiration-content .row-five,
+        .inspiration-page .inspiration .inspiration-content .row-six,
+        .inspiration-page .inspiration .inspiration-content .row-seven,
+        .inspiration-page .inspiration .inspiration-content .row-eight,
+        .inspiration-page .inspiration .inspiration-content .row-nine,
+        .inspiration-page .inspiration .inspiration-content .row-ten,
+        .inspiration-page .inspiration .inspiration-content .row-eleven {
+          height: 220px;
+          margin: 10px 0 0 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-one,
+        .inspiration-page .inspiration .inspiration-content .row-two,
+        .inspiration-page .inspiration .inspiration-content .row-three,
+        .inspiration-page .inspiration .inspiration-content .row-four,
+        .inspiration-page .inspiration .inspiration-content .row-five,
+        .inspiration-page .inspiration .inspiration-content .row-six,
+        .inspiration-page .inspiration .inspiration-content .row-seven,
+        .inspiration-page .inspiration .inspiration-content .row-eight,
+        .inspiration-page .inspiration .inspiration-content .row-nine,
+        .inspiration-page .inspiration .inspiration-content .row-ten,
+        .inspiration-page .inspiration .inspiration-content .row-eleven {
+          height: auto;
+          margin: 13px 0 0 0; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .inspiration-content .row-one {
+        height: auto;
+        margin: 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-one {
+        margin: 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-one .image-a {
+      float: left;
+      margin: 0 0 0 190px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .image-a {
+          margin: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .image-a {
+          margin: 0; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .image-a {
+          margin: 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .image-a {
+          margin: 0;
+          float: none; } }
+    .inspiration-page .inspiration .inspiration-content .row-one .copy {
+      width: 400px;
+      position: absolute;
+      bottom: -60px;
+      left: 190px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .copy {
+          left: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .copy {
+          left: 0; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .copy {
+          left: 0;
+          bottom: 0;
+          top: 226px;
+          width: 146px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .copy {
+          position: relative;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          top: 3px; } }
+    .inspiration-page .inspiration .inspiration-content .row-one .header {
+      padding: 0 20px;
+      width: 290px;
+      float: right;
+      position: absolute;
+      bottom: 20px;
+      right: 80px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .header {
+          padding: 0 14px 0 0;
+          right: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .header {
+          width: 200px;
+          padding: 0 20px 0 0;
+          right: 0; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .header {
+          width: 135px;
+          padding: 0 10px 0 0;
+          position: static;
+          margin: -2px 0 0 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-one .header {
+          position: relative;
+          width: 300px;
+          bottom: 0;
+          right: 0;
+          padding: 17px 0 0 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-two {
+        height: 219px;
+        margin: 17px 0 0 0; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .inspiration-content .row-two {
+        margin: 14px 0 0 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-two .image-b {
+      position: absolute;
+      top: 0;
+      left: 500px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .image-b {
+          left: 324px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .image-b {
+          left: 240px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .image-b {
+          left: 155px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .image-b {
+          left: 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-two .image-c {
+      position: absolute;
+      top: 0;
+      left: 810px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .image-c {
+          left: 648px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .image-c {
+          left: 480px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .image-c {
+          left: 310px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .image-c {
+          left: 155px; } }
+    .inspiration-page .inspiration .inspiration-content .row-two .copy {
+      position: absolute;
+      left: 810px;
+      top: 230px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .copy {
+          left: 648px;
+          top: 238px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .copy {
+          left: 480px;
+          top: 184px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .copy {
+          left: 310px;
+          top: 111px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-two .copy {
+          left: 155px;
+          top: 111px; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-three {
+        margin: 0;
+        padding: 19px 0 0 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-three .header {
+      width: 240px;
+      padding: 20px 50px 0 0;
+      float: left; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-three .header {
+          width: 200px;
+          padding: 20px 20px 0 0; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-three .header {
+          width: 145px;
+          padding: 2px 10px 0 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-three .header {
+          width: 100%;
+          padding: 0 0 12px 0;
+          float: none; } }
+    @media only screen and (max-width: 1439px) {
+      .inspiration-page .inspiration .inspiration-content .row-three .image-a {
+        float: right;
+        margin: 0; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .inspiration-content .row-three .image-a {
+        margin: 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-three .image-a {
+        float: none;
+        margin: 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-four {
+        margin: 6px 0 0 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-four .image-b {
+      float: left;
+      margin: 0 0 0 290px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-b {
+          margin: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-b {
+          margin: 0; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-b {
+          margin: 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-b {
+          float: left;
+          margin: 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-four .image-c {
+      float: left;
+      margin: 0 0 0 20px; }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-c {
+          margin: 0 0 0 10px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-c {
+          float: right;
+          margin: 0 0 10px 0; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-c:last-child {
+          margin: 0;
+          float: right; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-c:last-child {
+          margin: 0;
+          float: right; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-four .image-c:last-child {
+          margin: 10px 0 0 10px;
+          float: right; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-five {
+        margin: 0; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .inspiration-content .row-five {
+        height: auto; } }
+    .inspiration-page .inspiration .inspiration-content .row-five .image-a {
+      float: left;
+      margin: 0 0 0 150px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-five .image-a {
+          margin: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-five .image-a {
+          margin: 0; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-five .image-a {
+          margin: 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-five .image-a {
+          margin: 0;
+          float: none; } }
+    .inspiration-page .inspiration .inspiration-content .row-five .header {
+      width: 240px;
+      padding: 20px 0 0 20px;
+      float: left; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-five .header {
+          width: 220px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-five .header {
+          width: 145px;
+          padding: 0 0 0 10px;
+          margin: -2px 0 9px 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-five .header {
+          width: 100%;
+          padding: 13px 0 0 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-six {
+        height: 420px;
+        margin: 17px 0 0 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-six .image-a {
+      position: absolute;
+      top: 0;
+      left: 460px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .image-a {
+          left: 325px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .image-a {
+          left: 240px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .image-a {
+          left: 155px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .image-a {
+          left: 0;
+          top: 193px; } }
+    .inspiration-page .inspiration .inspiration-content .row-six .image-c {
+      position: absolute;
+      top: 0;
+      left: 150px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .image-c {
+          left: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .image-c {
+          left: 0; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .image-c {
+          left: 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .image-c {
+          left: 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-six .copy {
+      position: absolute;
+      top: 230px;
+      left: 150px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .copy {
+          left: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .copy {
+          left: 0;
+          top: 184px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .copy {
+          left: 0;
+          top: 111px;
+          width: 150px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-six .copy {
+          left: 0;
+          width: 145px;
+          top: 111px; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-seven {
+        margin: 10px 0 0 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-seven .image-b {
+      margin: 0; }
+    .inspiration-page .inspiration .inspiration-content .row-seven .header {
+      width: 270px;
+      padding: 20px 40px 0 45px;
+      margin: 0 0 0 105px;
+      float: left; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-seven .header {
+          width: 285px;
+          padding: 20px 40px 0 0;
+          margin: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-seven .header {
+          width: 220px;
+          padding: 20px 20px 0 0;
+          margin: 0; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-seven .header {
+          width: 145px;
+          padding: 0 10px 0 0;
+          margin: -2px 0 0 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-seven .header {
+          width: 100%;
+          float: none;
+          padding: 0 0 17px 0;
+          margin: 0; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .inspiration-content .row-eight {
+        height: auto; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-eight {
+        margin: 3px 0 0 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-eight .image-a,
+    .inspiration-page .inspiration .inspiration-content .row-eight .image-c {
+      float: left; }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-eight .image-a,
+        .inspiration-page .inspiration .inspiration-content .row-eight .image-c {
+          float: none; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .inspiration-page .inspiration .inspiration-content .row-eight .image-c {
+        position: absolute;
+        top: -230px;
+        right: 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-eight .image-c {
+        position: absolute;
+        top: -227px;
+        right: 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-eight .image-a {
+      margin: 0 0 0 20px; }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-eight .image-a {
+          margin: 0 0 0 155px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-eight .image-a {
+          margin: 3px 0 0 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-nine {
+      height: 500px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-nine {
+          height: 520px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-nine {
+          height: 398px;
+          overflow: visible; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-nine {
+          height: 280px;
+          overflow: visible; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-nine {
+          height: auto;
+          margin: 6px 0 0 0; } }
+      .inspiration-page .inspiration .inspiration-content .row-nine .image-a,
+      .inspiration-page .inspiration .inspiration-content .row-nine .image-b,
+      .inspiration-page .inspiration .inspiration-content .row-nine .copy-a,
+      .inspiration-page .inspiration .inspiration-content .row-nine .copy-b {
+        position: absolute;
+        top: 0; }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .image-a,
+          .inspiration-page .inspiration .inspiration-content .row-nine .image-b,
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-a,
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-b {
+            position: static; } }
+      .inspiration-page .inspiration .inspiration-content .row-nine .image-a {
+        left: 620px; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .image-a {
+            left: 324px; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .image-a {
+            left: 240px; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .image-a {
+            left: 155px; } }
+      .inspiration-page .inspiration .inspiration-content .row-nine .copy-a {
+        top: 460px;
+        left: 620px; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-a {
+            left: 324px;
+            top: 480px; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-a {
+            left: 240px;
+            top: 358px; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-a {
+            left: 155px;
+            top: 226px; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-a {
+            padding: 2px 0 0 0; } }
+      .inspiration-page .inspiration .inspiration-content .row-nine .image-b {
+        left: 310px; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .image-b {
+            left: 0; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .image-b {
+            left: 0; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .image-b {
+            left: 0; } }
+      .inspiration-page .inspiration .inspiration-content .row-nine .copy-b {
+        top: 460px;
+        left: 310px; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-b {
+            left: 0;
+            top: 480px; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-b {
+            left: 0;
+            top: 358px;
+            width: 220px; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-b {
+            left: 0;
+            top: 226px;
+            width: 145px; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .inspiration-page .inspiration .inspiration-content .row-nine .copy-b {
+            padding: 3px 0 7px 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .inspiration-page .inspiration .inspiration-content .row-ten {
+        margin: 7px 0 0 0; } }
+    .inspiration-page .inspiration .inspiration-content .row-ten .image-b {
+      float: left;
+      margin: 0 20px 0 310px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-ten .image-b {
+          margin: 0 20px 0 324px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-ten .image-b {
+          margin: 0 20px 0 240px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-ten .image-b {
+          margin: 0 10px 0 155px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-ten .image-b {
+          margin: 0; } }
+      .inspiration-page .inspiration .inspiration-content .row-ten .image-b:last-child {
+        margin: 0 20px 0 0; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .inspiration-page .inspiration .inspiration-content .row-ten .image-b:last-child {
+            margin: 0; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .inspiration-page .inspiration .inspiration-content .row-ten .image-b:last-child {
+            margin: 0; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .inspiration-page .inspiration .inspiration-content .row-ten .image-b:last-child {
+            margin: 0; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .inspiration-page .inspiration .inspiration-content .row-ten .image-b:last-child {
+            margin: 0;
+            float: right; } }
+    .inspiration-page .inspiration .inspiration-content .row-eleven {
+      height: 500px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .inspiration-page .inspiration .inspiration-content .row-eleven {
+          height: 555px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .inspiration-page .inspiration .inspiration-content .row-eleven {
+          height: 415px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .inspiration-page .inspiration .inspiration-content .row-eleven {
+          height: 280px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .inspiration-page .inspiration .inspiration-content .row-eleven {
+          height: auto; } }
+      .inspiration-page .inspiration .inspiration-content .row-eleven .image-a {
+        float: left;
+        margin: 0 0 0 150px; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .image-a {
+            margin: 0; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .image-a {
+            margin: 0; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .image-a {
+            margin: 0; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .image-a {
+            float: none;
+            margin: 0; } }
+      .inspiration-page .inspiration .inspiration-content .row-eleven .header {
+        width: 300px;
+        padding: 20px 0 0 20px;
+        float: left; }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .header {
+            width: 220px; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .header {
+            width: 145px;
+            padding: 0 0 0 10px;
+            margin: -2px 0 0 0; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .header {
+            float: none;
+            padding: 5px 0 20px 0;
+            width: 300px; } }
+      .inspiration-page .inspiration .inspiration-content .row-eleven .copy {
+        position: absolute;
+        top: 460px;
+        left: 150px;
+        padding: 0 0 7px 0; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .copy {
+            left: 0;
+            top: 480px; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .copy {
+            left: 0;
+            top: 358px; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .copy {
+            top: 226px;
+            left: 0;
+            width: 300px; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .inspiration-page .inspiration .inspiration-content .row-eleven .copy {
+            position: static;
+            padding: 3px 0 9px 0; } }

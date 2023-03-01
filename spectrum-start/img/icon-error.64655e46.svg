@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+  <title>
+    icAlertCircle
+  </title>
+  <defs>
+    <path id="a" d="M3.658 15H2.082c-.43 0-.534-.36-.582-.837L.02 3.702C-.18 1.727 1.211 0 3 0c1.786 0 3.178 1.727 2.98 3.702L4.5 14.163c-.048.477-.41.837-.842.837zM0 21.667c0-1.84 1.344-3.334 3-3.334s3 1.494 3 3.334S4.656 25 3 25s-3-1.493-3-3.333z"/>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <g transform="translate(24 14)">
+      <mask id="b" fill="#fff">
+        <use xlink:href="#a"/>
+      </mask>
+      <path fill="#F04848" d="M-5-5h16v35H-5z" mask="url(#b)"/>
+    </g>
+    <path stroke="#FF4D4A" stroke-width="2" d="M27 1C12.64 1 1 12.64 1 27s11.64 26 26 26 26-11.64 26-26S41.36 1 27 1z"/>
+  </g>
+</svg>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="robots" content="noindex, nofollow">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connected Care Login</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" charset="utf-8" href="/assets/css/main.css">
+</head>
+<body ng-app="app" ng-controller="navController" ng-class="{blue: isCurrent('/terms')}">
+
+
+  <nav class="global-nav" ng-class="{animate: isCurrent('/login')}">
+  
+    <div class="left-container">
+      <a href="#" class="logo">Logo</a>
+
+      <div class="hiding-wrapper" ng-if="isLoggedIn()">
+        <!-- HCP Nav -->
+        <div class="nav-links" ng-if="!isPatient()">
+          <a href="/#/hcp/profile" class="link-profile" ng-class="{current: isCurrent('profile')}">
+            <!-- <span class="icon-holder"></span> -->
+            PROFILE
+          </a>
+          <a href="/#/hcp/patients" class="link-patients" ng-class="{current: isCurrent('patients')}">
+            <span class="icon-holder"></span>
+            PATIENTS
+          </a>
+          <a href="/#/hcp/contacts" class="link-contacts" ng-class="{current: isCurrent('contacts')}">
+            <span class="icon-holder"></span>
+            CONTACTS
+          </a>
+          <a href="/#/hcp/carenetwork" class="link-care" ng-class="{current: isCurrent('carenetwork')}">
+            <span class="icon-holder"></span>
+            CARE NETWORK
+          </a>
+          <a href="/#/hcp/learn" class="link-learn" ng-class="{current: isCurrent('learn')}">
+            <span class="icon-holder"></span>
+            LEARN
+          </a>
+        </div>
+        
+        <!-- Patient Nav -->
+        <div class="nav-links" ng-if="isPatient()">
+          <a href="/#/patient/profile" class="link-profile" ng-class="{current: isCurrent('profile')}">
+            <span class="icon-holder"></span>
+            PROFILE
+          </a>
+          <a href="/#/patient/carenetwork" class="link-contacts" ng-class="{current: isCurrent('carenetwork')}">
+            <span class="icon-holder"></span>
+            CARE NETWORK
+          </a>
+          <a href="/#/patient/learn" class="link-learn" ng-class="{current: isCurrent('learn')}">
+            <span class="icon-holder"></span>
+            LEARN
+          </a>
+        </div>
+      </div>
+
+    </div> <!-- end left container -->
+    
+    <div class="right-container" ng-if="isLoggedIn()">
+      <div class="nav-search" ng-class="{open: nav.searchOpen}">
+        <button class="show-search" ng-click="nav.toggleSearchInput()">
+          <span class="search-icon"></span>
+        </button>
+        <input type="text" class="search-input" id="search-input" ng-model="nav.searchTerm" ng-keyup="nav.search()">
+  
+        <!-- Search result dropdown -->
+        <div class="search-result-dropdown patient-group" ng-show="nav.showResults">
+          <div class="dropdown-group">
+            <div class="group-title">PATIENTS</div>
+  
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/default_profile.png" alt="profile photo">
+              </div><!-- 
+               --><div class="result-name-cont">
+                <div class="name">
+                  Anderson, Alexander
+                </div>
+                <div class="sub-info">
+                  895 547 4568
+                </div>
+              </div>
+            </div>
+            
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/default_profile.png" alt="profile photo">
+              </div>
+              <div class="result-name-cont">
+                <div class="name">
+                  Anderson, Louis
+                </div>
+                <div class="sub-info">
+                  355 291 0220
+                </div>
+              </div>
+            </div>
+            
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/default_profile.png" alt="profile photo">
+              </div>
+              <div class="result-name-cont">
+                <div class="name">
+                  Elson, Anton
+                </div>
+                <div class="sub-info">
+                  589 513 5365
+                </div>
+              </div>
+            </div>
+  
+            <a href="/#/search" ng-click="nav.goToSearch()" class="see-all-link">45 results</a>
+  
+          </div> <!-- end dropdown group -->
+  
+          <div class="dropdown-group contacts-group">
+            <div class="group-title">CONTACTS</div>
+  
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/default_profile.png" alt="profile photo">
+              </div>
+              <div class="result-name-cont">
+                <div class="name">
+                  Dr. Anderson, Sarah
+                </div>
+                <div class="sub-info">
+                  Pacific Coast Urology
+                </div>
+              </div>
+            </div>
+            
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/default_profile.png" alt="profile photo">
+              </div>
+              <div class="result-name-cont">
+                <div class="name">
+                  Dr. Thompson, Andrew
+                </div>
+                <div class="sub-info">
+                  Central Urology Group
+                </div>
+              </div>
+            </div>
+            
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/default_profile.png" alt="profile photo">
+              </div>
+              <div class="result-name-cont">
+                <div class="name">
+                  Dr. Walder, Anita
+                </div>
+                <div class="sub-info">
+                  UCSF Department of Urology
+                </div>
+              </div>
+            </div>
+  
+            <a href="/#/search" ng-click="nav.goToSearch()" class="see-all-link">32 results</a>
+  
+          </div> <!-- end dropdown group -->
+  
+          <div class="dropdown-group learn-group">
+            <div class="group-title">LEARN</div>
+  
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/learn_doc.png" alt="profile photo">
+              </div>
+              <div class="result-name-cont">
+                <div class="name">
+                  Anfarifencin
+                </div>
+              </div>
+            </div>
+            
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/learn_video.png" alt="profile photo">
+              </div>
+              <div class="result-name-cont">
+                <div class="name">
+                  Anti-Inflamation
+                </div>
+              </div>
+            </div>
+            
+            <div class="result-item">
+              <div class="result-photo">
+                <img src="/assets/img/learn_doc.png" alt="profile photo">
+              </div>
+              <div class="result-name-cont">
+                <div class="name">
+                  Anti-Overactive Bladder Activation
+                </div>
+              </div>
+            </div>
+  
+            <a href="/#/search" ng-click="nav.goToSearch()" class="see-all-link">67 results</a>
+  
+          </div> <!-- end dropdown group -->
+        </div> <!-- end search-result-dropdown -->
+      </div><!--  end nav-search & comment to fix extra 4px
+  
+   --><div class="nav-profile-link" ng-click="showNavLinks=!showNavLinks" ng-if="!isPatient()">
+        <div class="nav-profile-name">A. Menendez</div>
+        <img class="nav-profile-pic" src="/assets/img/doctor0.jpg" alt="Your profile photo">
+        <div class="nav-dropdown" ng-show="showNavLinks">
+          <a href="/#/hcp/profile" class="drop-link">MY PROFILE</a>
+          <a href="/#/hcp/profile" class="drop-link">SETTINGS</a>
+          <a href="/#/" class="drop-link">LOG OUT</a>
+        </div>
+      </div><!--  end nav-search & comment to fix extra 4px
+  
+   --><div class="nav-profile-link" ng-click="showNavLinks=!showNavLinks" ng-if="isPatient()">
+        <div class="nav-profile-name">Allen, Nicholas</div>
+        <img class="nav-profile-pic" src="/assets/img/People1_0007_Man3.jpg" alt="Your profile photo">
+        <div class="nav-dropdown" ng-show="showNavLinks">
+          <a href="/#/" class="drop-link">LOG OUT</a>
+        </div>
+      </div>
+    </div> <!-- end right container -->
+  
+  </nav> <!-- end global nav -->
+
+
+  <!-- <ng-view autoscroll="true" class="view-frame" ng-class="{high: isCurrent('/login')}"></ng-view> -->
+  <ng-view autoscroll="true" class="view-frame" ng-class="{'no-animate': isCurrent('/login')}" ng-cloak></ng-view>
+
+
+  <!-- SCRIPTS -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+</html>

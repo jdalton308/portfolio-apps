@@ -1,0 +1,119 @@
+// Media Queries in Sass 3.2
+//
+// These mixins make media queries a breeze with Sass.
+// The media queries from mobile up until desktop all
+// trigger at different points along the way
+//
+// And important point to remember is that and width
+// over the portrait width is considered to be part of the
+// landscape width. This allows us to capture widths of devices
+// that might not fit the dimensions exactly. This means the break
+// points are seamless.
+
+$mq-mobile-portrait		      : 320px !default;
+$mq-mobile-landscape	      : 464px !default;
+$mq-tablet-portrait		      : 768px !default;
+$mq-tablet-landscape	      : 1024px !default;
+$mq-desktop				      : 1440px !default;
+$mq-desktop-wide		      : 1600px !default;
+
+@mixin desktop {
+	@media only screen and (min-width : $mq-desktop) {
+		@content;
+	}
+}
+
+@mixin desktop-wide {
+	@media only screen and (min-width : $mq-desktop-wide) {
+		@content;
+	}
+}
+
+@mixin tablet-landscape-and-above {
+	@media only screen and (min-width : $mq-tablet-landscape) {
+		@content;
+	}
+}
+
+@mixin tablet-landscape-and-down {
+	@media only screen and (max-width : $mq-tablet-landscape - 1) {
+		@content;
+	}
+}
+
+@mixin tablet-landscape {
+	@media only screen and (min-width : $mq-tablet-landscape) and (max-width : $mq-desktop - 1) {
+		@content;
+	}
+}
+
+@mixin tablet-landscape-and-below {
+	@media only screen and (max-width : $mq-desktop - 1) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait-and-above {
+	@media only screen and (min-width : $mq-tablet-portrait) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait-and-below {
+	@media only screen and (max-width : $mq-tablet-portrait - 1) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait {
+	@media only screen and (min-width : $mq-tablet-portrait) and (max-width : $mq-tablet-landscape - 1) {
+		@content;
+	}
+}
+
+@mixin mobile-landscape-and-above {
+	@media only screen and (min-width : $mq-mobile-landscape) {
+		@content;
+	}
+}
+
+@mixin mobile-landscape-and-below {
+	@media only screen and (max-width : $mq-tablet-landscape - 1) {
+		@content;
+	}
+}
+
+@mixin mobile-landscape-and-below-2 {
+	@media only screen and (max-width : $mq-mobile-landscape - 1) {
+		@content;
+	}
+}
+
+@mixin mobile-landscape {
+	@media only screen and (min-width : $mq-mobile-landscape) and (max-width : $mq-tablet-portrait - 1) {
+		@content;
+	}
+}
+
+@mixin mobile-portrait-and-above {
+	@media only screen and (min-width : $mq-mobile-portrait) {
+		@content;
+	}
+}
+
+@mixin mobile-portrait {
+	@media only screen and (min-width : $mq-mobile-portrait) and (max-width : $mq-mobile-landscape - 1) {
+		@content;
+	}
+}
+
+@mixin retina {
+	@media only screen and (-webkit-min-device-pixel-ratio : 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio : 2) {
+		@content;
+	}
+}
+@mixin non-retina {
+	@media only screen and (-webkit-max-device-pixel-ratio : 1), only screen and (max--moz-device-pixel-ratio: 1), only screen and (max-device-pixel-ratio : 1) {
+		@content;
+	}
+}

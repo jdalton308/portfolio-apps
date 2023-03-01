@@ -1,0 +1,50 @@
+
+<!-- PATIENT'S LANDING PAGE: MY HEALTH -->
+
+<section class="section-main-header">
+	<div class="main-title-holder">
+		<h1>MY HEALTH</h1>
+		<h5>85 Lorem ipsum</h5>
+	</div>
+	<div class="header-imgs placeholder">
+		Placeholder
+	</div>
+</section>
+
+<section class="section-header-boxes">
+	<div class="box no-hover two-line">
+		<div class="box-number">2:30</div>
+		<div class="box-label">Appointment Tuesday July 13th</div>
+	</div>
+	<div class="box no-hover two-line">
+		<div class="box-number">1</div>
+		<div class="box-label">New Profile Update</div>
+	</div>
+	<div class="box no-hover img-box">
+		<div class="box-number">
+			<img src="/assets/img/device1.png" alt="InterStim device icon">
+		</div>
+		<div class="box-label">InterStim<sup>&reg;</sup>II Neurostimulator</div>
+	</div>
+</section>
+
+<div class="page-myhealth">
+
+	<div class="section-top-nav">
+		<nav class="top-level-arrow-nav">
+			<!-- <a href="" class="top-level-left">
+			  <i class="fa fa-angle-left"></i>
+			</a> -->
+			<a href="" scroll-to="profile" class="top-level-center">
+			  VIEW HEALTH INFORMATION
+			</a>
+			<a href="/#/patient/carenetwork" class="top-level-right">
+			  <i class="fa fa-angle-right"></i>
+			</a>
+		</nav>
+	</div>
+	
+	<!-- Pull in the Patient's Profile HTML -->
+	<ng-include src="'/profile_patient.html'" id="profile"></ng-include>
+
+</div>

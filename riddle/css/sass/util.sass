@@ -1,0 +1,137 @@
+@import "media-queries"
+@import "prefixes"
+
+.plus-popup
+  width: 16px
+  height: 16px
+  display: inline-block
+  position: relative
+  background: transparent url('../img/plus-icon-sprite.png') no-repeat 0 0
+  text-indent: 100%
+  white-space: nowrap
+  overflow: hidden
+  background-size: 32px
+  position: relative
+  top: 3px
+  text-indent: -9999px
+
+  &.dark
+    background-position: -16px 0
+
+    &:hover
+      background-position: -16px -16px
+
+  &:hover
+    background-position: 0 -16px
+
+.hidden
+  display: none
+
+.vegan-icon
+  width: 9px
+  height: 12px
+  background: transparent url('../img/vegan-sprite.png') no-repeat
+  display: block
+  float: left
+  margin: 6px 8px 0 2px
+  background-size: 9px 24px
+
+  &.grey
+    background-position: 0 0
+
+  &.color
+    background-position: 0 -12px
+
+.spice-icon
+  width: 15px
+  height: 16px
+  background: transparent url('../img/hot-sprite.png') no-repeat
+  display: block
+  float: left
+  margin: 0 3px 0 0
+  background-size: 70px 240px
+
+  &.one-grey
+    background-position: 0 0
+
+  &.two-grey
+    width: 32px
+    background-position: 0 -16px
+
+  &.three-grey
+    width: 48px
+    background-position: 0 -32px
+
+  &.four-grey
+    width: 66px
+    background-position: 0 -48px
+
+  &.five-grey
+    width: 84px
+    background-position: 0 -64px
+
+  &.one-fire
+    background-position: 0 -80px
+
+  &.two-fire
+    width: 32px
+    background-position: 0 -96px
+
+  &.three-fire
+    width: 48px
+    background-position: 0 -112px
+
+  &.four-fire
+    width: 66px
+    background-position: 0 -128px
+
+  &.five-fire
+    width: 84px
+    background-position: 0 -144px
+
+  &.one
+    width: 84px
+    background-position: 0 -160px
+
+  &.two
+    width: 84px
+    background-position: 0 -176px
+
+  &.three
+    width: 84px
+    background-position: 0 -194px
+
+  &.four
+    width: 84px
+    background-position: 0 -210px
+
+  &.five
+    width: 84px
+    background-position: 0 -226px
+
+.button
+  height: 46px
+  background: #939191
+  color: #fff
+  text-decoration: none
+  text-align: center
+  display: block
+  margin: 0 auto
+  line-height: 3.3
+  text-transform: uppercase
+  letter-spacing: 1px
+  border: none medium
+  padding: 0
+
+.arrow-font
+  font-family: 'Zemestro Std Medium'
+
+/* hides the spin-button for firefox */
+input[type=number]
+  -moz-appearance:textfield
+
+/* hides the spin-button for chrome*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0

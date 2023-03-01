@@ -1,0 +1,92 @@
+#landing {
+  position: relative;
+  padding: 5vh 0 0;
+  text-align: center;
+  background-image: url('/assets/img/land-bg.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: $grey-dark;
+
+  .crate {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include transform(translateX(-50%));
+    height: 250px; // for older mobile browsers
+    height: 80vh;
+    width: auto;
+  }
+
+  @media (max-width: $mobile-small) {
+    .crate {
+      bottom: 0;
+      left: 18%;
+      height: 250px;
+      @include transform(none);
+    }
+  }
+
+  @media (min-width: $mobile) {
+    padding-top: 40px;
+    background-position: center center;
+
+    .crate {
+      max-height: 700px;
+      bottom: 0;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+  }
+
+  // UK Landing Page
+  //-----------------
+  @at-root #guac-uk & {
+    .logo {
+      display: inline-block;
+      height: 27vh;
+    }
+    .crate {
+      height: 150px;
+      height: 60vh;
+    }
+
+    @media (max-width: $mobile-small) {
+      .crate {
+        left: 17%;
+        height: 150px;
+      }
+    }
+
+    @media (min-width: $mobile) {
+      .logo {
+        height: 20vh;
+        max-height: 175px;
+      }
+      .crate {
+        max-height: 440px;
+      }
+    }
+  }
+
+}
+
+#coming-soon {
+  background-color: $grey-dark;
+  margin: 0;
+  padding: 0;
+
+  .splash-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+    min-width: 100%;
+    width: auto;
+    height: 100%;
+  }
+}

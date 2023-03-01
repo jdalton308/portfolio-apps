@@ -1,0 +1,236 @@
+@import "media-queries"
+@import "prefixes"
+
+.about-page
+
+  .about
+    position: relative
+    display: block
+    left: 0
+    @include transition(left 0.5s ease-in-out)
+    margin: 0 0 52px 0
+
+  .main-img
+    margin: 0 0 50px 0
+
+    +mobile-landscape-and-below
+      display: none
+
+  .main-img-bg
+    display: none
+    background: transparent url('../img/about/splash.jpg') no-repeat 0 0
+
+    +mobile-landscape-and-below
+      display: block
+      margin: 0
+      height: 230px
+      width: inherit
+      background-size: 1280px
+      background-position: -500px -60px
+
+    +mobile-portrait
+      background-size: 1050px
+      background-position: -560px -25px
+
+
+  .intro
+    position: absolute
+    width: 100%
+    text-align: center
+    z-index: 5
+
+    .h2
+      width: 300px
+      margin: 0 auto
+      text-shadow: 0px 1px 2px rgba(0,0,0,.5)
+
+    +mobile-landscape-and-below
+      position: static
+      width: 90%
+      margin: 0 auto
+      padding: 25px 0
+      text-align: center
+
+      .h2
+        width: 250px
+        color: #2d2b28
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0.5)
+
+  .image-article
+    margin: 50px 0 50px 0
+    img
+      width: 100%
+
+      +mobile-landscape-and-below
+        margin: 0
+        overflow: hidden
+        position: relative
+        width: 200%
+        left: -20%
+
+    +mobile-landscape-and-below
+      overflow: hidden
+      
+  .about-content
+    width: 980px
+    margin: 0 auto
+    position: relative
+
+    +tablet-landscape
+
+    +tablet-portrait
+      width: 700px
+
+    +mobile-landscape
+      width: 568px
+      left: 0
+
+    +mobile-portrait
+      width: 320px
+      left: 0
+
+    .article
+      width: 580px
+      text-align: left
+      position: relative
+      left: 400px
+
+      +tablet-portrait
+        width: 455px
+        left: 250px
+
+      +mobile-landscape
+        margin: 0 15px
+        width: 530px
+        left: 0
+
+      +mobile-portrait
+        margin: 0 15px
+        width: 290px
+        left: 0
+
+      .title
+        color: #2d2b28
+        text-transform: uppercase
+        margin: 0 0 15px 0
+
+      .copy
+        color: #787777
+        margin: 10px 0
+        
+      .bullets-orange 
+        padding: 0
+        margin: 25px 0 15px
+
+        li
+          padding-left: .6em
+          padding-bottom: 10px
+          text-indent: -.7em
+        
+          &:before
+            content: "• "
+            color: #f06423
+            font-size: 16px
+            
+      .cta-link
+        color: #787777
+        font-size: 14px
+        text-transform: uppercase
+        margin-top: 30px
+        display: inline-block
+        margin-right: 20px        
+
+        &:after
+          background: transparent url('../img/arrow-cta-right.png') no-repeat
+          width: 20px
+          height: 20px
+          background-size: 20px 20px
+          float: right
+          margin: -5px 0 0 8px
+          content: ""
+
+          +tablet-landscape-and-down
+            margin: -15px -5px 0px 8px
+            
+          +tablet-portrait-and-below
+            margin-top: -5px
+
+      .quote
+        width: 250px
+        padding: 15px 0 0 0
+        border-top: 1px solid #f06423
+        display: block
+        position: absolute
+        left: -290px
+        top: 38px
+
+        +tablet-landscape
+          width: 303px
+          left: -343px
+
+        +tablet-portrait
+          width: 198px
+          left: -240px
+          top: 40px
+
+        +mobile-landscape-and-below
+          left: 0
+          position: relative
+          width: 510px
+          margin: 25px 0
+          padding: 0 0 0 20px
+          border-top: none medium
+          border-left: 1px solid #f06423
+          top: 0
+
+        +mobile-portrait
+          width: 260px
+
+
+        /* bordered triangle */
+        &:after,
+        &:before
+          top: 0
+          left: 15%
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+
+          +mobile-landscape-and-below
+            left: 8px
+            top: 33px
+
+          +mobile-portrait
+            top: 33px
+
+        &:after
+          border-color: rgba(255, 255, 255, 0)
+          border-width: 5px
+          margin-left: -5px
+          background: transparent url('../img/light-bg-400.jpg') repeat
+          @include transform(rotate(45deg))
+          top: -6px
+
+          +mobile-landscape-and-below
+            top: 36px
+            left: -1px
+
+          +mobile-portrait
+            top: 36px
+
+        &:before
+          border-top-color: #f06423
+          border-width: 8px
+          margin-left: -8px
+
+          +mobile-landscape-and-below
+            border-top-color: transparent
+            border-left-color: #f06423
+
+
+
+
+

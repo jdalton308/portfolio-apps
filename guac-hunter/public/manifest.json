@@ -1,0 +1,31 @@
+{
+  "short_name": "Guac Hunter",
+  "name": "Guac Hunter",
+  "icons": [
+    {
+      "src": "/assests/img/logo-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assests/img/logo-icon-256.png",
+      "sizes": "256x256",  
+      "type": "image/png"  
+    },
+    {
+      "src": "/assests/img/logo-icon-384.png",
+      "sizes": "384x384",  
+      "type": "image/png"  
+    },
+    {
+      "src": "/assests/img/logo-icon-512.png",
+      "sizes": "512x512",  
+      "type": "image/png"  
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#322f31",
+  "theme_color": "#e96e31"
+}

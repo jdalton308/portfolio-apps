@@ -1,0 +1,82 @@
+#notice-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  padding: 0 30px;
+  overflow: hidden;
+
+  background: $notice-banner-background;
+  color: $notice-banner-color;
+
+  a {
+    text-decoration: none;
+    outline: 0;
+    line-height: 14px;
+    color: $notice-banner-link-color;
+  }
+
+  .icon-x-thin {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+
+    font-size: 22px;
+    opacity: .5;
+
+    @media (min-width: $tablet) {
+      top: 8px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      font-size: 28px;
+    }
+
+    &:hover {
+      opacity: .7;
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      height: 1px;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+      background: #000;
+    }
+    &::before {
+      @include transform(rotate(45deg));
+    }
+    &::after {
+      @include transform(rotate(-45deg));
+    }
+  }
+
+  p {
+    margin: 15px auto;
+    padding: 0;
+
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+
+    width: 95%;
+    max-width: 800px;
+
+    @media (min-width: $tablet) {
+      margin: 20px auto;
+      font-size: 15px;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,858 @@
+@-webkit-keyframes dancing {
+  0% {
+    transform: rotate(0deg) translate(0, 0); }
+
+  30% {
+    transform: rotate(180deg) translate(-15px, -5px); }
+
+  60% {
+    transform: rotate(360deg) translate(30px, 0px); }
+
+  100% {
+    transform: rotate(0deg) translate(0, 0); } }
+
+@keyframes dancing {
+  0% {
+    transform: rotate(0deg) translate(0, 0); }
+
+  30% {
+    transform: rotate(180deg) translate(-15px, -5px); }
+
+  60% {
+    transform: rotate(360deg) translate(30px, 0px); }
+
+  100% {
+    transform: rotate(0deg) translate(0, 0); } }
+
+html {
+  min-height: 100%;
+  height: 100%; }
+
+.riddle-page {
+  height: 100%;
+  background-image: url(/img/riddles/texture_brown_bg.jpg);
+  background-size: cover; }
+  .riddle-page * {
+    box-sizing: border-box; }
+  .riddle-page .sh-footer {
+    top: 0; }
+    @media (min-width: 1024px) {
+      .riddle-page .sh-footer {
+        top: 0; } }
+  .riddle-page .riddles {
+    position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 95px;
+    text-align: center;
+    min-height: calc(100% - 99px); }
+    @media (min-width: 768px) {
+      .riddle-page .riddles {
+        min-height: calc(100% - 99px);
+        padding-top: 95px; } }
+    @media (min-width: 1024px) {
+      .riddle-page .riddles {
+        min-height: calc(100% - 99px);
+        padding-top: 95px; } }
+    .riddle-page .riddles h1,
+    .riddle-page .riddles h2,
+    .riddle-page .riddles p {
+      font-family: TypeWriter2, Georgia, serif; }
+    .riddle-page .riddles .title-block {
+      position: relative;
+      padding: 3px;
+      margin-bottom: 29px;
+      background-color: #dc551a; }
+      .riddle-page .riddles .title-block:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        left: 0;
+        right: 0;
+        border-bottom: 10px solid #dc551a;
+        border-right: 11px solid transparent;
+        border-left: 11px solid transparent; }
+      .riddle-page .riddles .title-block:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        border-top: 10px solid #dc551a;
+        border-right: 11px solid transparent;
+        border-left: 11px solid transparent; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles .title-block:before {
+          top: -12px;
+          border-bottom: 12px solid #dc551a;
+          border-right: 14px solid transparent;
+          border-left: 14px solid transparent; }
+        .riddle-page .riddles .title-block:after {
+          bottom: -12px;
+          border-top: 12px solid #dc551a;
+          border-right: 14px solid transparent;
+          border-left: 14px solid transparent; } }
+      .riddle-page .riddles .title-block .title-border {
+        position: relative;
+        padding: 1px;
+        background-color: #e7d2ae; }
+        .riddle-page .riddles .title-block .title-border:before {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          top: -10px;
+          left: 0;
+          right: 0;
+          border-bottom: 10px solid #e7d2ae;
+          border-right: 11px solid transparent;
+          border-left: 11px solid transparent; }
+        .riddle-page .riddles .title-block .title-border:after {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          border-top: 10px solid #e7d2ae;
+          border-right: 11px solid transparent;
+          border-left: 11px solid transparent; }
+        @media (min-width: 768px) {
+          .riddle-page .riddles .title-block .title-border:before {
+            top: -12px;
+            border-bottom: 12px solid #e7d2ae;
+            border-right: 14px solid transparent;
+            border-left: 14px solid transparent; }
+          .riddle-page .riddles .title-block .title-border:after {
+            bottom: -12px;
+            border-top: 12px solid #e7d2ae;
+            border-right: 14px solid transparent;
+            border-left: 14px solid transparent; } }
+      .riddle-page .riddles .title-block h1 {
+        font-size: 23px;
+        letter-spacing: 1px;
+        line-height: 1em;
+        color: #e7d2ae;
+        position: relative;
+        padding: 0 10px;
+        background-color: #dc551a; }
+        .riddle-page .riddles .title-block h1:before {
+          content: '';
+          position: absolute;
+          z-index: 3;
+          top: -10px;
+          left: 0;
+          right: 0;
+          border-bottom: 10px solid #dc551a;
+          border-right: 11px solid transparent;
+          border-left: 11px solid transparent; }
+        .riddle-page .riddles .title-block h1:after {
+          content: '';
+          position: absolute;
+          z-index: 3;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          border-top: 10px solid #dc551a;
+          border-right: 11px solid transparent;
+          border-left: 11px solid transparent; }
+        @media (min-width: 768px) {
+          .riddle-page .riddles .title-block h1:before {
+            top: -12px;
+            border-bottom: 12px solid #dc551a;
+            border-right: 14px solid transparent;
+            border-left: 14px solid transparent; }
+          .riddle-page .riddles .title-block h1:after {
+            bottom: -12px;
+            border-top: 12px solid #dc551a;
+            border-right: 14px solid transparent;
+            border-left: 14px solid transparent; } }
+      @media (min-width: 768px) {
+        .riddle-page .riddles .title-block {
+          display: inline-block;
+          margin-bottom: 55px;
+          padding: 6px; }
+          .riddle-page .riddles .title-block .title-border {
+            display: inline-block;
+            padding: 2px; }
+          .riddle-page .riddles .title-block h1 {
+            display: inline-block;
+            font-size: 34px;
+            letter-spacing: 3px;
+            padding: 5px 15px 1px; } }
+    .riddle-page .riddles .header-image {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto 19px; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles .header-image {
+          margin-bottom: 35px; } }
+    .riddle-page .riddles h2 {
+      color: #dc551a;
+      font-size: 20px;
+      line-height: 1.2em; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles h2 {
+          font-size: 28px;
+          line-height: 1.1em; } }
+    .riddle-page .riddles p {
+      color: #4c4949;
+      font-size: 16px;
+      line-height: 1.3em; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles p {
+          font-size: 24px; } }
+      .riddle-page .riddles p.tiny {
+        font-size: 14px; }
+        @media (min-width: 768px) {
+          .riddle-page .riddles p.tiny {
+            font-size: 16px; } }
+    .riddle-page .riddles input[type='text'],
+    .riddle-page .riddles input[type='number'],
+    .riddle-page .riddles input[type='email'],
+    .riddle-page .riddles input[type='password'],
+    .riddle-page .riddles button,
+    .riddle-page .riddles .button {
+      text-align: center;
+      width: 100%;
+      max-width: 360px;
+      font-family: "Zemestro Std Book", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 1.3em; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles input[type='text'],
+        .riddle-page .riddles input[type='number'],
+        .riddle-page .riddles input[type='email'],
+        .riddle-page .riddles input[type='password'],
+        .riddle-page .riddles button,
+        .riddle-page .riddles .button {
+          font-size: 18px;
+          letter-spacing: 3px; } }
+    .riddle-page .riddles input[type='text'],
+    .riddle-page .riddles input[type='number'],
+    .riddle-page .riddles input[type='email'],
+    .riddle-page .riddles input[type='password'] {
+      margin-bottom: 10px;
+      padding: 13px 5px 10px;
+      background-color: white;
+      border-radius: 0;
+      border: 2px solid transparent;
+      text-transform: uppercase;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .riddle-page .riddles input[type='text']:focus,
+      .riddle-page .riddles input[type='number']:focus,
+      .riddle-page .riddles input[type='email']:focus,
+      .riddle-page .riddles input[type='password']:focus {
+        border: 2px solid #5e5e5e;
+        outline: none; }
+      .riddle-page .riddles input[type='text']:last-child,
+      .riddle-page .riddles input[type='number']:last-child,
+      .riddle-page .riddles input[type='email']:last-child,
+      .riddle-page .riddles input[type='password']:last-child {
+        margin-bottom: 0; }
+      .riddle-page .riddles input[type='text'].error, .riddle-page .riddles input[type='text'].ng-touched.ng-invalid:not(.ng-pristine),
+      .riddle-page .riddles input[type='number'].error,
+      .riddle-page .riddles input[type='number'].ng-touched.ng-invalid:not(.ng-pristine),
+      .riddle-page .riddles input[type='email'].error,
+      .riddle-page .riddles input[type='email'].ng-touched.ng-invalid:not(.ng-pristine),
+      .riddle-page .riddles input[type='password'].error,
+      .riddle-page .riddles input[type='password'].ng-touched.ng-invalid:not(.ng-pristine) {
+        border: 3px solid #f06423; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles input[type='text'],
+        .riddle-page .riddles input[type='number'],
+        .riddle-page .riddles input[type='email'],
+        .riddle-page .riddles input[type='password'] {
+          padding: 18px 15px 13px;
+          margin-bottom: 10px; } }
+    .riddle-page .riddles button,
+    .riddle-page .riddles .button {
+      height: auto;
+      line-height: 1em;
+      padding: 14px 15px 12px;
+      font-weight: 700;
+      color: white;
+      border: none;
+      background-color: #5e5e5e;
+      border-radius: 0;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s; }
+      .riddle-page .riddles button:hover,
+      .riddle-page .riddles .button:hover {
+        background-color: #2c2b28; }
+      .riddle-page .riddles button:focus, .riddle-page .riddles button:active,
+      .riddle-page .riddles .button:focus,
+      .riddle-page .riddles .button:active {
+        outline: none; }
+      .riddle-page .riddles button[disabled="disabled"],
+      .riddle-page .riddles .button[disabled="disabled"] {
+        opacity: 0.5; }
+        .riddle-page .riddles button[disabled="disabled"]:hover,
+        .riddle-page .riddles .button[disabled="disabled"]:hover {
+          background-color: #5e5e5e; }
+      .riddle-page .riddles button.orange,
+      .riddle-page .riddles .button.orange {
+        background-color: #dc551a; }
+        .riddle-page .riddles button.orange:hover,
+        .riddle-page .riddles .button.orange:hover {
+          background-color: #f06423; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles button,
+        .riddle-page .riddles .button {
+          padding: 20px;
+          font-size: 18px; } }
+      .riddle-page .riddles button .dancing,
+      .riddle-page .riddles .button .dancing {
+        position: relative;
+        -webkit-animation: dancing 2s ease 0s infinite;
+        animation: dancing 2s ease 0s infinite; }
+    .riddle-page .riddles .social-links a {
+      display: inline-block;
+      margin-right: 12px; }
+      .riddle-page .riddles .social-links a:last-child {
+        margin-right: 0; }
+      .riddle-page .riddles .social-links a.facebook, .riddle-page .riddles .social-links a.twitter {
+        width: 42px;
+        height: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s; }
+        @media (min-width: 768px) {
+          .riddle-page .riddles .social-links a.facebook:hover, .riddle-page .riddles .social-links a.twitter:hover {
+            opacity: 0.8; } }
+      .riddle-page .riddles .social-links a.facebook {
+        background-image: url(/img/riddles/fb.png); }
+      .riddle-page .riddles .social-links a.twitter {
+        background-image: url(/img/riddles/twitter.png); }
+    .riddle-page .riddles.scroller,
+    .riddle-page .riddles .scroller {
+      padding-left: 15%;
+      padding-right: 15%;
+      padding-bottom: 25px;
+      background-image: url(/img/riddles/scroll-mobile.png);
+      background-size: 100% auto;
+      background-position: center 15px; }
+      .riddle-page .riddles.scroller.question,
+      .riddle-page .riddles .scroller.question {
+        padding-top: 80px;
+        background-position: center -90px; }
+        .riddle-page .riddles.scroller.question .title-border .solid-back,
+        .riddle-page .riddles .scroller.question .title-border .solid-back {
+          padding: 0 15px; }
+        .riddle-page .riddles.scroller.question .divider,
+        .riddle-page .riddles .scroller.question .divider {
+          margin-top: 23px;
+          margin-bottom: 23px; }
+        .riddle-page .riddles.scroller.question .answer-form,
+        .riddle-page .riddles .scroller.question .answer-form {
+          display: inline-block;
+          position: relative; }
+        .riddle-page .riddles.scroller.question .error-message,
+        .riddle-page .riddles .scroller.question .error-message {
+          position: absolute;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          color: #dc551a;
+          font-size: 14px; }
+      .riddle-page .riddles.scroller .divider,
+      .riddle-page .riddles .scroller .divider {
+        position: relative;
+        display: block;
+        margin: 20px auto;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        background-color: #dc551a; }
+        .riddle-page .riddles.scroller .divider:before,
+        .riddle-page .riddles .scroller .divider:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 7px;
+          border-right: 67px solid #dc551a;
+          border-top: 2px outset transparent;
+          border-bottom: 2px outset transparent; }
+        .riddle-page .riddles.scroller .divider:after,
+        .riddle-page .riddles .scroller .divider:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 7px;
+          border-left: 67px solid #dc551a;
+          border-top: 2px outset transparent;
+          border-bottom: 2px outset transparent; }
+      .riddle-page .riddles.scroller .ps,
+      .riddle-page .riddles .scroller .ps {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        max-width: 230px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        font-size: 13px;
+        color: #dc551a; }
+        .riddle-page .riddles.scroller .ps:before, .riddle-page .riddles.scroller .ps:after,
+        .riddle-page .riddles .scroller .ps:before,
+        .riddle-page .riddles .scroller .ps:after {
+          content: '';
+          display: inline-block;
+          width: 20px;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          background-image: url(/img/riddles/bracket.png);
+          background-size: auto 100%;
+          background-position: 100% 0;
+          background-repeat: no-repeat; }
+        .riddle-page .riddles.scroller .ps:before,
+        .riddle-page .riddles .scroller .ps:before {
+          left: 0;
+          -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+        .riddle-page .riddles.scroller .ps:after,
+        .riddle-page .riddles .scroller .ps:after {
+          right: 0; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles.scroller,
+        .riddle-page .riddles .scroller {
+          padding: 110px 140px 35px;
+          background-image: url(/img/riddles/scroll.png);
+          background-position: center -40px; }
+          .riddle-page .riddles.scroller.question,
+          .riddle-page .riddles .scroller.question {
+            background-position: center -125px;
+            padding-left: 190px;
+            padding-right: 190px;
+            padding-top: 100px; }
+            .riddle-page .riddles.scroller.question .divider,
+            .riddle-page .riddles .scroller.question .divider {
+              margin-top: 35px;
+              margin-bottom: 35px; }
+            .riddle-page .riddles.scroller.question .error-message,
+            .riddle-page .riddles .scroller.question .error-message {
+              top: -20px;
+              font-size: 16px; }
+            .riddle-page .riddles.scroller.question .answer-form,
+            .riddle-page .riddles .scroller.question .answer-form {
+              display: block; }
+          .riddle-page .riddles.scroller .divider,
+          .riddle-page .riddles .scroller .divider {
+            margin: 47px auto 50px;
+            height: 6px;
+            width: 6px; }
+            .riddle-page .riddles.scroller .divider:before,
+            .riddle-page .riddles .scroller .divider:before {
+              top: 1px;
+              right: 10px;
+              border-right: 100px solid #dc551a; }
+            .riddle-page .riddles.scroller .divider:after,
+            .riddle-page .riddles .scroller .divider:after {
+              top: 1px;
+              left: 10px;
+              border-left: 100px solid #dc551a; }
+          .riddle-page .riddles.scroller .ps,
+          .riddle-page .riddles .scroller .ps {
+            max-width: 360px;
+            margin-bottom: 30px;
+            padding: 0 15px;
+            font-size: 22px; }
+          .riddle-page .riddles.scroller .title-border .solid-back,
+          .riddle-page .riddles .scroller .title-border .solid-back {
+            padding: 5px 15px 1px; } }
+    .riddle-page .riddles.landing h2 {
+      color: #4c4949;
+      line-height: 1.4em;
+      margin-bottom: 20px; }
+    .riddle-page .riddles.landing .lucky-cat {
+      display: block;
+      width: 85px;
+      margin: 0 auto 8px; }
+    .riddle-page .riddles.landing .come-back {
+      font-size: 17px;
+      color: #dc551a;
+      margin: 20px 0 0;
+      font-family: "Zemestro Std Book", Helvetica, Arial, sans-serif; }
+    .riddle-page .riddles.landing .tiny {
+      margin-top: 20px; }
+    .riddle-page .riddles.landing .toolsButton {
+      padding-left: 20px;
+      padding-right: 20px;
+      position: absolute;
+      right: -147px;
+      bottom: 150px;
+      -webkit-transform: rotateZ(-90deg);
+      transform: rotateZ(-90deg); }
+    @media (min-width: 768px) {
+      .riddle-page .riddles.landing .lucky-cat {
+        width: 135px;
+        margin-bottom: 10px; }
+      .riddle-page .riddles.landing .come-back {
+        margin-bottom: 3px;
+        font-size: 28px; }
+      .riddle-page .riddles.landing .toolsButton {
+        right: -110px; } }
+    .riddle-page .riddles.over {
+      padding-top: 0; }
+      .riddle-page .riddles.over .scroller {
+        padding-top: 100px; }
+      .riddle-page .riddles.over .title-block {
+        margin-bottom: 40px; }
+        .riddle-page .riddles.over .title-block h1 {
+          font-size: 15px;
+          padding: 0 5px; }
+          @media (min-width: 375px) {
+            .riddle-page .riddles.over .title-block h1 {
+              font-size: 18px; } }
+      .riddle-page .riddles.over h2 {
+        margin-bottom: 28px; }
+      .riddle-page .riddles.over .social-links {
+        margin-bottom: 30px; }
+      .riddle-page .riddles.over .submit-form {
+        margin-bottom: 25px; }
+        .riddle-page .riddles.over .submit-form .input-container {
+          margin-bottom: 10px; }
+        .riddle-page .riddles.over .submit-form .error-message {
+          margin-bottom: 20px;
+          font-size: 16px;
+          color: #f06423;
+          line-height: 1.1em;
+          padding-top: 15px;
+          padding-bottom: 5px; }
+      .riddle-page .riddles.over .disclaimer {
+        font-family: "Zemestro Std Book", Helvetica, Arial, sans-serif;
+        font-size: 9px;
+        line-height: 1.5em;
+        color: #4c4949; }
+        .riddle-page .riddles.over .disclaimer a {
+          color: #4c4949;
+          text-decoration: underline; }
+          .riddle-page .riddles.over .disclaimer a:hover {
+            text-decoration: none; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles.over {
+          padding-top: 0; }
+          .riddle-page .riddles.over .title-block h1 {
+            font-size: 30px; }
+          .riddle-page .riddles.over .scroller {
+            padding-top: 120px; }
+          .riddle-page .riddles.over h2 {
+            margin-bottom: 38px; }
+          .riddle-page .riddles.over .social-links {
+            margin-bottom: 40px; }
+            .riddle-page .riddles.over .social-links a.facebook,
+            .riddle-page .riddles.over .social-links a.twitter {
+              width: 65px;
+              height: 63px; }
+            .riddle-page .riddles.over .social-links a.facebook {
+              margin-right: 20px; }
+          .riddle-page .riddles.over .submit-form .input-container {
+            margin-bottom: 18px; }
+            .riddle-page .riddles.over .submit-form .input-container input:first-child {
+              margin-bottom: 18px; }
+          .riddle-page .riddles.over .disclaimer {
+            font-size: 12px; } }
+    .riddle-page .riddles.result {
+      padding-top: 0; }
+      .riddle-page .riddles.result .scroller {
+        position: relative;
+        padding-top: 85px;
+        padding-bottom: 24%;
+        margin-bottom: 10px;
+        background-image: url(/img/riddles/scroll-bottom-mobile.png);
+        background-position: center bottom; }
+        .riddle-page .riddles.result .scroller h1.solid-back {
+          font-size: 14px;
+          padding: 0 5px; }
+          @media (min-width: 375px) {
+            .riddle-page .riddles.result .scroller h1.solid-back {
+              font-size: 17px; } }
+          @media (min-width: 768px) {
+            .riddle-page .riddles.result .scroller h1.solid-back {
+              font-size: 34px; } }
+        .riddle-page .riddles.result .scroller h2 {
+          font-size: 24px; }
+        .riddle-page .riddles.result .scroller .result-image {
+          width: 140px;
+          margin: 0; }
+        .riddle-page .riddles.result .scroller .result-description {
+          padding: 0 14px; }
+        .riddle-page .riddles.result .scroller .cat {
+          position: absolute;
+          width: 90px;
+          right: 5px;
+          bottom: -15px; }
+          .riddle-page .riddles.result .scroller .cat img {
+            display: inline-block;
+            width: 100%; }
+      .riddle-page .riddles.result .submit-form {
+        padding: 0 20px; }
+        .riddle-page .riddles.result .submit-form a {
+          color: #5e5e5e;
+          text-decoration: underline;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s; }
+          .riddle-page .riddles.result .submit-form a:hover {
+            text-decoration: none;
+            color: #4c4949; }
+        .riddle-page .riddles.result .submit-form .all-need {
+          margin-bottom: 8px;
+          font-size: 14px;
+          color: #5e5e5e;
+          font-family: "Zemestro Std Book", Helvetica, Arial, sans-serif; }
+        .riddle-page .riddles.result .submit-form .input-container {
+          position: relative;
+          margin-bottom: 10px; }
+          .riddle-page .riddles.result .submit-form .input-container input {
+            width: 100%;
+            margin-bottom: 8px; }
+        .riddle-page .riddles.result .submit-form .error-message {
+          font-size: 14px;
+          color: #f06423;
+          line-height: 1.1em;
+          padding-bottom: 5px; }
+        .riddle-page .riddles.result .submit-form .consent-box {
+          padding: 10px 0;
+          text-align: left; }
+          .riddle-page .riddles.result .submit-form .consent-box #realCheckbox {
+            display: none;
+            position: absolute;
+            left: -10000px; }
+            .riddle-page .riddles.result .submit-form .consent-box #realCheckbox:checked + .fakeCheckbox {
+              background-image: url(/img/riddles/check.png);
+              background-size: 80% auto;
+              background-position: center center;
+              background-repeat: no-repeat; }
+          .riddle-page .riddles.result .submit-form .consent-box .fakeCheckbox {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            vertical-align: top;
+            margin: 0 12px;
+            background-color: white;
+            box-shadow: inset 0 3px 7px -3px #5e5e5e; }
+          .riddle-page .riddles.result .submit-form .consent-box .consent-copy {
+            display: inline-block;
+            width: calc(100% - 50px); }
+        .riddle-page .riddles.result .submit-form .disclaimer,
+        .riddle-page .riddles.result .submit-form .consent-copy {
+          font-family: "Zemestro Std Book", Helvetica, Arial, sans-serif;
+          font-size: 13px;
+          line-height: 1.4em;
+          color: #5e5e5e; }
+          .riddle-page .riddles.result .submit-form .disclaimer.red,
+          .riddle-page .riddles.result .submit-form .consent-copy.red {
+            color: #f06423;
+            font-weight: 700; }
+        .riddle-page .riddles.result .submit-form .disclaimer {
+          margin: 0 auto;
+          padding-bottom: 15px; }
+          .riddle-page .riddles.result .submit-form .disclaimer.required {
+            margin-bottom: 0; }
+        .riddle-page .riddles.result .submit-form button {
+          margin: 5px 0 15px; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles.result .scroller {
+          padding: 100px 130px 180px;
+          margin-bottom: 20px;
+          background-image: url(/img/riddles/scroll-bottom.png);
+          background-position: center bottom; }
+          .riddle-page .riddles.result .scroller .title-block {
+            margin-bottom: 40px; }
+          .riddle-page .riddles.result .scroller h2 {
+            font-size: 40px; }
+          .riddle-page .riddles.result .scroller .result-image {
+            width: 300px;
+            margin: 0; }
+          .riddle-page .riddles.result .scroller .result-description {
+            padding: 0 60px; }
+          .riddle-page .riddles.result .scroller .cat {
+            width: 240px;
+            right: -53px;
+            bottom: -12px; }
+        .riddle-page .riddles.result .submit-form {
+          padding: 0 45px; }
+          .riddle-page .riddles.result .submit-form .all-need {
+            margin-bottom: 20px;
+            font-size: 18px; }
+          .riddle-page .riddles.result .submit-form .error-message {
+            font-size: 18px; }
+          .riddle-page .riddles.result .submit-form .input-container {
+            margin-bottom: 20px; }
+            .riddle-page .riddles.result .submit-form .input-container:after {
+              content: '';
+              display: table;
+              clear: both; }
+            .riddle-page .riddles.result .submit-form .input-container input {
+              width: calc(50% - 5px);
+              margin-bottom: 10px;
+              margin-right: 10px;
+              float: left; }
+              .riddle-page .riddles.result .submit-form .input-container input:nth-child(2n) {
+                margin-right: 0; }
+          .riddle-page .riddles.result .submit-form .consent-box {
+            padding: 10px 0;
+            text-align: left; }
+            .riddle-page .riddles.result .submit-form .consent-box .fakeCheckbox {
+              width: 20px;
+              height: 20px;
+              margin: 18px 30px 0;
+              box-shadow: inset 0 4px 10px -4px #5e5e5e; }
+            .riddle-page .riddles.result .submit-form .consent-box .consent-copy {
+              display: inline-block;
+              width: calc(100% - 125px); }
+          .riddle-page .riddles.result .submit-form .disclaimer,
+          .riddle-page .riddles.result .submit-form .consent-copy {
+            font-size: 16px; }
+          .riddle-page .riddles.result .submit-form .disclaimer {
+            width: 575px;
+            margin: 0 auto 20px; }
+            .riddle-page .riddles.result .submit-form .disclaimer.required {
+              margin-bottom: 10px; }
+          .riddle-page .riddles.result .submit-form button {
+            margin: 20px 0 30px; } }
+    .riddle-page .riddles.wrong, .riddle-page .riddles.nobowls {
+      padding-top: 0; }
+      .riddle-page .riddles.wrong .scroller, .riddle-page .riddles.nobowls .scroller {
+        padding: 90px 20% 24%;
+        margin-bottom: 10px;
+        background-image: url(/img/riddles/scroll-bottom-mobile.png);
+        background-position: center bottom; }
+        .riddle-page .riddles.wrong .scroller .bordered, .riddle-page .riddles.nobowls .scroller .bordered {
+          padding: 40px 10px;
+          background-image: url(/img/riddles/border-mobile.png);
+          background-size: 100% 100%; }
+          .riddle-page .riddles.wrong .scroller .bordered h2, .riddle-page .riddles.nobowls .scroller .bordered h2 {
+            font-size: 20px;
+            line-height: 1.3em;
+            color: #4c4949; }
+      .riddle-page .riddles.wrong .hint, .riddle-page .riddles.nobowls .hint {
+        margin-bottom: 15px;
+        padding: 0 10px;
+        font-size: 1rem;
+        line-height: 1.4em;
+        color: #4c4949; }
+      .riddle-page .riddles.wrong .button-cont, .riddle-page .riddles.nobowls .button-cont {
+        margin: 0 0 22px;
+        padding: 0 20px; }
+        .riddle-page .riddles.wrong .button-cont button, .riddle-page .riddles.nobowls .button-cont button {
+          margin-bottom: 15px; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles.wrong .scroller, .riddle-page .riddles.nobowls .scroller {
+          padding: 110px 190px 180px;
+          margin-bottom: 0px;
+          background-image: url(/img/riddles/scroll-bottom.png);
+          background-position: center bottom; }
+          .riddle-page .riddles.wrong .scroller .bordered, .riddle-page .riddles.nobowls .scroller .bordered {
+            padding: 75px 25px;
+            background-image: url(/img/riddles/border.png); }
+            .riddle-page .riddles.wrong .scroller .bordered h2, .riddle-page .riddles.nobowls .scroller .bordered h2 {
+              font-size: 34px;
+              color: #4c4949; }
+        .riddle-page .riddles.wrong .hint, .riddle-page .riddles.nobowls .hint {
+          margin-bottom: 20px;
+          font-size: 1.5rem; }
+        .riddle-page .riddles.wrong .button-cont, .riddle-page .riddles.nobowls .button-cont {
+          padding: 0;
+          margin: 0 0 30px; }
+        .riddle-page .riddles.wrong .button, .riddle-page .riddles.nobowls .button {
+          max-width: 360px; } }
+    .riddle-page .riddles.nobowls .scroller .bordered {
+      padding: 30px 10px; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles.nobowls .scroller .bordered {
+          background-image: url(/img/riddles/border-mobile.png); } }
+    .riddle-page .riddles.share {
+      padding-top: 0; }
+      .riddle-page .riddles.share .scroller {
+        position: relative;
+        padding-top: 80px;
+        padding-bottom: 130px;
+        margin-bottom: 20px;
+        background-image: url(/img/riddles/scroll-bottom-mobile.png);
+        background-position: center bottom; }
+        .riddle-page .riddles.share .scroller h2 {
+          font-size: 24px; }
+        .riddle-page .riddles.share .scroller .divider {
+          margin-top: 20px;
+          margin-bottom: 20px; }
+        .riddle-page .riddles.share .scroller p {
+          margin-bottom: 17px;
+          padding: 0 20px; }
+        .riddle-page .riddles.share .scroller .cat {
+          width: 170px;
+          position: absolute;
+          left: -4px;
+          bottom: -96px; }
+          .riddle-page .riddles.share .scroller .cat img {
+            width: 100%; }
+      @media (min-width: 768px) {
+        .riddle-page .riddles.share .scroller {
+          padding: 110px 190px 175px;
+          margin-bottom: 0;
+          background-image: url(/img/riddles/scroll-bottom.png);
+          background-position: center bottom; }
+          .riddle-page .riddles.share .scroller h2 {
+            font-size: 40px; }
+          .riddle-page .riddles.share .scroller .social-links a.facebook, .riddle-page .riddles.share .scroller .social-links a.twitter {
+            width: 62px;
+            height: 60px;
+            cursor: pointer;
+            background-position: center;
+            background-size: 95% auto; }
+          .riddle-page .riddles.share .scroller .social-links a.facebook {
+            margin-right: 20px; }
+          .riddle-page .riddles.share .scroller .divider {
+            margin-top: 40px;
+            margin-bottom: 40px; }
+          .riddle-page .riddles.share .scroller p {
+            margin-bottom: 35px;
+            padding: 0 70px; }
+          .riddle-page .riddles.share .scroller .cat {
+            width: 300px;
+            left: -54px;
+            bottom: -100px; } }
+
+@-webkit-keyframes cat-shake {
+  0% {
+    transform: rotateZ(0deg); }
+
+  3% {
+    transform: rotateZ(3deg); }
+
+  8% {
+    transform: rotateZ(-3deg); }
+
+  13% {
+    transform: rotateZ(2deg); }
+
+  16% {
+    transform: rotateZ(0deg); } }
+
+@keyframes cat-shake {
+  0% {
+    transform: rotateZ(0deg); }
+
+  3% {
+    transform: rotateZ(3deg); }
+
+  8% {
+    transform: rotateZ(-3deg); }
+
+  13% {
+    transform: rotateZ(2deg); }
+
+  16% {
+    transform: rotateZ(0deg); } }
+
+.cat {
+  -webkit-animation: cat-shake 5s ease-in-out 3s infinite;
+  animation: cat-shake 5s ease-in-out 3s infinite; }

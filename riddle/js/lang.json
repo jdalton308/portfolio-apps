@@ -1,0 +1,155 @@
+{
+	"questions": [
+		{
+			"question": "The pod-like fruits give our dishes a sweet and sour boost. Ring-tailed lemurs eat their petals, and its pulp can be used to polish old metal.",
+			"answer": "tamarind",
+			"answerResponse": "You scored a free bowl.",
+			"wrongResponse": "But we still like you, so here's a free bowl.",
+			"answerDescription": "The answer is totally tamarind. Try it in our green papaya slaw — our treat.",
+			"shareHead": "Boom. Your free bowl is headed to your inbox.",
+			"shareCopy": "Tell your friends the good news and take on tomorrow’s riddle together."
+		},
+		{
+			"question": "This leaf with two names packs a polarizing punch; some people dislike it, some love it a bunch. Grind up the roots for a good curry paste. Leaves, stems, seeds, and all, none need go to waste.",
+			"answer": [
+				"cilantro",
+				"coriander"
+			],
+			"answerResponse": "Welcome to free bowl land.",
+			"wrongResponse": "But we still like you, so here's a free bowl.",
+			"answerDescription": "The answer is cilantro, aka coriander. Top off a bowl with fresh cilantro or try it tossed with our tofu.",
+			"shareHead": "Your free bowl is en route. Electronically.",
+			"shareCopy": "Go ahead, brag a little. Then play again tomorrow."
+		},
+		{
+			"question": "Similar to a citrus in both name and smell, this herb is medicinal as well. From curries to soups, teas to satays, this herb is used in so many ways.",
+			"answer": "lemongrass",
+			"answerResponse": "Your next bowl is 100 percent free.",
+			"wrongResponse": "But we still like you, so here's a free bowl.",
+			"answerDescription": "The answer is lovely lemongrass. Our grilled chicken satay has the perfect hint of lemongrass zest. Give it a try.",
+			"shareHead": "Get excited. Your free bowl is arriving via email.",
+			"shareCopy": "Let your friends in on the fun. Tomorrow’s another chance to win."
+		},
+		{
+			"question": "Bigger, shinier, and sharper in taste, don’t mistake this root for ginger in haste. Peeled, sliced, powdered, or brined, you’ll find it in Asian fare far and wide.",
+			"answer": "galangal",
+			"answerResponse": "We have a free bowl with your name on it.",
+			"wrongResponse": "But we still like you, so here's a free bowl.",
+			"answerDescription": "The answer is fragrant galangal. You’ll find hints of galangal’s rich, floral flair in our curries.",
+			"shareHead": "You’re good at this. Check your email to cash in that free bowl.",
+			"shareCopy": "Go ahead and tell the world, and play for another free meal tomorrow."
+		},
+		{
+			"question": "This ingredient is in stir-fry, soups, salads, and curries. It changes from green to red as it grows, and its mega spiciness will keep you on your toes.",
+			"answer": [
+				"thai chili",
+				"thai chilies"
+			],
+			"answerResponse": "Hope you like free bowls because you just won one.",
+			"wrongResponse": "But we still like you, so here's a free bowl.",
+			"answerDescription": "The answer is clearly Thai chili. For a kick of spice, we recommend giving our green beans or red curry a try.",
+			"shareHead": "Lucky you. Your free bowl will land in your inbox soon.",
+			"shareCopy": "Get your friends in on the action. Only one more chance to score."
+		}
+	],
+	"incorrect": [
+		{
+			"first": {
+				"message": "So close, yet so far. Go ahead and give it another shot.",
+				"button": "TRY AGAIN"
+			},
+			"second": {
+				"message": "Bummer. Wish there was a search engine that could help you out.",
+				"button": "TRY AGAIN (HARDER)"
+			}
+		},
+		{
+			"first": {
+				"message": "Sorry, we were thinking of something different. Want to have another go?",
+				"button": "TRY AGAIN"
+			},
+			"second": {
+				"message": "Bummer. Wish there was a search engine that could help you out.",
+				"button": "TRY AGAIN (HARDER)"
+			}
+		},
+		{
+			"first": {
+				"message": "Uh oh. Wrong answer. Want to try again?",
+				"button": "TRY AGAIN"
+			},
+			"second": {
+				"message": "Bummer. Wish there was a search engine that could help you out.",
+				"button": "TRY AGAIN (HARDER)"
+			}
+		},
+		{
+			"first": {
+				"message": "Not quite right. Maybe you should visit our Food page for ideas.",
+				"button": "TRY AGAIN"
+			},
+			"second": {
+				"message": "Bummer. Wish there was a search engine that could help you out.",
+				"button": "TRY AGAIN (HARDER)"
+			}
+		},
+		{
+			"first": {
+				"message": "Not quite. Heat things up with another guess.",
+				"button": "TRY AGAIN"
+			},
+			"second": {
+				"message": "Bummer. Wish there was a search engine that could help you out.",
+				"button": "TRY AGAIN (HARDER)"
+			}
+		}
+	],
+	"out": [
+		{
+			"copy": "Actually, you’re out of luck, because we’re out of bowls for today. Maybe the stars will align in your favor tomorrow...if you’re quicker. ",
+			"prompt": "Hint: Tomorrow’s ingredient is known by two names. Luckily you only have to guess one correctly to get your free bowl.",
+			"button": "EXPLORE OUR MENU",
+			"promptURL": "/food.html"
+		},
+		{
+			"copy": "We’ve run out of today’s free bowl stash, but step up your ingredient game and come back first thing tomorrow.",
+			"prompt": "Hint: In addition to flavoring many Southeast Asian dishes, tomorrow’s ingredient naturally repels insects. Get ready.",
+			"button": "EXPLORE THE MENU",
+			"promptURL": "/food.html"
+		},
+		{
+			"copy": "We’re fresh out of free bowls. Be one of the first to play tomorrow and maybe you’ll snag one before they’re all gone.",
+			"prompt": "Hint: Tomorrow’s ingredient has a name that’s fun to say. We’re rooting for you to ace the next riddle.",
+			"button": "EXPLORE THE MENU",
+			"promptURL": "/food.html"
+		},
+		{
+			"copy": "Too bad. We’re out of free bowls for the day. Be a speed solver tomorrow because it’s your final shot at on-the-house ShopHouse.",
+			"prompt": "Hint: Tomorrow’s ingredient might have you reaching for a glass of milk. Study up on what it could be.",
+			"button": "EXPLORE THE MENU",
+			"promptURL": "/food.html"
+		},
+		{
+			"copy": "We’re sad to say: we’re out of bowls and it’s the final day. Thanks so much for playing and come visit us soon.",
+			"prompt": "Craving a bowl?",
+			"button": "FIND A SHOPHOUSE",
+			"promptURL": "/locations.html"
+		}
+	],
+	"home": [
+		{
+			"imgAlt": "RIDDLE A DAY",
+			"imgUrl": "landing",
+			"copy": "How well do you know what’s in your bowl? Our lucky cat wants you to prove your ShopHouse chops. Solve the daily riddle to score a FREE bowl (while supplies last) to redeem at any of our locations.",
+			"ps": "Remember: spelling counts",
+			"button": "START"
+		},
+		{
+			"imgAlt": "RIDDLE A DAY",
+			"imgUrl": "landing",
+			"copy": "How well do you know what’s in your bowl? Our lucky cat wants you to prove your ShopHouse chops. Solve the daily riddle to score a FREE bowl (while supplies last) to redeem at any of our locations.",
+			"ps": "It all starts October 5th",
+			"button": "COME BACK SOON"
+		}
+	]
+}

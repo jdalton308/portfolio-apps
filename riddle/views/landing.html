@@ -1,0 +1,23 @@
+<section class="main-wrapper riddles scroller landing">
+
+    <img src="/img/riddles/header_{{lang.imgUrl}}.png" alt="{{lang.imgAlt}}" class="header-image">
+
+    <h2>
+        {{lang.copy}}
+    </h2>
+
+    <img class="lucky-cat cat" src="/img/riddles/lucky-cat.png" alt="lucky cat">
+
+    <p ng-if="buttonDisabled" class="come-back">{{lang.button}}</p>
+
+    <p class="ps">
+        {{lang.ps}}
+    </p>
+
+    <button ng-click="beginGame()" ng-if="!buttonDisabled">
+        <span ng-show="!sending">{{lang.button}}</span>
+        <span ng-show="sending">STARTING <span class="dancing">...</span></span>
+    </button>
+
+
+</section>

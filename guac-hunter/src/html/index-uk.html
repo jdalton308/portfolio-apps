@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, minimal-ui">
+
+  <!-- Mobile App-Capable -->
+  <link rel="manifest" href="/manifest.json">
+
+  <meta name="theme-color" content="#e96e31">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-navbutton-color" content="#e96e31">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- App icons -->
+  <link rel="icon" sizes="192x192" href="/assets/img/logo-icon.png">
+  <link rel="apple-touch-icon" href="/assets/img/logo-icon.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/logo-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/logo-icon-ipad.png">
+  <link rel="apple-touch-startup-image" href="/assets/img/logo-icon.png">
+  <meta name="msapplication-square70x70logo" content="/assets/img/logo-tileicon-70.png">
+  <meta name="msapplication-square150x150logo" content="/assets/img/logo-tileicon-150.png">
+  <meta name="msapplication-square310x310logo" content="/assets/img/logo-tileicon-310.png">
+
+  <title>Guac Hunter | Chipotle</title>
+  <meta name="description" content="Play Guac Hunter and win a free order of chips and guac at Chipotle Mexican Grill">
+
+  <!-- Facebook -->
+  <meta property="fb:app_id" content="1690168034594607">
+  <meta property="og:url" content="http://www.guachunter.co.uk">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Play Guac Hunter">
+  <meta property="og:description" content="FREE > extra. Play Guac Hunter and win free tortilla chips and guac chip.tl/guac-uk #GuacHunter">
+  <meta property="og:site_name" content="Guac Hunter">
+
+  <meta property="og:image" content="http://www.guachunter.co.uk/assets/img/social-facebook-share_720-2.png">
+  <meta property="og:image:url" content="http://www.guachunter.co.uk/assets/img/social-facebook-share_720-2.png">
+  <meta property="og:image:secure_url" content="https://www.guachunter.co.uk/assets/img/social-facebook-share_720-2.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="720">
+  <meta property="og:image:height" content="378">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ChipotleUK">
+  <meta name="twitter:title" content="Guac Hunter">
+  <meta name="twitter:description" content="FREE > extra. Play Guac Hunter and win free tortilla chips and guac chip.tl/guac-uk #GuacHunter">
+  <meta name="twitter:image" content="http://www.guachunter.co.uk/assets/img/social-twitter-share_468.png">
+
+
+  <link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/css/game.css">
+
+</head>
+<body id="guac-uk">
+
+  <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5MCQ3W"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5MCQ3W');</script>
+  <!-- End Google Tag Manager -->
+
+
+  <!-- Facebook App -->
+  <!-- TODO: Replace app ID w/ Chipotle's -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1690168034594607',
+        xfbml      : true,
+        version    : 'v2.5'
+      });
+    };
+
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "//connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+  </script>
+  <!-- End Facebook App -->
+
+
+
+  <!-- //// LANDING VIEW //// -->
+
+  <section id="landing" class="view current">
+    <img src="/assets/img/logo-cmg.png" alt="Chipotle logo" class="logo">
+    <img src="/assets/img/land-crate-uk.png" alt="Crate of avacados" class="crate">
+  </section>
+
+
+
+  <!-- //// INTRO VIEW //// -->
+
+  <section id="intro" class="view current">
+    <div class="centered-text">
+      <img src="/assets/img/intro-wood-pole.png" alt="piece of wood" class="back-pole">
+      <div class="top-sign">
+        <h2>GET&nbsp;FREE&nbsp;GUAC</h2>
+        <p>We know you know it's extra, but right now you can get it free.</p>
+      </div>
+      <a href="#game" class="next bottom-sign">
+        <h3>PLAY NOW</h3>
+      </a>
+    </div>
+  </section>
+
+
+
+  <!-- //// GAME VIEW ////-->
+
+  <section id="game" class="view">
+
+
+    <div class="title-bar">
+      <img src="/assets/img/texture-invert.png" alt="text texture overlay" class="text-texture">
+      <div class="title-cont">
+        <img src="/assets/img/logo-cmg.png" alt="Chipotle Mexican Grill logo" class="logo-cmg">
+        <h1 class="title">
+          <span class="green">GUAC</span><span class="orange">HUNTER</span>
+        </h1>
+      </div>
+      <div class="timer-cont">
+        <!-- Timer added with js -->
+        <h1 class="timer"></h1>
+      </div>
+    </div>
+
+
+    <div class="photo-cont">
+      <div class="countdown-cont">
+        <h1 class="countdown">3</h1>
+      </div>
+      <div class="images">
+        <div class="game-img left">
+          <!-- Hotspots added with js -->
+
+          <!-- HOTSPOT, for reference -->
+          <!--
+          <div class="spot" style="left:'+ leftP +'; top:'+ topP +';">
+            <div class="avo">
+              <span class="hair north"></span>
+              <span class="hair south"></span>
+              <span class="hair west"></span>
+              <span class="hair east"></span>
+            </div>
+          </div>
+          -->
+
+
+        </div>
+        <div class="game-img right">
+          <!-- Hotspots added with js -->
+        </div>
+      </div>
+      <div class="penalty-overlay">
+        <h2>5 SECOND PENALTY</h2>
+      </div>
+    </div>
+
+
+    <div class="status-bar">
+      <img src="/assets/img/texture-invert.png" alt="text texture overlay" class="text-texture">
+      <div class="checkboxes">
+        <!-- Checkboxes added with js -->
+      </div>
+
+      <h1 class="round-num">
+        ROUND 1
+      </h1>
+      <div class="button-cont">
+        <button class="give-up">QUIT</button>
+      </div>
+    </div>
+
+
+
+    <!-- //// Game Modal ////-->
+    <div class="how-to overlay">
+      <div class="centered-text">
+        <h2>HOW TO PLAY</h2>
+        <ol>
+          <li>
+            <div class="list-number">
+              1
+              <span class="hash north"></span>
+              <span class="hash east"></span>
+              <span class="hash south"></span>
+              <span class="hash west"></span>
+            </div>
+            Spot the five differences in each photoset before time runs out.
+          </li>
+          <li>
+            <div class="list-number">
+              2
+              <span class="hash north"></span>
+              <span class="hash east"></span>
+              <span class="hash south"></span>
+              <span class="hash west"></span>
+            </div>
+            <span class="two">Get through three rounds and you’ll score FREE tortilla chips and guac.</span>
+          </li>
+        </ol>
+        <button class="got-it">GET IT</button>
+
+        <!-- <div class="logo-cont">
+          <img src="/assets/img/logo-cmg.png" alt="chipotle mexican grill logo" class="chipotle-logo">
+          <img src="/assets/img/logo-afm-white.svg" alt="Avocados from Mexico logo" class="afm-logo">
+        </div> -->
+      </div>
+    </div>
+
+    <!-- //// Game Modal ////-->
+    <div class="result overlay">
+      <div class="text">
+        <h2>You Win!</h2>
+        <p></p>
+        <button class="continue">NEXT</button>
+      </div>
+    </div>
+
+    <!-- //// Game Modal ////-->
+    <div class="give-up-overlay overlay">
+      <div class="give-up-close">
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+      <div class="centered-text">
+        <h2>Gotta go?</h2>
+        <button id="give-up-stay">KEEP HUNTING</button><!-- comment to remove space
+     --><button id="give-up-leave">ESCAPE</button>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <section id="end" class="view">
+
+      <div class="scroll-cont">
+        <div class="animation-cont">
+
+
+          <!-- //// SIGN-UP VIEW ////-->
+
+          <div id="signUp" class="subview">
+            <div class="wrapper">
+              <h2>THANKS FOR PLAYING</h2>
+              <p class="subhead">Enter your information to claim your free tortilla chips and guac.</p>
+              <p class="fine-print">*All fields required.</p>
+
+              <form action="" id="signup-form">
+                <div class="input-error-cont">
+                  <input type="text" placeholder="FIRST NAME*" name="first" id="first-name" class="input">
+                  <p class="error-text"></p>
+                </div>
+
+                <div class="input-error-cont">
+                  <input type="text" placeholder="LAST NAME*" name="last" id="last-name" class="input">
+                  <p class="error-text"></p>
+                </div>
+
+              <!--   <div class="mobile-zip-cont">
+                  <input type="tel" placeholder="MOBILE NUMBER* (US OR CANADA ONLY)" name="mobile" id="mobile-num" class="input mobile">
+                  <input type="tel" pattern="[0-9]*" placeholder="ZIP CODE*" name="zip" id="zip" class="input zip touched">
+                  <p class="error-text mobile-error"></p>
+                  <p class="error-text zip-error"></p>
+                </div> -->
+
+                <div class="input-error-cont">
+                  <input type="email" placeholder="EMAIL*" name="email" id="email" class="input email">
+                  <p class="error-text"></p>
+                </div>
+
+                <label for="consent" class="consent-label">
+                  <input class="real-checkbox" type="checkbox" name="consent" id="consent">
+                  <span class="fake-checkbox"></span>
+                  <span class="consent-copy">Click this box to receive future updates and newsletters from Chipotle. You can unsubscribe at any time. Consent is not a condition of purchase. View <a href="https://www.chipotle.co.uk/privacy-policy" target="_blank">Terms of Use</a> and <a href="https://www.chipotle.co.uk/privacy-policy" target="_blank">Privacy Policy</a>.</span>
+                </label>
+                <p class="form-error-text"></p>
+                <button class="submit" disabled>SUBMIT</button>
+              </form>
+            </div>
+
+            <p class="finer-print agree-copy">**By providing your email and clicking "SUBMIT," you confirm you are 13 years of age or older and agree to our <a href="https://www.chipotle.co.uk/privacy-policy" target="_blank">Privacy Policy</a> and <a href="https://www.chipotle.co.uk/privacy-policy" target="_blank">Terms of Use</a>.</p>
+
+            <p class="finer-print rules-copy">NO PURCHASE NECESSARY. Open to legal residents of the United Kingdom, 13 or older. Void where prohibited. Ends ‌29/7/16 or while supplies last. Coupon for tortilla chips &amp; guac must be redeemed at a participating Chipotle restaurant by ‌8/8/16. Full rules at <a href="https://www.chipotle.co.uk/guachunter-rules" target="_blank">www.chipotle.co.uk/guachunter-rules</a>. Sponsor: Chipotle Mexican Grill, Inc.</p>
+
+            <div class="logos">
+              <img src="/assets/img/logo-cmg.png" alt="Chipotle Mexican Grill logo">
+              <!-- <img src="/assets/img/logo-afm-white.svg" alt="Chipotle Mexican Grill logo"> -->
+            </div>
+
+          </div>
+
+
+          <!-- //// SHARE VIEW ////-->
+
+          <div id="share" class="subview">
+            <div class="wrapper">
+              <h2>SPREAD THE GUAC</h2>
+              <p class="subhead">Get your friends to join the Guac Hunt.</p>
+
+              <div class="social-icons">
+                <a href="https://twitter.com/intent/tweet?text=FREE%20%3E%20extra.%20Play%20Guac%20Hunter%20and%20win%20free%20tortilla%20chips%20and%20guac&via=ChipotleUK&url=http%3A%2F%2Fchip.tl%2Fguac-uk&hashtags=GuacHunter" class="twitter" target="_blank">
+                </a>
+                <a href="#" class="facebook" target="_blank">
+                </a>
+              </div>
+
+              <a href="#intro" class="button next">PLAY AGAIN</a>
+              <p class="fine-print toggle">(But you can only claim free tortilla chips and guac once.)</p>
+            </div>
+          </div>
+
+          <!-- FORM ERROR OVERLAY -->
+          <div class="form-error-overlay overlay">
+            <div class="centered-text">
+              <h2>Something happened.</h2>
+              <p>This is the pits.</p>
+              <button id="error-try-again">TRY AGAIN</button>
+            </div>
+          </div>
+
+          <!--  'YOU GUAC' OVERLAY -->
+          <div class="you-guac-overlay overlay">
+            <div class="centered-text">
+              <!-- <img src="/assets/img/result-guac.png" alt="bowl of guacamole"> -->
+              <h2>YOU GUAC!</h2>
+              <div class="copy-cont">
+                <p>Prepare your tastebuds. We're sending guac your way.</p>
+                <p>Remember&hellip; only one offer per email address.</p>
+              </div>
+              <div class="border-line"></div>
+            </div>
+          </div>
+
+        </div> <!-- end animation cont -->
+
+        <footer id="footer">
+          <div class="links">
+            <a href="https://www.chipotle.co.uk/privacy-policy" target="_blank">Privacy Policy</a>
+            <a href="https://www.chipotle.co.uk/guachunter-rules" target="_blank">Official Rules</a>
+            <a href="https://www.chipotle.co.uk/guachunter-faq" target="_blank">FAQ</a>
+          </div>
+          <p class="fine-print">&copy; 2016 Chipotle Mexican Grill</p>
+        </footer>
+      </div>
+
+  </section>
+
+
+
+  <!-- //// ROTATE WARNING //// -->
+
+  <div class="rotate-warning">
+    <div class="message">
+      <div class="avocado">
+      <div class="check-icon"></div>
+      </div>
+      <h1>
+        Please hold your device in landscape mode to play.
+      </h1>
+    </div>
+  </div>
+
+  <script charset="utf-8">window.GUAC_UK = true;</script>
+  <script src="/assets/js/game-uk.js" charset="utf-8"></script>
+
+</body>
+</html>

@@ -1,0 +1,532 @@
+
+<!-- PERSONAL PROFILE SECTION -->
+
+<div class="profile-main container-fluid">
+	
+	<div class="highlights-module">
+		<div class="highlight-box">
+			<h5>PATIENTS IN TOTAL</h5>
+			<div class="number">135</div>
+		</div>
+		<div class="highlight-box">
+			<h5>CONNECTIONS</h5>
+			<div class="number">200</div>
+		</div>
+		<div class="highlight-box">
+			<h5>RANKING</h5>
+			<div class="number">
+				<img src="/assets/img/icon_star.png" alt="star icon">
+				4.1<span class="grey-out">/5</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="location-module" ng-hide="editPractice">
+		<div class="edit-button white" ng-click="editPractice=true"></div>
+		<img src="/assets/img/practice.png" alt="hospital" class="location-photo">
+
+		<div class="name-cont">
+			<h3>{{profile.practice.name}}</h3>
+		</div>
+		<div class="location-details-cont">
+			<div class="location-detail">
+				<div class="title">LOCATION</div>
+				<div class="details">
+					<div>{{profile.practice.street}}</div>
+					<div>{{profile.practice.street2}}</div>
+					<div>{{profile.practice.city}}, {{profile.practice.state}} {{profile.practice.zip}}</div>
+					<span class="more-link">1 OTHER LOCATION</span>
+				</div>
+			</div>
+			<div class="location-detail">
+				<div class="title">OFFICE HOURS</div>
+				<div class="details">
+					{{profile.practice.start}} - {{profile.practice.end}}<br>
+					{{profile.practice.days}}
+				</div>
+			</div>
+		</div>
+	</div> <!-- end location module -->
+
+	<div class="location-edit-module" ng-show="editPractice">
+		<div class="img-cont">
+			<img src="/assets/img/practice.png" alt="hospital" class="location-photo">
+      		<div class="module-edit-button-cont">
+        		<div class="edit-button white"></div>
+			</div>
+		</div>
+		<div class="input-cont edit container-fluid">
+
+			<h5>PRACTICE</h5>
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="input-group">
+						<label for="practice-name">NAME</label>
+						<input type="text" id="practice-name" name="practice-name" ng-model="profile.practice.name">
+					</div>
+				</div>
+			</div>
+
+			<h5>LOCATION</h5>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<label for="practice-street">STREET ADDRESS</label>
+						<input type="text" id="practice-street" name="practice-street" ng-model="profile.practice.street">
+					</div>
+				</div>
+				
+				<div class="col-sm-6">
+					<div class="input-group">
+						<label for="practice-street2">ADDRESS LINE 2</label>
+						<input type="text" id="practice-street2" name="practice-street2" ng-model="profile.practice.street2">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<label for="practice-city">CITY</label>
+						<input type="text" id="practice-city" name="practice-city" ng-model="profile.practice.city">
+					</div>
+				</div>
+				
+				<div class="col-sm-3">
+					<div class="input-group">
+						<label for="practice-state">STATE</label>
+						<div class="styled-select-cont">
+							<select name="practice-state" id="practice-state" ng-model="profile.practice.state">
+								<option value="CA">CA</option>
+								<option value="MN">MN</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-3">
+					<div class="input-group">
+						<label for="practice-zip">ZIP CODE</label>
+						<input type="text" id="practice-zip" name="practice-zip" ng-model="profile.practice.zip">
+					</div>
+				</div>
+			</div>
+
+			<h5>OFFICE HOURS</h5>
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<label for="office-days">DAYS</label>
+						<input type="text" id="office-days" name="office-days" ng-model="profile.practice.days">
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="input-group">
+						<label for="office-start">FROM</label>
+						<div class="styled-select-cont">
+							<select name="office-start" id="office-start" ng-model="profile.practice.start">
+								<option value="9 AM">9:00 AM</option>
+								<option value="9:30 AM">9:30 AM</option>
+								<option value="10 AM">10:00 AM</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="input-group">
+						<label for="office-end">UNTIL</label>
+						<div class="styled-select-cont">
+							<select name="office-end" id="office-end" ng-model="profile.practice.end">
+								<option value="5 PM">5:00 PM</option>
+								<option value="5:30 PM">5:30 PM</option>
+								<option value="6 PM">6:00 PM</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="add-more">
+				ADDITIONAL LOCATION
+			</div>
+
+			<div class="row button-row">
+				<button class="cancel-btn" type="button" ng-click="editPractice=false">CANCEL</button>
+				<button type="button" class="blue" ng-click="editPractice=false">SAVE</button>
+			</div> <!-- end row -->
+
+		</div>
+	</div> <!-- end location-edit-module -->
+
+	<div class="row">
+		<!-- left column -->
+		<div class="col-sm-9">
+
+
+			<div class="profile-module about-module" ng-class="{edit: editAbout}">
+				<div class="edit-button" ng-click="editAbout=true" ng-hide="isEditingProfile()"></div>
+				<h5>ABOUT</h5>
+				<p ng-hide="editAbout">{{profile.about}}</p>
+
+				<div class="edit-cont" ng-show="editAbout">
+					<textarea name="profile-about" id="profile-about" ng-model="profile.about"></textarea>
+					
+					<div class="row button-row">
+						<button class="cancel-btn" type="button" ng-click="editAbout=false">CANCEL</button>
+						<button type="button" class="blue" ng-click="editAbout=false">SAVE</button>
+					</div> <!-- end row -->
+				</div>
+			</div>
+
+
+			<div class="profile-module list-module education-module">
+				<div class="edit-button" ng-click="editEducatRows=true" ng-hide="isEditingProfile()"></div>
+				<div class="done-button" ng-click="editEducatRows=false" ng-show="editEducatRows">DONE</div>
+
+				<h5>EDUCATION</h5>
+				<div class="module-row" ng-repeat="school in profile.education track by $index" ng-class="{edit: editSchool}">
+					<div class="view-cont" ng-hide="editSchool">
+						<div class="row-entry-title">{{school.name}}</div>
+						<div class="row-edit-btns" ng-show="editEducatRows">
+							<div class="edit-btn" ng-click="editSchool=true">EDIT</div><!-- comment to remove space
+						 --><div class="del-btn" ng-click="deleteRow(profile.education, $index)">DELETE</div>
+						</div>
+						<div class="row-details"><strong>{{school.degree}}</strong></div>
+					</div>
+
+					<div class="edit-cont container-fluid" ng-show="editSchool">
+						<div class="row">
+							<div class="col-sm-9">
+								<div class="input-group">
+									<label for="school-name">SCHOOL NAME</label>
+									<input type="text" name="school-name" id="school-name" ng-model="school.name">
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="input-group">
+									<label for="school-degree">DEGREE</label>
+									<div class="styled-select-cont">
+										<select name="school-degree" id="school-degree" ng-model="profile.practice.end" ng-model="school.degree">
+											<option value="Bachelor\'s">Bachelor's</option>
+											<option value="Associate\'s">Associate's</option>
+											<option value="Master\'s">Master's</option>
+											<option value="PhD">PhD</option>
+											<option value="Residency">Residency</option>
+											<option value="MD">MD</option>
+											<option value="DO">DO</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row button-row">
+							<button class="cancel-btn" type="button" ng-click="editSchool=false">CANCEL</button>
+							<button type="button" class="blue" ng-click="editSchool=false">SAVE</button>
+						</div> <!-- end row -->
+					</div>
+				</div>
+
+				<div class="module-row add-new" ng-click="addingNewSchool=true" ng-hide="addingNewSchool">
+					ADD NEW
+				</div>
+				<div class="module-row edit container-fluid" ng-show="addingNewSchool">
+
+					<div class="row">
+						<div class="col-sm-9">
+							<div class="input-group">
+								<label for="school-name">SCHOOL NAME</label>
+								<input type="text" name="school-name" id="school-name" ng-model="newSchool.name">
+							</div>
+						</div>
+						<div class="col-sm-3">
+							<div class="input-group">
+								<label for="school-degree">DEGREE</label>
+								<div class="styled-select-cont">
+									<select name="school-degree" id="school-degree" ng-model="newSchool.degree" ng-model="school.degree">
+										<option value="Bachelor\'s">Bachelor's</option>
+										<option value="Associate\'s">Associate's</option>
+										<option value="Master\'s">Master's</option>
+										<option value="PhD">PhD</option>
+										<option value="Residency">Residency</option>
+										<option value="MD">MD</option>
+										<option value="DO">DO</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row button-row">
+						<button class="cancel-btn" type="button" ng-click="addingNewSchool=false">CANCEL</button>
+						<button type="button" class="blue" ng-click="addNewSchool()">ADD</button>
+					</div> <!-- end row -->
+
+				</div>
+			</div> <!-- END EDUCATION MODULE -->
+
+
+			<div class="profile-module list-module">
+				<div class="edit-button" ng-click="editCertRows=true" ng-hide="isEditingProfile()"></div>
+				<div class="done-button" ng-click="editCertRows=false" ng-show="editCertRows">DONE</div>
+
+				<h5>BOARD CERTIFICATIONS</h5>
+				<div class="module-row" ng-repeat="cert in profile.certification" ng-class="{edit: editCert}">
+					<div class="view-cont" ng-hide="editCert">
+						<div class="row-entry-title">{{cert}}</div><div class="row-edit-btns" ng-show="editCertRows">
+							<div class="edit-btn" ng-click="editCert=true">EDIT</div><!-- comment to remove space
+							 --><div class="del-btn" ng-click="deleteRow(profile.certification, $index)">DELETE</div>
+						</div>
+					</div>
+
+					<div class="edit-cont container-fluid" ng-show="editCert">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<label for="cert-name">CERTIFICATION</label>
+									<input type="text" name="cert-name" id="cert-name" ng-model="cert">
+								</div>
+							</div>
+						</div>
+
+						<div class="row button-row">
+							<button class="cancel-btn" type="button" ng-click="editCert=false">CANCEL</button>
+							<button type="button" class="blue" ng-click="editCert=false">SAVE</button>
+						</div> <!-- end row -->
+					</div> <!-- end edit-cont -->
+				</div>
+
+				<div class="module-row add-new" ng-click="addingNewCert=true" ng-hide="addingNewCert">
+					ADD NEW
+				</div>
+				<div class="module-row edit container-fluid" ng-show="addingNewCert">
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="input-group">
+								<label for="school-name">CERTIFICATION</label>
+								<input type="text" name="school-name" id="school-name" ng-model="newCert">
+							</div>
+						</div>
+					</div>
+
+					<div class="row button-row">
+						<button class="cancel-btn" type="button" ng-click="addingNewCert=false">CANCEL</button>
+						<button type="button" class="blue" ng-click="addNewItem(profile.certification, newCert, addingNewCert)">ADD</button>
+					</div> <!-- end row -->
+
+				</div>
+			</div> <!-- END MODULE -->
+
+
+			<div class="profile-module list-module">
+				<div class="edit-button" ng-click="editHospRows=true" ng-hide="isEditingProfile()"></div>
+				<div class="done-button" ng-click="editHospRows=false" ng-show="editHospRows">DONE</div>
+
+				<h5>HOSPITAL AFFILIATIONS</h5>
+
+				<div class="module-row" ng-repeat="hospital in profile.hospitals" ng-class="{edit: editHospital}">
+					<div class="view-cont" ng-hide="editHospital">
+						<div class="row-entry-title">{{hospital}}</div>
+						<div class="row-edit-btns" ng-show="editHospRows">
+							<div class="edit-btn" ng-click="editHospital=true">EDIT</div><!-- comment to remove space
+							 --><div class="del-btn" ng-click="deleteRow(profile.hospitals, $index)">DELETE</div>
+						</div>
+					</div>
+					
+					<div class="edit-cont" ng-show="editHospital">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<label for="place-name">HOSPITAL</label>
+									<input type="text" name="place-name" id="place-name" ng-model="hospital">
+								</div>
+							</div>
+						</div>
+
+						<div class="row button-row">
+							<button class="cancel-btn" type="button" ng-click="editHospital=false">CANCEL</button>
+							<button type="button" class="blue" ng-click="editHospital=false">SAVE</button>
+						</div> <!-- end row -->
+					</div> <!-- end edit-cont -->
+				</div>
+
+				<div class="module-row add-new" ng-click="addingNewHosp=true" ng-hide="addingNewHosp">
+					ADD NEW
+				</div>
+				<div class="module-row edit container-fluid" ng-show="addingNewHosp">
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="input-group">
+								<label for="hospital-name">HOSPITAL</label>
+								<input type="text" name="hospital-name" id="hospital-name" ng-model="newHosp">
+							</div>
+						</div>
+					</div>
+
+					<div class="row button-row">
+						<button class="cancel-btn" type="button" ng-click="addingNewHosp=false">CANCEL</button>
+						<button type="button" class="blue" ng-click="addNewItem(profile.hospitals, newHosp, addingNewHosp)">ADD</button>
+					</div> <!-- end row -->
+
+				</div>
+			</div>
+
+
+			<div class="profile-module list-module">
+				<div class="edit-button" ng-click="editMemberRows=true" ng-hide="isEditingProfile()"></div>
+				<div class="done-button" ng-click="editMemberRows=false" ng-show="editMemberRows">DONE</div>
+
+				<h5>MEMBERSHIPS</h5>
+
+				<div class="module-row" ng-repeat="member in profile.memberships" ng-class="{edit: editMember}">
+					<div class="view-cont" ng-hide="editMember">
+						<div class="row-entry-title">{{member}}</div><div class="row-edit-btns" ng-show="editMemberRows">
+							<div class="edit-btn" ng-click="editMember=true">EDIT</div><!-- comment to remove space
+							 --><div class="del-btn" ng-click="deleteRow(profile.memberships, $index)">DELETE</div>
+						</div>
+					</div>
+					
+					<div class="edit-cont" ng-show="editMember">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<label for="member-name">HOSPITAL</label>
+									<input type="text" name="member-name" id="member-name" ng-model="member">
+								</div>
+							</div>
+						</div>
+
+						<div class="row button-row">
+							<button class="cancel-btn" type="button" ng-click="editMember=false">CANCEL</button>
+							<button type="button" class="blue" ng-click="editMember=false">SAVE</button>
+						</div> <!-- end row -->
+					</div> <!-- end edit-cont -->
+				</div>
+
+				<div class="module-row add-new" ng-click="addingNewMember=true" ng-hide="addingNewMember">
+					ADD NEW
+				</div>
+				<div class="module-row edit container-fluid" ng-show="addingNewMember">
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="input-group">
+								<label for="member-name">MEMBERSHIP</label>
+								<input type="text" name="member-name" id="member-name" ng-model="newMember">
+							</div>
+						</div>
+					</div>
+
+					<div class="row button-row">
+						<button class="cancel-btn" type="button" ng-click="addingNewMember=false">CANCEL</button>
+						<button type="button" class="blue" ng-click="addNewItem(profile.memberships, newMember, addingNewMember)">ADD</button>
+					</div> <!-- end row -->
+
+				</div>
+			</div>
+
+
+			<div class="profile-module list-module">
+				<div class="edit-button" ng-hide="isEditingProfile()"></div>
+
+				<h5>IN-NETWORK INSURANCES</h5>
+				<div class="module-scroll-cont">
+					<div class="module-row">
+						<div class="row-entry-title">AARP</div>
+						<span class="blue-link read-more" ng-click="showList=true" ng-hide="showList">READ MORE</span>
+						<span class="blue-link read-more" ng-click="showList=false" ng-show="showList">COLLAPSE</span>
+						<div class="insurance-list" ng-show="showList">
+							<ul>
+								<li>AARP Medicare Advantage POS</li>
+								<li>AARP Medicare Advantage PPO</li>
+								<li>AARP Medicare Supplement</li>
+								<li>AARP MedicareComplete Choice (PPO)</li>
+								<li>AARP MedicareComplete SecureHorizons</li>
+								<li>AARP Personal Health Insurance Plan</li>
+								<li>Premier</li>
+							</ul>
+						</div>
+					</div>
+					<div class="module-row">
+						<div class="row-entry-title">American Republic Insurance Company</div>
+					</div>
+					<div class="module-row">
+						<div class="row-entry-title">Anthem Blue Cross Blue Shield</div>
+					</div>
+					<div class="module-row">
+						<div class="row-entry-title">Anthem Blue Cross of California</div>
+					</div>
+					<div class="module-row">
+						<div class="row-entry-title">Arkansas Blue Cross Blue Shield</div>
+					</div>
+					<div class="module-row">
+						<div class="row-entry-title">People's Insurance</div>
+					</div>
+				</div>
+				<div class="module-row add-new">
+					ADD NEW
+				</div>
+			</div>
+
+		</div>
+
+		<!-- right column -->
+		<div class="col-sm-3">
+			<div class="profile-module list-module">
+				<div class="edit-button" ng-click="editSpecialRows=true" ng-hide="isEditingProfile()"></div>
+				<div class="done-button" ng-click="editSpecialRows=false" ng-show="editSpecialRows">DONE</div>
+
+				<h5>SPECIALTY</h5>
+
+				<div class="module-row" ng-repeat="special in profile.specialties" ng-class="{edit: editSpecial}">
+					<div class="view-cont" ng-hide="editSpecial">
+						<div class="row-entry-title">{{special}}</div><div class="row-edit-btns" ng-show="editSpecialRows">
+							<div class="edit-btn" ng-click="editSpecial=true">EDIT</div><!-- comment to remove space
+							 --><div class="del-btn" ng-click="deleteRow(profile.specialties, $index)">DELETE</div>
+						</div>
+					</div>
+					
+					<div class="edit-cont" ng-show="editSpecial">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="input-group">
+									<label for="special-name">SPECIALTY</label>
+									<input type="text" name="special-name" id="special-name" ng-model="special">
+								</div>
+							</div>
+						</div>
+
+						<div class="row button-row">
+							<button class="cancel-btn" type="button" ng-click="editSpecial=false">CANCEL</button>
+							<button type="button" class="blue" ng-click="editSpecial=false">SAVE</button>
+						</div> <!-- end row -->
+					</div> <!-- end edit-cont -->
+				</div>
+
+				<div class="module-row add-new" ng-click="addingNewSpecial=true" ng-hide="addingNewSpecial">
+					ADD NEW
+				</div>
+				<div class="module-row edit container-fluid" ng-show="addingNewSpecial">
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="input-group">
+								<label for="special-name">SPECIALTY</label>
+								<input type="text" name="special-name" id="special-name" ng-model="newSpecial">
+							</div>
+						</div>
+					</div>
+
+					<div class="row button-row">
+						<button class="cancel-btn" type="button" ng-click="addingNewSpecial=false">CANCEL</button>
+						<button type="button" class="blue" ng-click="addNewItem(profile.specialties, newSpecial, addingNewSpecial)">ADD</button>
+					</div> <!-- end row -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,906 @@
+@-o-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.food-page .food {
+  position: relative;
+  display: block;
+  left: 0;
+  -moz-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+  -ms-transition: left 0.5s ease-in-out;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+  margin: 0 0 -20px 0; }
+  .food-page .food .main-img {
+    margin: 0; }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .main-img {
+        display: none; } }
+  .food-page .food .main-img-bg {
+    display: none;
+    background: transparent url("../img/food/splash.jpg") no-repeat 0 0; }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .main-img-bg {
+        display: block;
+        margin: 0;
+        height: 230px;
+        width: inherit;
+        background-size: 767px;
+        background-position: 0 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .food-page .food .main-img-bg {
+        background-size: 645px;
+        background-position: -53px 0; } }
+  .food-page .food .intro {
+    position: absolute;
+    width: 600px;
+    text-align: center;
+    top: 85px;
+    right: 40px;
+    z-index: 3; }
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+      .food-page .food .intro {
+        width: 460px;
+        top: 45px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .food-page .food .intro {
+        position: static;
+        width: 90%;
+        margin: 0 auto;
+        padding: 56px 0 25px 0;
+        top: 0;
+        color: #999;
+        width: 540px;
+        display: block; } }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .intro {
+        position: static;
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px 0;
+        top: 0; } }
+    .food-page .food .intro .h2 {
+      text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); }
+    .food-page .food .intro .t2 {
+      margin: 10px 0 0 0; }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .intro .t2 {
+          color: #9f9f9f; } }
+  .food-page .food .tab-content {
+    position: relative; }
+    .food-page .food .tab-content.sticky {
+      top: 70px;
+      padding: 0 0 70px 0; }
+    .food-page .food .tab-content .h3 {
+      padding: 34px 0 20px 0;
+      margin: 0 auto;
+      border-top: 1px solid #6e6e6d;
+      width: 980px;
+      position: relative;
+      /* bordered triangle */ }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .h3 {
+          width: 980px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .h3 {
+          width: 700px; } }
+      .food-page .food .tab-content .h3:after,
+      .food-page .food .tab-content .h3:before {
+        top: 0;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none; }
+      .food-page .food .tab-content .h3:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-width: 5px;
+        margin-left: -5px;
+        background: transparent url("../img/dark-bg-400.jpg") repeat;
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: -6px; }
+        @media only screen and (max-width: 1023px) {
+          .food-page .food .tab-content .h3:after {
+            top: -7px; } }
+      .food-page .food .tab-content .h3:before {
+        border-color: rgba(110, 110, 109, 0);
+        border-top-color: #6e6e6d;
+        border-width: 8px;
+        margin-left: -8px; }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .h3 {
+          border-top: 2px solid #6e6e6d; } }
+      .food-page .food .tab-content .h3.first {
+        border-top: none medium; }
+        .food-page .food .tab-content .h3.first.test {
+          font-family: 'Zemestro Std Medium'; }
+        @media only screen and (max-width: 1439px) {
+          .food-page .food .tab-content .h3.first {
+            margin: 13px auto 0 auto;
+            border-top: 1px solid #6e6e6d; } }
+  @media only screen and (max-width: 1439px) and (max-width: 1023px) {
+    .food-page .food .tab-content .h3.first {
+      border-top: 2px solid #6e6e6d; } }
+        .food-page .food .tab-content .h3.first:after,
+        .food-page .food .tab-content .h3.first:before {
+          display: none; }
+          @media only screen and (max-width: 1439px) {
+            .food-page .food .tab-content .h3.first:after,
+            .food-page .food .tab-content .h3.first:before {
+              display: block; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .h3 {
+          width: 700px; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .h3 {
+          width: 548px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .food-page .food .tab-content .h3 {
+          width: 300px; } }
+    .food-page .food .tab-content .food-note-pos {
+      position: absolute;
+      right: 25px;
+      top: 25px; }
+    .food-page .food .tab-content .food-note {
+      position: absolute;
+      right: 25px;
+      top: 25px;
+      color: #9f9f9f;
+      width: 115px; }
+      .food-page .food .tab-content .food-note .wrapper {
+        margin: 25px 0 0 0; }
+        .food-page .food .tab-content .food-note .wrapper .icon {
+          margin: 0;
+          text-transform: uppercase; }
+          .food-page .food .tab-content .food-note .wrapper .icon .spice-icon {
+            margin: -7px 2px 0 0; }
+          .food-page .food .tab-content .food-note .wrapper .icon .vegan-icon {
+            margin: -1px 9px 0 0; }
+      @media only screen and (max-width: 1439px) {
+        .food-page .food .tab-content .food-note {
+          position: static; }
+          .food-page .food .tab-content .food-note .copy,
+          .food-page .food .tab-content .food-note .wrapper {
+            display: inline;
+            float: left;
+            margin: 0; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .food-note {
+          width: 980px;
+          margin: 25px auto -13px auto; }
+          .food-page .food .tab-content .food-note .copy {
+            width: 490px; }
+          .food-page .food .tab-content .food-note .wrapper {
+            width: 260px;
+            margin: 0;
+            position: relative;
+            left: 290px; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) and (min-width: 1024px) and (max-width: 1439px) {
+      .food-page .food .tab-content .food-note .wrapper {
+        width: 210px; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+            .food-page .food .tab-content .food-note .wrapper .icon {
+              width: 130px;
+              float: left;
+              display: block;
+              margin: 0; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .food-note .wrapper .icon:nth-child(2) {
+          width: 75px; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+              .food-page .food .tab-content .food-note .wrapper .icon .spice-icon {
+                margin: -4px 2px 0 0; }
+              .food-page .food .tab-content .food-note .wrapper .icon .vegan-icon {
+                margin: -1px 4px 0 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .food-note {
+          width: 700px;
+          margin: 25px auto -12px auto; }
+          .food-page .food .tab-content .food-note .copy {
+            width: 350px; }
+          .food-page .food .tab-content .food-note .wrapper {
+            width: 260px;
+            position: relative;
+            left: 184px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) and (max-width: 1023px) {
+      .food-page .food .tab-content .food-note .wrapper {
+        width: 200px;
+        left: 176px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            .food-page .food .tab-content .food-note .wrapper .icon {
+              width: 105px;
+              float: left;
+              display: inline;
+              margin: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .food-note .wrapper .icon {
+          width: 100px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+              .food-page .food .tab-content .food-note .wrapper .icon .spice-icon {
+                margin: -6px 2px 0 0; }
+              .food-page .food .tab-content .food-note .wrapper .icon .vegan-icon {
+                margin: -1px 4px 0 0; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .food-note {
+          width: 568px;
+          margin: 25px auto 25px auto; }
+          .food-page .food .tab-content .food-note .copy {
+            width: 243px;
+            height: 35px;
+            padding: 10px 20px 9px 20px;
+            line-height: 1.3;
+            border-right: 1px solid #1d1e1d; }
+          .food-page .food .tab-content .food-note .wrapper {
+            width: 263px;
+            height: 28px;
+            padding: 6px 0 20px 20px;
+            border-left: 1px solid #4e4f4e; }
+            .food-page .food .tab-content .food-note .wrapper .icon {
+              width: 100%; }
+              .food-page .food .tab-content .food-note .wrapper .icon .spice-icon {
+                margin: -4px 4px 0 -2px; }
+              .food-page .food .tab-content .food-note .wrapper .icon .vegan-icon {
+                margin: 0 9px 0 0; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .food-page .food .tab-content .food-note {
+          width: 320px; }
+          .food-page .food .tab-content .food-note .copy {
+            width: 119px;
+            padding-top: 0;
+            height: 60px; }
+          .food-page .food .tab-content .food-note .wrapper {
+            width: 138px;
+            height: 44px; }
+            .food-page .food .tab-content .food-note .wrapper .icon {
+              margin: 9px 0 15px 0; } }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .tab-content .options-wrapper {
+        width: 568px;
+        margin: -20px auto 0 auto;
+        overflow: hidden;
+        visibility: hidden;
+        position: relative; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .food-page .food .tab-content .options-wrapper {
+        width: 320px; } }
+    .food-page .food .tab-content .options {
+      width: 980px;
+      margin: 0 auto;
+      padding: 0 0 80px 0; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .options {
+          width: 940px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .options {
+          width: 700px; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .options {
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+          padding: 0 0 35px 0; } }
+      .food-page .food .tab-content .options .option {
+        display: block;
+        float: left;
+        width: 215px;
+        margin: 0 40px 0 0; }
+        .food-page .food .tab-content .options .option:last-child {
+          margin: 0; }
+        .food-page .food .tab-content .options .option img {
+          max-width: 266px;
+          margin: 0 0 0 -26px;
+          position: relative;
+          z-index: 1; }
+        .food-page .food .tab-content .options .option article {
+          position: relative; }
+        .food-page .food .tab-content .options .option .h4 {
+          margin: 0 0 18px 0;
+          text-align: center;
+          position: relative; }
+          @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            .food-page .food .tab-content .options .option .h4 {
+              font-size: 19px;
+              margin: 0 0 12px 0; }
+              .food-page .food .tab-content .options .option .h4 .text {
+                position: relative;
+                top: -4px; } }
+          @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+            .food-page .food .tab-content .options .option .h4 {
+              margin: 0 0 12px 0; } }
+          @media only screen and (max-width: 1023px) {
+            .food-page .food .tab-content .options .option .h4 {
+              margin: 18px auto;
+              width: 568px; } }
+          @media only screen and (min-width: 464px) and (max-width: 767px) {
+            .food-page .food .tab-content .options .option .h4 {
+              width: 220px; } }
+          @media only screen and (min-width: 320px) and (max-width: 463px) {
+            .food-page .food .tab-content .options .option .h4 {
+              width: 300px; } }
+          .food-page .food .tab-content .options .option .h4 .spice-icon,
+          .food-page .food .tab-content .options .option .h4 .vegan-icon {
+            margin: 0;
+            float: none;
+            display: inline-block; }
+          .food-page .food .tab-content .options .option .h4 .spice-icon {
+            position: relative;
+            top: 1px;
+            margin: 0; }
+            @media only screen and (min-width: 768px) and (max-width: 1023px) {
+              .food-page .food .tab-content .options .option .h4 .spice-icon {
+                top: -3px; } }
+          .food-page .food .tab-content .options .option .h4 .vegan-icon {
+            position: relative;
+            top: 0; }
+            @media only screen and (min-width: 768px) and (max-width: 1023px) {
+              .food-page .food .tab-content .options .option .h4 .vegan-icon {
+                top: -4px; }
+                .food-page .food .tab-content .options .option .h4 .vegan-icon.alone {
+                  top: 0; } }
+        .food-page .food .tab-content .options .option .t2 {
+          color: #9f9f9f; }
+          .food-page .food .tab-content .options .option .t2 .reg {
+            font-family: Courier; }
+          @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            .food-page .food .tab-content .options .option .t2 {
+              font-size: 16px; } }
+          @media only screen and (max-width: 1023px) {
+            .food-page .food .tab-content .options .option .t2 {
+              margin: 0 auto;
+              width: 320px; } }
+          @media only screen and (min-width: 464px) and (max-width: 767px) {
+            .food-page .food .tab-content .options .option .t2 {
+              width: 220px; } }
+          @media only screen and (min-width: 320px) and (max-width: 463px) {
+            .food-page .food .tab-content .options .option .t2 {
+              margin: 0 auto;
+              width: 280px; } }
+        .food-page .food .tab-content .options .option .nutrition {
+          background: transparent;
+          border: none medium;
+          line-height: 2.5;
+          margin: 10px 0 0 0;
+          cursor: pointer;
+          outline: none;
+          letter-spacing: 1.2px; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .food-page .food .tab-content .options .option {
+            width: 220px;
+            margin: 0 20px 0 0; }
+            .food-page .food .tab-content .options .option img {
+              max-width: 206px;
+              margin: 0 0 0 7px; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .food-page .food .tab-content .options .option {
+            width: 160px;
+            margin: 0 20px 0 0; }
+            .food-page .food .tab-content .options .option img {
+              max-width: 159px;
+              margin: 0 20px 0 0; } }
+        @media only screen and (max-width: 1023px) {
+          .food-page .food .tab-content .options .option {
+            float: left;
+            display: block;
+            margin: 0;
+            width: 640px;
+            height: 100%;
+            position: relative; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .food-page .food .tab-content .options .option img {
+            max-width: 264px;
+            margin: 0; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .food-page .food .tab-content .options .option {
+            width: 320px;
+            margin: 0; }
+            .food-page .food .tab-content .options .option img {
+              max-width: 260px;
+              margin: 0; } }
+        .food-page .food .tab-content .options .option .plus-popup {
+          color: #7e7e7e; }
+          .food-page .food .tab-content .options .option .plus-popup:hover {
+            color: #3f3f3f; }
+        .food-page .food .tab-content .options .option .sesonal {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          width: 109px;
+          height: 109px;
+          background: transparent url("../img/sesonal-item.png") no-repeat;
+          background-size: 109px; }
+          @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            .food-page .food .tab-content .options .option .sesonal {
+              top: -20px;
+              right: -10px; } }
+          @media only screen and (min-width: 464px) and (max-width: 767px) {
+            .food-page .food .tab-content .options .option .sesonal {
+              top: 0;
+              right: 110px; } }
+          @media only screen and (min-width: 320px) and (max-width: 463px) {
+            .food-page .food .tab-content .options .option .sesonal {
+              top: 0;
+              right: 0; } }
+        .food-page .food .tab-content .options .option .note {
+          display: none; }
+          @media only screen and (max-width: 1023px) {
+            .food-page .food .tab-content .options .option .note {
+              display: block;
+              margin: 35px auto 0 auto; } }
+    .food-page .food .tab-content .indicators {
+      display: none;
+      position: relative;
+      top: 240px;
+      z-index: 3; }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .indicators {
+          display: block; } }
+      .food-page .food .tab-content .indicators .indicator {
+        width: 7px;
+        height: 7px;
+        background-color: #fff;
+        display: inline-block;
+        margin: 0 5px 0 0;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+        border-radius: 7px;
+        -moz-background-clip: padding;
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        opacity: .3; }
+        .food-page .food .tab-content .indicators .indicator.active {
+          opacity: 1; }
+        .food-page .food .tab-content .indicators .indicator:last-child {
+          margin: 0; }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .tab-content .note {
+        display: none; } }
+    .food-page .food .tab-content .arrow-left-wrapper,
+    .food-page .food .tab-content .arrow-right-wrapper {
+      display: none;
+      outline: none; }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .arrow-left-wrapper,
+        .food-page .food .tab-content .arrow-right-wrapper {
+          display: block;
+          height: 100%;
+          width: 30px;
+          position: absolute;
+          top: 0;
+          cursor: pointer; } }
+      .food-page .food .tab-content .arrow-left-wrapper .arrow-left-icon,
+      .food-page .food .tab-content .arrow-left-wrapper .arrow-right-icon,
+      .food-page .food .tab-content .arrow-right-wrapper .arrow-left-icon,
+      .food-page .food .tab-content .arrow-right-wrapper .arrow-right-icon {
+        position: absolute;
+        top: 50%;
+        margin: -31px 0 0 0;
+        background: transparent url("../img/arrow-sprite.png") no-repeat;
+        background-size: 50%;
+        width: 19px;
+        height: 14px; }
+      .food-page .food .tab-content .arrow-left-wrapper .arrow-left-icon,
+      .food-page .food .tab-content .arrow-right-wrapper .arrow-left-icon {
+        background-position: 0 -15px; }
+      .food-page .food .tab-content .arrow-left-wrapper .arrow-right-icon,
+      .food-page .food .tab-content .arrow-right-wrapper .arrow-right-icon {
+        background-position: 0 0; }
+      .food-page .food .tab-content .arrow-left-wrapper:active .arrow-left-icon,
+      .food-page .food .tab-content .arrow-left-wrapper:active .arrow-right-icon,
+      .food-page .food .tab-content .arrow-right-wrapper:active .arrow-left-icon,
+      .food-page .food .tab-content .arrow-right-wrapper:active .arrow-right-icon {
+        opacity: 1; }
+    .food-page .food .tab-content .arrow-left-wrapper {
+      left: 2px; }
+    .food-page .food .tab-content .arrow-right-wrapper {
+      right: 12px; }
+    .food-page .food .tab-content .grey-bar {
+      position: absolute;
+      bottom: 85px;
+      left: 0;
+      width: 100%;
+      height: 56px;
+      background: #5a5a57;
+      display: none; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .grey-bar {
+          bottom: 70px; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .grey-bar {
+          display: none; } }
+    .food-page .food .tab-content .base-wrapper,
+    .food-page .food .tab-content .meat-wrapper,
+    .food-page .food .tab-content .sauce-wrapper,
+    .food-page .food .tab-content .garnishes-wrapper,
+    .food-page .food .tab-content .topping-wrapper,
+    .food-page .food .tab-content .drinks-wrapper,
+    .food-page .food .tab-content .dessert-wrapper,
+    .food-page .food .tab-content .nutrition-calc-wrapper,
+    .food-page .food .tab-content .vegetable-wrapper {
+      position: relative;
+      text-align: center;
+      padding: 20px 0 0 0; }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .base-wrapper,
+        .food-page .food .tab-content .meat-wrapper,
+        .food-page .food .tab-content .sauce-wrapper,
+        .food-page .food .tab-content .garnishes-wrapper,
+        .food-page .food .tab-content .topping-wrapper,
+        .food-page .food .tab-content .drinks-wrapper,
+        .food-page .food .tab-content .dessert-wrapper,
+        .food-page .food .tab-content .nutrition-calc-wrapper,
+        .food-page .food .tab-content .vegetable-wrapper {
+          padding: 0; } }
+    .food-page .food .tab-content .nutrition-calc-wrapper {
+      width: 90%;
+      padding: 0;
+      margin: 0 auto 15px auto;
+      position: relative;
+      z-index: 1; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .nutrition-calc-wrapper {
+          width: 980px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .nutrition-calc-wrapper {
+          width: 700px;
+          margin: 0 auto 0 auto; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .nutrition-calc-wrapper {
+          width: 100%;
+          margin: 0 auto 0 auto; } }
+      .food-page .food .tab-content .nutrition-calc-wrapper .copy {
+        width: 100%;
+        color: #9f9f9f;
+        margin: 0 auto 25px auto; }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .food-page .food .tab-content .nutrition-calc-wrapper .copy {
+            width: 540px; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .food-page .food .tab-content .nutrition-calc-wrapper .copy {
+            width: 528px; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .food-page .food .tab-content .nutrition-calc-wrapper .copy {
+            width: 280px; } }
+    .food-page .food .tab-content .base-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .base-wrapper .arrow-right-icon {
+      margin: -75px 0 0 0; }
+    .food-page .food .tab-content .meat-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .meat-wrapper .arrow-right-icon,
+    .food-page .food .tab-content .vegetable-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .vegetable-wrapper .arrow-right-icon {
+      margin: -75px 0 0 0; }
+    .food-page .food .tab-content .meat-wrapper .options-wrapper .options,
+    .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options {
+      width: 840px;
+      margin: 0 auto;
+      padding: 0 0 20px 0; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .meat-wrapper .options-wrapper .options,
+        .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options {
+          width: 620px;
+          padding: 0 0 0 0; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .meat-wrapper .options-wrapper .options,
+        .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options {
+          padding: 0 0 35px 0; } }
+      .food-page .food .tab-content .meat-wrapper .options-wrapper .options .option,
+      .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options .option {
+        margin: 0 200px 60px 0;
+        width: 320px; }
+        .food-page .food .tab-content .meat-wrapper .options-wrapper .options .option:nth-child(even),
+        .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options .option:nth-child(even) {
+          margin: 0; }
+        .food-page .food .tab-content .meat-wrapper .options-wrapper .options .option img,
+        .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options .option img {
+          max-width: 340px;
+          margin: 0 0 0 -10px; }
+          @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+            .food-page .food .tab-content .meat-wrapper .options-wrapper .options .option img,
+            .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options .option img {
+              width: 260px;
+              margin: 0 auto; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .food-page .food .tab-content .meat-wrapper .options-wrapper .options .option,
+          .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options .option {
+            width: 260px;
+            margin: 0 100px 50px 0; }
+            .food-page .food .tab-content .meat-wrapper .options-wrapper .options .option img,
+            .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options .option img {
+              max-width: 192px;
+              margin: 0 auto; } }
+        @media only screen and (max-width: 1023px) {
+          .food-page .food .tab-content .meat-wrapper .options-wrapper .options .option,
+          .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options .option {
+            margin: 0; }
+            .food-page .food .tab-content .meat-wrapper .options-wrapper .options .option img,
+            .food-page .food .tab-content .vegetable-wrapper .options-wrapper .options .option img {
+              width: 280px;
+              margin: 0 auto; } }
+    .food-page .food .tab-content .sauce-wrapper .indicators {
+      top: 180px; }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .tab-content .sauce-wrapper .options-wrapper .options {
+        padding: 0; } }
+    .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option img {
+      width: 228px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option img {
+          width: 184px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option img {
+          width: 134px; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option img {
+          width: 216px; } }
+    .food-page .food .tab-content .garnishes-wrapper .indicators {
+      top: 180px; }
+    .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option img {
+      width: 216px;
+      margin: 0 auto; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option img {
+          width: 162px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option img {
+          width: 128px; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option img {
+          width: 196px; } }
+    .food-page .food .tab-content .sauce-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .sauce-wrapper .arrow-right-icon {
+      margin: -75px 0 0 0; }
+    .food-page .food .tab-content .sauce-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .sauce-wrapper .arrow-right-icon,
+    .food-page .food .tab-content .garnishes-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .garnishes-wrapper .arrow-right-icon,
+    .food-page .food .tab-content .drinks-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .drinks-wrapper .arrow-right-icon {
+      margin: -85px 0 0 0; }
+    .food-page .food .tab-content .sauce-wrapper .options-wrapper .options,
+    .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options,
+    .food-page .food .tab-content .drinks-wrapper .options-wrapper .options {
+      width: 980px; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options,
+        .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options,
+        .food-page .food .tab-content .drinks-wrapper .options-wrapper .options {
+          width: 700px; } }
+      .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option,
+      .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option,
+      .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option {
+        width: 300px;
+        margin: 0 40px 0 0; }
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option:last-child,
+        .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option:last-child,
+        .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option:last-child {
+          margin: 0; }
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option img,
+        .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option img,
+        .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option img {
+          display: block;
+          margin: 0 auto 20px auto; }
+          @media only screen and (max-width: 1023px) {
+            .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option img,
+            .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option img,
+            .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option img {
+              margin: 0 auto 30px auto; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option,
+          .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option,
+          .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option {
+            width: 220px;
+            margin: 0 20px 0 0; } }
+        @media only screen and (max-width: 1023px) {
+          .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option,
+          .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option,
+          .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option {
+            margin: 0; } }
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option .t2,
+        .food-page .food .tab-content .garnishes-wrapper .options-wrapper .options .option .t2,
+        .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option .t2 {
+          font-size: 14px; }
+    .food-page .food .tab-content .sauce-wrapper .options-wrapper .options {
+      width: 840px; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options {
+          width: 620px; } }
+      .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option {
+        margin: 0 200px 60px 0;
+        width: 320px; }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option {
+            margin: 0 100px 50px 0;
+            width: 260px; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option {
+            margin: 0; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option {
+            margin: 0; } }
+        .food-page .food .tab-content .sauce-wrapper .options-wrapper .options .option:nth-child(even) {
+          margin: 0; }
+    .food-page .food .tab-content .topping-wrapper .indicators {
+      top: 145px; }
+    .food-page .food .tab-content .topping-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .topping-wrapper .arrow-right-icon {
+      margin: -67px 0 0 0; }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .food-page .food .tab-content .topping-wrapper .options {
+        width: 700px; } }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .tab-content .topping-wrapper .options {
+        width: 320px;
+        height: 320px;
+        padding: 0; } }
+    .food-page .food .tab-content .topping-wrapper .options .option img {
+      margin: 0 0 20px 0;
+      width: 176px; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .topping-wrapper .options .option img {
+          width: 140px;
+          margin: 0 auto; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .topping-wrapper .options .option img {
+          width: 110px;
+          margin: 0  auto; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .topping-wrapper .options .option img {
+          width: 196px;
+          margin: 0 auto; } }
+    .food-page .food .tab-content .topping-wrapper .options .option .nutrition {
+      margin: 0; }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .food-page .food .tab-content .topping-wrapper .options .option {
+        width: 160px;
+        margin: 0 20px 0 0; }
+        .food-page .food .tab-content .topping-wrapper .options .option:last-child {
+          margin: 0; } }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .tab-content .topping-wrapper .options .option {
+        margin: 0; } }
+    .food-page .food .tab-content .dessert-wrapper .h3 {
+      padding: 34px 0 40px 0; }
+    .food-page .food .tab-content .dessert-wrapper .options-wrapper {
+      visibility: visible !important; }
+      .food-page .food .tab-content .dessert-wrapper .options-wrapper .options {
+        width: 220px; }
+        .food-page .food .tab-content .dessert-wrapper .options-wrapper .options .option {
+          width: 220px; }
+          .food-page .food .tab-content .dessert-wrapper .options-wrapper .options .option img {
+            width: 220px;
+            margin: 0 auto;
+            padding: 0; }
+            @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+              .food-page .food .tab-content .dessert-wrapper .options-wrapper .options .option img {
+                width: 340px; } }
+            @media only screen and (min-width: 768px) and (max-width: 1023px) {
+              .food-page .food .tab-content .dessert-wrapper .options-wrapper .options .option img {
+                width: 264px; } }
+            @media only screen and (max-width: 1023px) {
+              .food-page .food .tab-content .dessert-wrapper .options-wrapper .options .option img {
+                width: 200px; } }
+    .food-page .food .tab-content .drinks-wrapper .indicators {
+      top: 225px; }
+    .food-page .food .tab-content .drinks-wrapper .h3 {
+      padding: 34px 0 40px 0; }
+      .food-page .food .tab-content .drinks-wrapper .h3.first {
+        border: none medium;
+        margin: 0 auto; }
+        .food-page .food .tab-content .drinks-wrapper .h3.first:after,
+        .food-page .food .tab-content .drinks-wrapper .h3.first:before {
+          display: none; }
+    .food-page .food .tab-content .drinks-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .drinks-wrapper .arrow-right-icon {
+      margin: -28px 0 0 0; }
+    @media only screen and (max-width: 1439px) {
+      .food-page .food .tab-content .drinks-wrapper .options-wrapper .options {
+        padding: 0 0 50px 0; } }
+    @media only screen and (max-width: 1023px) {
+      .food-page .food .tab-content .drinks-wrapper .options-wrapper .options {
+        padding: 0 0 35px 0; } }
+    .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option img {
+      width: 211px;
+      margin: 0 auto 24px auto; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option img {
+          width: 162px;
+          margin: 0 auto 24px auto; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option img {
+          width: 123px;
+          margin: 0 auto 24px auto; } }
+      @media only screen and (max-width: 1023px) {
+        .food-page .food .tab-content .drinks-wrapper .options-wrapper .options .option img {
+          width: 174px;
+          margin: 0 auto 40px auto; } }
+    .food-page .food .tab-content .garnishes-wrapper .arrow-left-icon,
+    .food-page .food .tab-content .garnishes-wrapper .arrow-right-icon {
+      margin: -95px 0 0 0; }
+
+.page-tabs.food-tabs {
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); }
+  .page-tabs.food-tabs .tab {
+    width: 33% !important; }
+    .page-tabs.food-tabs .tab:first-child {
+      width: 34% !important; }
+    .page-tabs.food-tabs .tab .tab-links {
+      border-right: 1px solid #5e5d5d; }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .page-tabs.food-tabs .tab .tab-links {
+          line-height: 22px !important;
+          padding: 16px 0 7px 0; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .page-tabs.food-tabs .tab:nth-child(2) .tab-links {
+        height: 66px;
+        padding: 27px 0 0; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+      .page-tabs.food-tabs .tab:nth-child(3) .tab-links {
+        border-right: none; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .page-tabs.food-tabs .tab:nth-child(3) .tab-links {
+        border-right: none; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .page-tabs.food-tabs .tab:nth-child(3) .tab-links {
+        border-right: none;
+        height: 66px;
+        padding: 27px 0 0; } }

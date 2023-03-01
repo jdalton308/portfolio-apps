@@ -1,0 +1,121 @@
+#share {
+  background-color: $grey;
+
+  .wrapper {
+    padding-bottom: 0;
+    min-height: calc(100vh - 86px);
+
+    .fine-print {
+      padding: 10px 0;
+      margin: 0;
+    }
+  }
+  h2 {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 0 55px;
+    color: $white;
+
+    background-image:
+      url('/assets/img/icon-arrow-long-back.png'),
+      url('/assets/img/icon-arrow-long-front.png');
+    background-size: 
+      53px auto;
+    background-position:
+      left center,
+      right center;
+    background-repeat: no-repeat;
+  }
+  .subhead {
+    margin-bottom: 18px;
+    color: $white;
+  }
+  .social-icons {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+
+    a {
+      position: relative;
+      display: inline-block;
+      width: 92px;
+      height: 92px;
+      background-color: $white;
+      border-radius: 50%;
+
+      &:first-child {
+        margin-right: 47px;
+      }
+      &:before {
+        color: $grey;
+        font-size: 2.25rem;
+        @include centerEl();
+        left: 53%;
+      }
+      &.twitter {
+        &:before {
+          @include icon-twit();
+        }
+      }
+      &.facebook {
+        &:before {
+          @include icon-fb();
+        }
+      }
+
+    }
+  }
+  .button {
+    max-width: none;
+    width: 100%;
+  }
+
+  // If repeat player
+  &.repeat {
+    .toggle {
+      display: none;
+    }
+    .button {
+      margin-bottom: 40px;
+    }
+  }
+
+
+  @media (min-width: $mobile) {
+    height: calc(100vh - 102px);
+
+    .wrapper {
+      @include centerEl();
+      min-height: 0;
+      padding: 0;
+
+      // padding-top: 180px;
+      // padding-bottom: 150px;
+    }
+    .subhead {
+      margin-bottom: 48px;
+    }
+    .social-icons {
+      margin-bottom: 50px;
+
+      a {
+        width: 112px;
+        height: 112px;
+
+        &:first-child {
+          margin-right: 60px;
+        }
+        
+        &:before {
+          font-size: 2.6rem;
+        }
+        &:hover {
+          box-shadow: 0 0 25px $black;
+          background-color: $orange;
+        }
+      }
+    }
+  } // end media query
+
+
+}

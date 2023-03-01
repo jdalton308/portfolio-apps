@@ -1,0 +1,46 @@
+<section class="main-wrapper riddles landing over">
+    <div class="scroller">
+
+        <img src="/img/riddles/header_postpromo.png" alt="RIDDLE A DAY IS OVER" class="header-image">
+
+
+        <h2>If you missed out on free food this time around, sign up for emails and follow us so you're in the know for next time.</h2>
+
+        <div class="social-links">
+
+            <a href="https://www.facebook.com/shophouse/" class="facebook" ng-click="trackFacebook()" target="_blank"></a>
+
+            <a href="https://www.twitter.com/shophousetweets" class="twitter" ng-click="trackTwitter()" target="_blank"></a>
+
+        </div>
+
+
+        <form class="submit-form" name="submitForm" ng-submit="emailSignup()" novalidate>
+            <div class="input-container">
+                <input class="input" type="email" name="email" placeholder="EMAIL ADDRESS" ng-model="user.e" required="">
+                <input class="input" type="number" name="zip" placeholder="ZIP CODE" ng-model="user.z" required="" ng-minlength="5" ng-maxlength="5">
+            </div>
+
+            <div class="error-message" ng-show="submitForm.$error.email">
+                Please enter a valid email
+            </div>
+            <div class="error-message" ng-show="submitForm.$error.minlength || submitForm.$error.maxlength">
+                Please enter a valid zip code
+            </div>
+            <div class="error-message" ng-show="submitError">
+                {{submitError}}
+            </div>
+        
+            <button ng-disabled="submitDisabled()" type="submit">
+                <span ng-show="!sending">SUBMIT</span>
+                <span ng-show="sending">SENDING <span class="dancing">...</span></span>
+            </button>
+
+        </form>
+
+        <div class="disclaimer">
+            By providing your email and clicking "SUBMIT," you confirm you are 13 years of age or older and agree to our <a href="http://chipotle.com/privacy-policy" target="_blank">Privacy Policy</a>. You can unsubscribe at any time. Providing your ZIP code allows us to send you information relevant to your area. Consent is not a condition of purchase. You will only receive info about ShopHouse. View <a href="/riddle-terms" target="_blank">Terms of Use</a> and <a href="http://chipotle.com/privacy-policy" target="_blank">Privacy Policy</a>.
+        </div>
+
+    </div>
+</section>

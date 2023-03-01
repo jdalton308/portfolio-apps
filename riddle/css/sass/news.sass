@@ -1,0 +1,166 @@
+@import "media-queries"
+@import "prefixes"
+
+.news-page
+
+  .news
+    position: relative
+    display: block
+    left: 0
+    @include transition(left 0.5s ease-in-out)
+    margin: 22px 0 69px 0
+
+    +tablet-landscape-and-below
+      margin: 34px 0 69px 0
+
+    +tablet-portrait
+      margin: 68px 0 69px 0
+
+    +mobile-landscape
+      margin: 68px 0 69px 0
+
+    +mobile-portrait
+      margin: 34px 0 69px 0
+
+
+    .h3
+      text-transform: uppercase
+      width: 420px
+      margin: 0 auto
+      text-align: center
+      color: #4c4949
+      display: none
+
+      +tablet-portrait
+        display: block
+
+      +mobile-landscape-and-below
+        width: 320px
+        display: block
+
+    .news-content
+      width: 980px
+      margin: -20px auto 0 auto
+
+      +tablet-portrait
+        width: 700px
+
+      +mobile-landscape
+        width: 540px
+
+      +mobile-portrait
+        width: 280px
+
+      .posts
+        margin: 20px 0 0 0
+
+        .post
+          margin: 0 0 50px 0
+          width: 100%
+          position: relative
+
+          +mobile-landscape-and-below
+            padding: 0 0 20px 0
+            border-bottom: 1px solid #cbcbcb
+
+          .content,
+          .meta
+            float: left
+            display: block
+            color: #4c4949
+            line-height: 1.3
+
+            +mobile-landscape-and-below
+              float: none
+
+          .content
+            width: 700px
+            float: right
+            word-wrap: break-word
+
+            +tablet-portrait
+              width: 400px
+
+            +mobile-landscape-and-below
+              width: 100%
+              margin: 10px 0 0 0
+
+            .source
+              margin: 10px 0 0 0
+
+            a
+              color: #f06423
+              text-decoration: none
+
+            p
+              margin: 0 0 10px 0
+
+            img
+              max-width: 700px
+              margin: 0 auto 10px auto
+              height: auto
+
+              +tablet-portrait
+                max-width: 400px
+
+              +mobile-landscape
+                max-width: 540px
+
+              +mobile-portrait
+                max-width: 280px
+
+          .meta
+            width: 250px
+            position: relative
+
+            +tablet-portrait
+              width: 250px
+
+            +mobile-landscape-and-below
+              width: 100%
+
+            .title
+              line-height: 1.1
+              color: #4c4949
+
+            .date
+              color: #f06423
+
+      .button
+        width: 100%
+        color: #fff
+        background: #bebcbc
+
+        &.hidden
+          display: none
+
+    .loading
+      width: 980px
+      height: 80px
+      display: block
+      margin: 50px auto
+      color: #333
+      text-transform: uppercase
+      text-align: center
+
+      +tablet-portrait
+        width: 700px
+
+      +mobile-landscape
+        width: 540px
+
+      +mobile-portrait
+        width: 280px
+
+      .spinner
+        width: 32px
+        height: 36px
+        display: block
+        margin: 0 auto 20px auto
+        background: transparent url('../img/spinner.png') no-repeat
+        @include animation-name(rotate)
+        @include animation-duration(1s)
+        @include animation-iteration-count(infinite)
+
+      &.hidden
+        display: none

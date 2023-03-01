@@ -1,0 +1,27 @@
+{
+  "staging": {
+    "key": "AKIAJPKIKS6LYVWGZVIQ",
+    "secret": "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",
+    "bucket": "staging.guachunter.com",
+    "region": "us-west-2"
+  },
+  "production": {
+    "key": "AKIAJPKIKS6LYVWGZVIQ",
+    "secret": "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",
+    "bucket": "www.guachunter.com",
+    "region": "us-west-2"
+  },
+  
+  "staging-uk": {
+    "key": "AKIAJPKIKS6LYVWGZVIQ",
+    "secret": "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",
+    "bucket": "staging.guachunter.co.uk",
+    "region": "us-west-2"
+  },
+  "production-uk": {
+    "key": "AKIAJPKIKS6LYVWGZVIQ",
+    "secret": "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",
+    "bucket": "www.guachunter.co.uk",
+    "region": "us-west-2"
+  }
+}

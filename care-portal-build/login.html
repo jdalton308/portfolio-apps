@@ -1,0 +1,120 @@
+
+<div class="login-page">
+	<section class="section-login-video">
+		<div class="video-bg-container">
+			<video src="/assets/video/MDT_Video1.mp4" class="video-login-bg" autoplay loop></video>
+		</div>
+		<div class="video-overlay-container">
+			<div class="animated-bar left"></div>
+			<div class="animated-bar bottom"></div>
+			<div class="animated-bar right"></div>
+			<div class="animated-bar top"></div>
+
+			<div class="auth-container">
+				<div class="auth-box log-in-button" ng-click="showLogin=true">
+					LOG IN
+				</div>
+				<div class="auth-box create-button" ng-click="showSignup=true">
+					CREATE AN ACCOUNT
+				</div>
+			</div>
+
+			<div class="auth-animate-cont" ng-show="showSignup || showLogin">
+				<div class="auth-popout create" ng-show="showSignup">
+					<div class="back-button" ng-click="showSignup=false"></div>
+					<h4>CREATE AN ACCOUNT</h4>
+					<form action="" class="popout-form">
+						<input type="email" placeholder="Email">
+						<input type="password" placeholder="Password">
+						<button type="button" ng-click="showTerms()">CREATE ACCOUNT</button>
+					</form>
+					<div class="social-sign-up">
+						<p>CREATE AN ACCOUNT WITH:</p>
+						<button type="button" class="facebook"></button>
+						<button type="button" class="google-plus"></button>
+					</div>
+				</div>
+				
+				<div class="auth-popout login" ng-show="showLogin">
+					<div class="back-button" ng-click="showLogin=false"></div>
+					<h4>LOG IN</h4>
+					<form action="" class="popout-form">
+						<input type="email" placeholder="Email">
+						<input type="password" placeholder="Password">
+						<button type="button" ng-click="setDoctor()">LOG IN</button>
+					</form>
+					<div class="social-sign-up">
+						<p>LOG IN WITH:</p>
+						<button type="button" class="facebook"></button>
+						<button type="button" class="google-plus"></button>
+					</div>
+				</div>
+			</div>
+
+			<h3 class="animated care-title"> 
+				<!-- 'Connected Care' -->
+				<span class="left">C</span><!-- 
+			 --><span class="top">O</span><!-- 
+			 --><span class="bottom">N</span><!-- 
+			 --><span class="left">N</span><!-- 
+			 --><span class="top">E</span><!-- 
+			 --><span class="bottom">C</span><!-- 
+			 --><span class="left">T</span><!-- 
+			 --><span class="top">E</span><!-- 
+			 --><span class="bottom">D</span><!-- 
+			 --><span class="left">&nbsp;C</span><!-- 
+			 --><span class="top">A</span><!-- 
+			 --><span class="bottom">R</span><!-- 
+			 --><span class="left">E</span>
+			</h3>
+			<h2 class="tagline">YOUR HEALTH,</h2>
+			<h2 class="tagline">YOUR FAMILY,</h2>
+			<h2 class="green bold tagline">ALL RIGHT HERE</h2>
+			
+			<div class="learn-more-cont">
+				<a href="" class="learn-more-link" scroll-to="login-content">
+					LEARN MORE
+				</a>
+			</div>
+		</div> <!-- end .video-overlay-cont -->
+		
+
+	</section>
+
+	<section class="section-login-content-list container-fluid" id="login-content">
+		<div class="login-content-item max-width row">
+			<div class="login-content-copy col-sm-5">
+				<div class="item-title">
+					<div class="bold">STAY CONNECTED</div>TO YOUR HEALTH
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+			</div>
+			<div class="login-content-media col-sm-7">
+				<div class="video">video</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section-login-footer">
+		<form action="" class="new-account-form">
+			<h4>CREATE AN ACCOUNT</h4>
+			<p>Sign up below to get your Connect Care Portal benefits.</p>
+			<input type="email" placeholder="Email">
+			<input type="password" placeholder="Create Password">
+			<button type="submit" class="dark">CREATE ACCOUNT</button>
+		</form>
+		<div class="social-sign-up">
+			<p>CREATE AN ACCOUNT WITH:</p>
+			<button type="button" class="facebook"></button>
+			<button type="button" class="google-plus"></button>
+		</div>
+		<p class="existing-question">Existing Account? <a href="">LOG IN</a></p>
+
+		<!-- BUTTON FOR DEV -->
+		<div class="dev-buttons">
+			<button type="button" ng-click="setPatient()">I'M A PATIENT</button>
+			<button type="button" ng-click="setDoctor()">I'M A HEALTHCARE PROFESSIONAL</button>
+		</div>
+	</section>
+
+</div> <!-- end .login-page -->

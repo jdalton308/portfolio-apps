@@ -1,0 +1,494 @@
+@import "media-queries"
+@import "prefixes"
+
+body
+  &.modal-open
+    overflow: hidden
+    +mobile-landscape-and-below
+      position: fixed
+
+.modal-wrapper
+  background: rgba(0, 0, 0, 0.4)
+  width: 100%
+  height: 100%
+  display: block
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 17
+  color: #000
+  overflow: hidden
+
+  +mobile-landscape-and-below
+    background: transparent
+
+  .modal-wrapper-2
+    width: 100%
+    height: 100%
+
+    .modal
+      background: rgb(190, 188, 188)
+      width: 325px
+      margin: 0 auto
+      display: block
+      position: relative
+
+      +mobile-landscape-and-below
+        width: 100%
+        height: 100%
+
+      .modal-close
+        position: absolute
+        right: 10px
+        top: 20px
+        cursor: pointer
+        background: transparent url("../img/modal-close-icon.png") no-repeat
+        background-size: 20px
+        width: 20px
+        height: 20px
+        z-index: 3
+
+      .modal-content
+        padding: 40px 20px 20px 20px
+        overflow-y: auto
+        overflow-x: hidden
+        height: 100%
+
+        +tablet-landscape
+          overflow-y: auto
+          overflow-x: hidden
+          max-height: 480px
+          padding-bottom: 80px
+
+        +mobile-landscape-and-below
+          padding: 40px 10px 0 20px
+
+        +mobile-landscape
+          overflow-y: auto
+          overflow-x: hidden
+          max-height: 190px
+
+        +mobile-portrait
+          overflow-y: auto
+          overflow-x: hidden
+          max-height: 80%
+
+        .modal-inner-content
+          overflow: auto
+
+          +tablet-portrait
+            padding: 0 0 30px 0
+
+          +tablet-landscape
+            max-height: 480px
+            overflow: auto
+
+        .modal-title
+          margin: 0 0 1px 0
+          width: 85%
+
+          +mobile-portrait
+            width: 245px
+
+        .modal-copy
+          margin: 0 0 10px 0
+          width: 85%
+
+          .modal-sub-copy
+            color: #676767
+
+        .modal-list
+          margin: 25px 0
+
+          +mobile-landscape-and-below
+            margin: 20px 0
+
+          .list-title,
+          .list-copy
+            float: left
+            display: block
+            height: 20px
+            margin: 0 0 2px 0
+            text-transform: uppercase
+            line-height: 1.1
+
+          .list-title
+            width: 25%
+
+          .list-copy
+            width: 75%
+
+        .modal-button-link
+          width: 100%
+          height: 46px
+          background: #939191
+          color: #fff
+          text-decoration: none
+          text-align: center
+          display: block
+          margin: 0 auto
+          line-height: 3.3
+          text-transform: uppercase
+          letter-spacing: 1.2px
+
+          +tablet-landscape
+            position: absolute
+            bottom: 20px
+            width: 305px
+            left: 10px
+
+          +mobile-landscape-and-below
+            position: fixed
+            bottom: 20px
+            width: 94.6%
+            left: 10px
+
+        .modal-button-add,
+        .modal-button-remove
+          +tablet-landscape-and-below
+            position: absolute
+            bottom: 20px
+            width: 305px
+            left: 10px
+
+          +mobile-landscape-and-below
+            position: fixed
+            bottom: 20px
+            left: 10px
+            width: 94.6%
+
+        .modal-sub-title
+          text-transform: uppercase
+
+        .modal-two-col-list
+
+          .modal-ul-list
+            margin: 20px 20px 20px 0
+
+            +mobile-portrait
+              margin: 10px 10px 10px 0
+
+            .item
+              margin: 0 0 3px 0
+              line-height: 1.2
+
+        .note
+          color: #666
+
+        .form
+
+          .text
+            width: 250px
+            height: 44px
+            float: left
+            display: block
+            font-size: 15px
+            line-height: 3.4
+            font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+            color: #9f9f9f
+            text-indent: 10px
+
+            &.dark
+              color: #2d2b28
+
+          .button
+            width: 150px
+            height: 50px
+            float: right
+            cursor: pointer
+
+  &.get-updates
+    .modal
+      width: 326px
+
+      +tablet-landscape-and-below
+        padding: 0
+
+      +mobile-landscape-and-below
+        width: 100%
+        height: 100%
+
+      .modal-content
+        font-family: 'Zemestro Std Book', Helvetica, Arial, 'sans-serif'
+
+        +tablet-portrait
+          max-height: 620px
+          padding: 0 20px
+
+        +tablet-landscape
+          padding: 0 20px
+          max-height: 560px
+
+        +mobile-landscape-and-below
+          height: 100%
+          padding: 20px 10px 0 20px
+          max-height: 100%
+
+        .modal-inner-content
+          padding-bottom: 0
+          width: 305px
+
+          +tablet-portrait
+            padding: 0
+
+          +tablet-landscape
+            max-height: 560px
+            padding: 0
+
+          +mobile-landscape-and-below
+            height: 100%
+            padding: 0 10px
+
+          +mobile-landscape
+            width: 100%
+
+          +mobile-portrait
+            width: 290px
+
+          .modal-title
+            color: #2d2b28
+            font-size: 26px
+            margin: 0 0 7px 0
+
+            +tablet-landscape-and-below
+              margin: 40px 0 0 0
+
+            +mobile-landscape-and-below
+              margin: 20px 0 0 0
+
+          .modal-intro
+            line-height: 1.3
+            font-size: 16px
+            width: 270px
+
+            +mobile-landscape-and-below
+              width: 90%
+
+          .modal-note
+            margin: 10px 0 0 0
+            color: #666
+            font-size: 12px
+            display: block
+            line-height: 1.3
+            width: 270px
+
+            &.last
+              margin: 10px 0 0 0
+
+              +tablet-landscape-and-below
+                padding: 0 0 20px 0
+
+              +mobile-landscape-and-below
+                padding: 0 0 60px 0
+
+            +mobile-landscape-and-below
+              width: 90%
+
+            strong
+              font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+
+            a
+              color: #666
+              text-decoration: none
+              font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+
+          .form-area
+            margin: 28px 0 0 0
+            position: relative
+
+            .label
+              font-size: 14px
+              text-transform: uppercase
+              position: relative
+
+              .error-message
+                display: none
+                padding: 20px 15px 18px 15px
+                color: #fff
+                font-size: 13px
+                background: #f44e4e
+                text-transform: initial
+                @include box-shadow(0, 0, 5px, rgba(0,0,0,.3))
+                position: absolute
+                top: 8px
+                width: 256px
+                line-height: 1.5
+
+                +mobile-landscape-and-below
+                  width: 80%
+                  top: 87px
+
+                &:after
+                  border: solid transparent
+                  content: " "
+                  height: 0
+                  width: 0
+                  position: absolute
+                  border-color: transparent
+                  border-bottom-color: #f44e4e
+                  border-width: 8px
+                  margin-left: -8px
+                  left: 30px
+                  top: -16px
+
+              &.error
+
+                +mobile-landscape-and-below
+                  display: block
+
+                .error-message
+                  display: block
+                  z-index: 10
+
+                .text
+                  border: 2px solid #fe6666
+
+            .submit
+              width: 286px
+              float: none
+              letter-spacing: 1px
+              margin: 0
+              cursor: pointer
+              border: none medium
+              padding: 0
+              outline: none
+              -webkit-appearance: none
+              @include border-radius(0)
+
+              +mobile-landscape-and-below
+                width: 90%
+
+            .submit-close
+              margin: 0 0 20px 0
+
+            .text
+              float: none
+              width: 282px
+              font-size: 22px
+              line-height: 2.3
+              margin: 5px 0 0 0
+              height: 55px
+              padding: 0
+              outline: none
+              border: 2px solid #d6d6d6
+              -webkit-appearance: none
+              @include border-radius(0)
+
+              +mobile-landscape-and-below
+                width: 90%
+
+              &:focus,
+              &:active
+                outline: none
+                color: #2d2b28
+                border: 2px solid #d6d6d6
+
+          .form-area.email
+            z-index: 9
+
+    &.scroll-me
+
+      .modal-content
+        padding: 0 20px
+
+        .modal-inner-content
+          padding: 20px 0
+
+.careers-page
+
+  &.modal-appended
+
+    .modal-wrapper
+      position: relative
+      top: 20px
+      width: 100%
+      display: block
+      overflow: hidden
+      margin: 0 auto
+      z-index: 10
+      height: auto
+
+      .modal-wrapper-2
+
+        .modal
+          background: #bbb9b9
+
+          .modal-content
+            max-height: none
+
+            .modal-inner-content
+              height: auto
+
+.careers-page
+
+  .modal-wrapper
+    z-index: 17
+
+    .modal-wrapper-2
+
+      +mobile-landscape-and-below
+        width: 100%
+        display: block
+        margin: 0 auto
+
+      .modal
+        width: 590px
+        background: #e2e2e2
+
+        +tablet-landscape-and-below
+          width: 460px
+
+        +mobile-landscape-and-below
+          width: 100%
+
+        .modal-content
+          width: 550px
+
+          +tablet-landscape-and-below
+            width: 430px
+
+          +mobile-landscape-and-below
+            width: 90%
+            display: block
+            padding: 30px 15px
+            margin: 0 auto
+            height: auto
+            max-height: auto
+
+          .modal-copy
+            margin: 7px 20px 20px 0
+            width: 100%
+
+          .t9
+            font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+
+          .t8
+            color: #000
+
+          .note
+            margin: 0 10px 0 0
+
+          .modal-title
+            margin: 0
+
+          .modal-ul-list
+            float: left
+            width: 30%
+            margin-top: 3px
+
+            +tablet-landscape-and-below
+              width: 29%
+
+            +mobile-landscape-and-below
+              width: 45%
+
+            .item
+              line-height: 1
+              margin: 0 0 7px 0
+
+            &:nth(3)
+              float: none
+              margin-top: -5px
+
+          .modal-sub-title
+            margin: 10px 0 3px 0

@@ -1,0 +1,57 @@
+
+<!-- DOCTOR'S MY-PROFILE VIEW -->
+
+<section class="section-profile">
+
+  <div class="profile-header">
+    <div class="profile-photo-container">
+      <img src="/assets/img/doctor0.jpg" alt="Dr. Menendez Adriana">
+      <div class="module-edit-button-cont" ng-show="editingGeneral">
+        <div class="edit-button white"></div>
+      </div>
+    </div>
+    <div class="profile-header-name-cont">
+      <h2>{{profileDetails.general.last}}, {{profileDetails.general.first}}, {{profileDetails.general.qualification}}</h2>
+      <h3>{{profileDetails.general.occupation}}</h3>
+      <div class="contact-details">
+        <a href="" class="contact-item location">{{profileDetails.general.location}}</a>
+        <a href="" class="contact-item phone">{{profileDetails.general.phone}}</a>
+        <a href="" class="contact-item email">{{profileDetails.general.email}}</a>
+      </div>
+      <div class="profile-header-buttons">
+        <button type="button" ng-click="toggleDetails()">PERSONAL PROFILE</button>
+      </div>
+    </div>
+  </div> <!-- end header -->
+
+  <div ng-hide="!detailsShowing" class="profile-details-cont">
+    <jd-profile-details ></jd-profile-details>
+  </div>
+
+  <nav class="profile-nav">
+    <div class="profile-nav-item" ng-class="{current: profileView=='profile'}" ng-click="profileView='profile'">
+      PROFESSIONAL PROFILE
+    </div>
+    <div class="profile-nav-item" ng-class="{current: profileView=='vitals'}" ng-click="profileView='vitals'">
+      VITALS
+    </div>
+    <div class="profile-nav-item" ng-class="{current: profileView=='goals'}" ng-click="profileView='goals'">
+      GOALS
+    </div>
+    <div class="profile-nav-item" ng-class="{current: profileView=='activities'}" ng-click="profileView='activities'">
+      ACTIVITIES
+    </div>
+    <div class="profile-nav-item edit-nav-btn" ng-click="editProfileNav()">
+      <div class="edit-button white"></div>
+    </div>
+  </nav> <!-- end nav -->
+
+  <!-- Views -->
+ <div class="subview-cont max-width">
+    <jd-profile-profile ng-if="profileView=='profile'" class="slide-down"></jd-profile-profile>
+   <jd-profile-vitals ng-if="profileView=='vitals'" class="slide-down"></jd-profile-vitals>
+   <jd-profile-goals ng-if="profileView=='goals'" class="slide-down"></jd-profile-goals>
+   <jd-profile-activities ng-if="profileView=='activities'" class="slide-down"></jd-profile-activities>
+ </div>
+  
+</section>

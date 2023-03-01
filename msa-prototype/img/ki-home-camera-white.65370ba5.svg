@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <title>ki-home-camera</title>
+  <g>
+    <rect width="32" height="32" fill="none"/>
+    <path d="M16,14a4,4,0,1,1,4-4A4.004,4.004,0,0,1,16,14Zm0-6a2,2,0,1,0,2,2A2.0026,2.0026,0,0,0,16,8Z"  fill="#fff"/>
+    <rect x="15" y="17" width="2" height="2"  fill="#fff"/>
+    <path d="M24,16V10A8,8,0,0,0,8,10v6a8.007,8.007,0,0,0,7,7.93054V26H10a2,2,0,0,0-2,2H24a2,2,0,0,0-2-2H17V23.93054A8.007,8.007,0,0,0,24,16ZM10,16V10a6,6,0,0,1,12,0v6a6,6,0,0,1-12,0Z"  fill="#fff"/>
+  </g>
+</svg>

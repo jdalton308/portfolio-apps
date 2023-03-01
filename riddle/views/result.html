@@ -1,0 +1,58 @@
+<section class="main-wrapper riddles result">
+    <div class="scroller">
+
+        <img src="/img/riddles/header_{{headImg}}.png" alt="GOOD GOING" class="header-image">
+
+        <h2>
+            {{lang.resultSubhead}}
+        </h2>
+        <img ng-src="/img/riddles/{{imglabel}}.png" alt="{{imglabel}}" class="result-image">
+        <p class="result-description">
+            {{lang.answerDescription}}
+        </p>
+    
+        <div class="cat">
+            <img src="/img/riddles/lucky-cat.png" alt="lucky cat">
+        </div>
+    </div>
+    
+    
+    <form class="submit-form" name="submitForm" novalidate>
+        <div class="all-need">All we need is your info:</div>
+        <div class="input-container">
+            <input type="text" name="first" placeholder="FIRST NAME*" ng-model="user.f" ng-pattern="/^[A-z]+$/" required="">
+            <input type="text" name="last" placeholder="LAST NAME*" ng-model="user.l" ng-pattern="/^[A-z]+$/" required="">
+            <input type="number" ng-minlength="5" ng-maxlength="5" name="zip" placeholder="ZIP CODE*" ng-model="user.z" required="">
+            <input type="email" name="email" placeholder="EMAIL ADDRESS*" ng-model="user.e" required="">
+        </div>
+        <div class="disclaimer required" ng-class="{red: turnRed() }">*Required fields</div>
+        <div class="error-message" ng-show="submitForm.$error.email">
+            Please enter a valid email
+        </div>
+        <div class="error-message" ng-show="submitForm.$error.minlength || submitForm.$error.maxlength">
+            Please enter a valid zip code
+        </div>
+        <div class="error-message" ng-show="submitForm.$error.pattern">
+            Please only enter letters for your name
+        </div>
+        <div class="error-message" ng-show="submitError">
+            {{submitError}}
+        </div>
+    
+        <div class="consent-box">
+            
+            <input type="checkbox" name="consent" id="realCheckbox" ng-model="user.s">
+            <label for="realCheckbox" class="fakeCheckbox"></label>
+                
+            <div class="consent-copy">
+                (This form doesn't actually submit anything, but you'll need to fill it out to go to the next screen).
+            </div>
+        </div>
+    
+        <button ng-disabled="!submitForm.$valid || sending" ng-click="getBowl(submitForm)">
+            <span ng-show="!sending">SUBMIT</span>
+            <span ng-show="sending">SENDING <span class="dancing">...</span></span>
+        </button>
+
+    </form>
+</section>

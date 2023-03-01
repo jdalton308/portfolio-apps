@@ -1,0 +1,30 @@
+{
+  "projects": {
+    "default": "portfolio-c3814"
+  },
+  "targets": {
+    "portfolio-c3814": {
+      "hosting": {
+        "careportal": [
+          "careportal-73"
+        ],
+        "guac-hunter": [
+          "guac-hunter-game"
+        ],
+        "image-game-prototype": [
+          "image-game-prototype"
+        ],
+        "msa-prototype": [
+          "msa-app-prototype"
+        ],
+        "riddle": [
+          "riddle-game"
+        ],
+        "spectrum-start": [
+          "spectrum-start"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

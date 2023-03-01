@@ -1,0 +1,327 @@
+
+<!-- Profile Vitals -->
+
+<div class="profile-main container-fluid" id="profile-vitals">
+
+  <div class="row">
+
+    <div class="vitals-module col-sm-6">
+
+      <div class="module-data" ng-class="{edit: editingBP}">
+        <div class="edit-button white" ng-click="editingBP=true" ng-hide="isEditingVitals()"></div>
+        <h4 class="vital-title">BLOOD PRESSURE</h4>
+
+        <div class="view-cont" ng-hide="editingBP">
+          <h2 class="vital-metric">{{vitals.bp.systolic}}/{{vitals.bp.diastolic}}<sup>mmHg</sup></h2>
+          <h5 class="vital-status">Normal</h5>
+          <div class="vital-updated">Last Updated: <strong>JUN 24</strong></div>
+          <div class="blue-link view-hist-link" ng-click="showHistoryPopup=true">VIEW HISTORY</div>
+        </div>
+
+        <div class="edit-cont" ng-show="editingBP">
+
+          <div class="split-inputs">
+            <div class="input-group">
+              <label for="systolic">SYSTOLIC</label>
+              <input type="number" id="systolic" ng-model="vitals.bp.systolic">
+            </div>
+            <div class="input-group">
+              <label for="diastolic">diastolic</label>
+              <input type="number" id="diastolic" ng-model="vitals.bp.diastolic">
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="cancel-btn" type="button" ng-click="editingBP=false">CANCEL</button>
+            <button class="" type="button" ng-click="editingBP=false">SAVE</button>
+          </div>
+        </div> <!-- end edit-cont -->
+      </div>
+
+      <div class="module-spectrums">
+        <div class="spectrum-item">
+          <div class="spectrum-title">SYSTOLIC</div>
+          <div class="spectrum-metric">{{vitals.bp.systolic}}<sup>mmHg</sup></div>
+          <div class="spectrum">
+            <div class="spectrum-arrow"></div>
+            <div class="spectrum-meter"></div>
+            <div class="spectrum-labels">
+              <span class="label">110</span>
+              <span class="label">120</span>
+              <span class="label">130</span>
+              <span class="label">140</span>
+              <span class="label">150</span>
+            </div>
+          </div>
+        </div>
+        <div class="spectrum-item">
+          <div class="spectrum-title">DIASTOLIC</div>
+          <div class="spectrum-metric">{{vitals.bp.diastolic}}<sup>mmHg</sup></div>
+          <div class="spectrum">
+            <div class="spectrum-arrow"></div>
+            <div class="spectrum-meter"></div>
+            <div class="spectrum-labels">
+              <span class="label">75</span>
+              <span class="label">80</span>
+              <span class="label">85</span>
+              <span class="label">90</span>
+              <span class="label">95</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end module -->
+    
+    <div class="vitals-module col-sm-6">
+      <div class="module-data" ng-class="{edit: editingPulse}">
+        <div class="edit-button white" ng-click="editingPulse=true" ng-hide="isEditingVitals()"></div>
+        <h4 class="vital-title">PULSE</h4>
+
+        <div class="view-cont" ng-hide="editingPulse">
+          <h2 class="vital-metric">{{vitals.pulse}}<sup>bpm</sup></h2>
+          <h5 class="vital-status">Normal</h5>
+          <div class="vital-updated">Last Updated: <strong>JUN 24</strong></div>
+          <div class="blue-link view-hist-link" ng-click="showHistoryPopup=true">VIEW HISTORY</div>
+        </div>
+
+        <div class="edit-cont" ng-show="editingPulse">
+
+          <div class="input-group">
+            <label for="pulse">PULSE (bpm)</label>
+            <input type="number" id="pulse" ng-model="vitals.pulse">
+          </div>
+
+          <div class="buttons">
+            <button class="cancel-btn" type="button" ng-click="editingPulse=false">CANCEL</button>
+            <button class="" type="button" ng-click="editingPulse=false">SAVE</button>
+          </div>
+        </div> <!-- end edit-cont -->
+      </div>
+      <div class="module-spectrums">
+        <div class="spectrum-item">
+          <div class="spectrum-title">BEATS PER MINUTE</div>
+          <div class="spectrum-metric">{{vitals.pulse}}<sup>bpm</sup></div>
+          <div class="spectrum">
+            <div class="spectrum-arrow"></div>
+            <div class="spectrum-meter"></div>
+            <div class="spectrum-labels">
+              <span class="label">40</span>
+              <span class="label">60</span>
+              <span class="label">80</span>
+              <span class="label">100</span>
+              <span class="label">120</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end module -->
+  </div> <!-- end row -->
+
+  <div class="row">
+    <div class="vitals-module bmi-module col-sm-12">
+
+      <div class="bmi-data-cont">
+      	<div class="module-data" ng-class="{edit: editingWeight}">
+      	  <div class="edit-button white" ng-click="editingWeight=true" ng-hide="isEditingVitals()"></div>
+      	  <h4 class="vital-title">WEIGHT</h4>
+
+      	  <div class="view-cont" ng-hide="editingWeight">
+            <h2 class="vital-metric">{{vitals.weight.metric}}<sup>{{vitals.weight.units}}</sup></h2>
+            <div class="vital-updated">Last Updated: <strong>JUN 24</strong></div>
+            <div class="blue-link view-hist-link" ng-click="showHistoryPopup=true">VIEW HISTORY</div>
+          </div>
+
+          <div class="edit-cont" ng-show="editingWeight">
+
+            <div class="weight-inputs">
+              <div class="input-group">
+                <input type="number" id="pulse" ng-model="vitals.weight.metric">
+              </div>
+              <div class="styled-select-cont">
+                <select name="weight-units" id="units" ng-model="vitals.weight.units">
+                  <option value="lbs">lbs</option>
+                  <option value="kg">kg</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="cancel-btn" type="button" ng-click="editingWeight=false">CANCEL</button>
+              <button class="" type="button" ng-click="editingWeight=false">SAVE</button>
+            </div>
+            
+          </div>
+      	</div>
+      	
+      	<div class="module-data" ng-class="{edit: editingHeight}">
+      	  <div class="edit-button white" ng-click="editingHeight=true" ng-hide="isEditingVitals()"></div>
+      	  <h4 class="vital-title">HEIGHT</h4>
+
+      	  <div class="view-cont" ng-hide="editingHeight">
+            <h2 class="vital-metric">{{vitals.height.feet}}'{{vitals.height.inches}}"</h2>
+            <div class="vital-updated">Last Updated: <strong>JUN 24</strong></div>
+            <div class="blue-link view-hist-link" ng-click="showHistoryPopup=true">VIEW HISTORY</div>
+          </div>
+
+          <div class="edit-cont" ng-show="editingHeight">
+
+            <div class="split-inputs">
+              <div class="input-group">
+                <label for="feet">FEET</label>
+                <input type="number" id="feet" ng-model="vitals.height.feet">
+              </div>
+              <div class="input-group">
+                <label for="inches">INCHES</label>
+                <input type="number" id="inches" ng-model="vitals.height.inches">
+              </div>
+            </div>
+
+            <div class="buttons">
+              <button class="cancel-btn" type="button" ng-click="editingHeight=false">CANCEL</button>
+              <button class="" type="button" ng-click="editingHeight=false">SAVE</button>
+            </div>
+            
+          </div>
+      	</div>
+      	
+      	<div class="module-data" ng-class="{edit: editingBMI}">
+      	  <div class="edit-button white" ng-click="editingBMI=true" ng-hide="isEditingVitals()"></div>
+      	  <h4 class="vital-title">BODY MASS INDEX</h4>
+
+      	  <div class="view-cont" ng-hide="editingBMI">
+            <h2 class="vital-metric">{{vitals.bmi}}</h2>
+            <div class="vital-updated">Last Updated: <strong>JUN 24</strong></div>
+            <div class="blue-link view-hist-link" ng-click="showHistoryPopup=true">VIEW HISTORY</div>
+          </div>
+
+          <div class="edit-cont" ng-show="editingBMI">
+
+            <div class="input-group">
+              <input type="number" id="pulse" ng-model="vitals.bmi">
+            </div>
+
+            <div class="buttons">
+              <button class="cancel-btn" type="button" ng-click="editingBMI=false">CANCEL</button>
+              <button class="" type="button" ng-click="editingBMI=false">SAVE</button>
+            </div>
+            
+          </div>
+      	</div>
+      </div>
+
+      <div class="module-spectrums">
+        <div class="spectrum-item">
+          <div class="spectrum-title">BODY MASS INDEX SCALE</div>
+          <div class="spectrum">
+            <div class="spectrum-meter"></div>
+            <div class="spectrum-bmi-groups">
+
+              <div class="bmi-class">
+                <div class="over-meter">
+                	<h5>UNDERWEIGHT</h5>
+                	<div class="spectrum-arrow"></div>
+                </div>
+                <div class="bmi-scale-label">&lt;18.5</div>
+              </div>
+
+              <div class="bmi-class">
+                <div class="over-meter">
+                	<h5>NORMAL</h5>
+                	<div class="spectrum-arrow"></div>
+                </div>
+                <div class="bmi-scale-label">18.6-24.99</div>
+              </div>
+
+              <div class="bmi-class current">
+                <div class="over-meter">
+                	<h5>OVERWEIGHT</h5>
+                	<div class="spectrum-arrow"></div>
+                </div>
+                <div class="bmi-scale-label">25-29.99</div>
+              </div>
+
+              <div class="bmi-class">
+                <div class="over-meter">
+                	<h5>OBESE</h5>
+                	<div class="spectrum-arrow"></div>
+                </div>
+                <div class="bmi-scale-label">&gt;30</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> <!-- end module -->
+  </div> <!-- end row -->
+
+  <div class="row">
+
+  	<div class="history-box col-sm-3">
+  		<div class="history-image-cont">
+  			<img src="/assets/img/scan.png" alt="alt text" class="history-photo">
+  		</div>
+  		<div class="history-label">
+  			<div class="history-name">Scans</div>
+  			<div class="history-date">May 13, 2015</div>
+  		</div>
+  	</div>
+  
+  	<div class="history-box col-sm-3">
+  		<div class="history-image-cont">
+  			<img src="/assets/img/pain_man.png" alt="alt text" class="history-photo">
+  		</div>
+  		<div class="history-label">
+  			<div class="history-name">Pain Areas</div>
+  			<div class="history-date">March 16, 2014</div>
+  		</div>
+  	</div>
+  
+  	<div class="history-box col-sm-3">
+  		<div class="history-image-cont">
+  			<img src="/assets/img/new_audio.png" alt="alt text" class="history-photo">
+  		</div>
+  		<div class="history-label">
+  			<div class="history-name">New Recording Audio</div>
+  			<div class="history-date">March 16, 2014</div>
+  		</div>
+  	</div>
+  
+  	<div class="history-box col-sm-3">
+  		<div class="history-image-cont">
+  			<img src="/assets/img/new_report.png" alt="alt text" class="history-photo">
+  		</div>
+  		<div class="history-label">
+  			<div class="history-name">Health Report 2006</div>
+  			<div class="history-date">March 03, 2014</div>
+  		</div>
+  	</div>
+
+  </div> <!-- end row -->
+
+</div> <!-- end profile main container -->
+
+
+<div class="history-popup-background" ng-show="showHistoryPopup">
+  <div class="history-popup">
+    <div class="close-button white" ng-click="showHistoryPopup=false"></div>
+    <h3>BLOOD PRESSURE HISTORY</h3>
+
+    <div class="history-table">
+      <div class="table-head">
+        <div class="title-cell">ENTRY</div>
+        <div class="title-cell">UPDATE DATE</div>
+        <div class="title-cell">UPDATED BY</div>
+      </div>
+      <div class="table-body">
+        <div class="table-row" ng-repeat="entry in historyData">
+          <div class="cell">{{entry.entry}}</div>
+          <div class="cell">{{entry.date}}</div>
+          <div class="cell">{{entry.author}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- end popup -->
+</div>

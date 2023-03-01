@@ -1,0 +1,650 @@
+@-o-keyframes $name {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes $name {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes $name {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-keyframes $name {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.nutrition-calc-wrapper-outer {
+  position: relative;
+  max-width: 1430px;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+    .nutrition-calc-wrapper-outer {
+      width: 956px; } }
+  .nutrition-calc-wrapper-outer .nutrition-calc-wrapper-inner {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin: 0 0 0 470px;
+    box-shadow: inset -2px 0px 2px rgba(0, 0, 0, 0.3); }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .nutrition-calc-wrapper-outer .nutrition-calc-wrapper-inner {
+        margin: 0 0 0 350px; } }
+    @media only screen and (max-width: 1023px) {
+      .nutrition-calc-wrapper-outer .nutrition-calc-wrapper-inner {
+        width: 100%;
+        margin-bottom: 30px; } }
+
+.food-page .food .tab-content .nutrition-calc-wrapper .h3.first {
+  margin: 0 auto; }
+  @media only screen and (max-width: 1439px) {
+    .food-page .food .tab-content .nutrition-calc-wrapper .h3.first {
+      border: none medium; } }
+  .food-page .food .tab-content .nutrition-calc-wrapper .h3.first:after, .food-page .food .tab-content .nutrition-calc-wrapper .h3.first:before {
+    display: none; }
+
+.nutrition-calc-wrapper {
+  width: 90%;
+  margin: 0 auto; }
+  @media only screen and (max-width: 1023px) {
+    .nutrition-calc-wrapper {
+      width: 100%; } }
+  .nutrition-calc-wrapper .nutrition-table {
+    width: 100%;
+    table-layout: fixed;
+    margin: 0 auto;
+    border-top: 1px solid #707070; }
+    @media only screen and (max-width: 1023px) {
+      .nutrition-calc-wrapper .nutrition-table .head .filter-open {
+        height: 433px;
+        display: block; } }
+    @media only screen and (min-width: 320px) and (max-width: 463px) {
+      .nutrition-calc-wrapper .nutrition-table .head .filter-open {
+        height: 447px; } }
+    @media only screen and (max-width: 1023px) {
+      .nutrition-calc-wrapper .nutrition-table .head .filter-open .cal {
+        height: 384px; } }
+    @media only screen and (max-width: 1023px) {
+      .nutrition-calc-wrapper .nutrition-table .head .filter-closed {
+        height: 112px;
+        display: block; } }
+    @media only screen and (max-width: 1023px) {
+      .nutrition-calc-wrapper .nutrition-table .head .filter-closed .cal {
+        height: 60px; } }
+    @media only screen and (min-width: 464px) and (max-width: 767px) {
+      .nutrition-calc-wrapper .nutrition-table .head .filter-closed .cal {
+        display: none; } }
+    .nutrition-calc-wrapper .nutrition-table .head .filter {
+      width: 470px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+      height: 200px;
+      border-top: 1px solid #707070; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .nutrition-calc-wrapper .nutrition-table .head .filter {
+          width: 350px; } }
+      @media only screen and (max-width: 1023px) {
+        .nutrition-calc-wrapper .nutrition-table .head .filter {
+          width: 100%;
+          text-indent: 10px; } }
+      .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form {
+        width: 320px;
+        position: absolute;
+        z-index: 1;
+        top: 25px; }
+        @media only screen and (max-width: 1023px) {
+          .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form {
+            width: 100%;
+            position: relative;
+            top: 0; } }
+        .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters {
+          text-align: left; }
+          .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .pdf-item {
+            margin: 0 0 20px 0;
+            letter-spacing: 1.1px; }
+            @media only screen and (max-width: 1023px) {
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .pdf-item {
+                height: 56px;
+                line-height: 4.25;
+                margin: 0;
+                border-bottom: 1px solid #212121; } }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .pdf-item .pdf {
+              color: #7e7e7e;
+              text-decoration: none;
+              background: transparent url("../img/pdf-icon.png") no-repeat right 4px;
+              padding: 5px 22px 0 0; }
+          .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .open,
+          .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close {
+            position: relative;
+            width: 230px;
+            cursor: pointer;
+            letter-spacing: 1.1px;
+            background: transparent;
+            /* bordered triangle */ }
+            @media only screen and (max-width: 1023px) {
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .open,
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close {
+                width: 100%;
+                height: 56px;
+                line-height: 4.25;
+                border-top: 1px solid #505050; } }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .open:after, .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .open:before,
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:after,
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:before {
+              top: 2px;
+              right: 6px;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none; }
+              @media only screen and (max-width: 1023px) {
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .open:after, .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .open:before,
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:after,
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:before {
+                  right: 18px;
+                  top: 23px; } }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .open:before,
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:before {
+              border-top-color: #7e7e7e;
+              border-width: 8px; }
+          .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close {
+            /* bordered triangle */ }
+            @media only screen and (max-width: 1023px) {
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close {
+                box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2); } }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:after, .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:before {
+              top: -6px;
+              right: 6px;
+              border: solid transparent;
+              content: " ";
+              height: 0;
+              width: 0;
+              position: absolute;
+              pointer-events: none; }
+              @media only screen and (max-width: 1023px) {
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:after, .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:before {
+                  right: 18px;
+                  top: 14px; } }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .close:before {
+              border-bottom-color: #7e7e7e;
+              border-width: 8px; }
+          .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options {
+            margin: 25px 0 0 0;
+            width: 280px;
+            background: #272727;
+            padding: 0 20px 20px 20px;
+            display: none; }
+            @media only screen and (max-width: 1023px) {
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options {
+                width: 100%;
+                margin: 0;
+                padding: 30px 0 20px 0; } }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .filter-option {
+              margin: 15px 0;
+              height: 20px;
+              text-transform: uppercase; }
+              @media only screen and (max-width: 1023px) {
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .filter-option {
+                  margin: 15px 0 0 20px; } }
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .filter-option input {
+                display: none;
+                margin: 0 16px 0 0; }
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .filter-option .t9 {
+                position: relative;
+                top: 1px; }
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .filter-option .indicator {
+                display: block;
+                float: left;
+                margin: 0 10px 0 0;
+                width: 20px;
+                height: 20px;
+                background: #fff;
+                cursor: pointer; }
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .filter-option .indicator.checked {
+                  background: #fff url("../img/x.gif") no-repeat 3px 3px; }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .copy {
+              color: #fff;
+              margin: 30px 0 0 0;
+              padding: 30px 0 15px 0;
+              line-height: 1.2; }
+              @media only screen and (max-width: 1023px) {
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .copy {
+                  padding: 0 0 15px 20px;
+                  margin: 0;
+                  text-indent: 0; } }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .lower {
+              color: #999;
+              margin: 30px 0 0 0;
+              line-height: 1.2; }
+              @media only screen and (max-width: 1023px) {
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .lower {
+                  padding: 0 20px;
+                  text-indent: 0; } }
+            .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .actions {
+              margin: 30px 0 0 0;
+              text-align: left; }
+              @media only screen and (max-width: 1023px) {
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .actions {
+                  padding: 0 20px; } }
+              .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .actions .button {
+                width: 136px;
+                float: left;
+                cursor: pointer; }
+                @media only screen and (max-width: 1023px) {
+                  .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .actions .button {
+                    width: 48%; } }
+                .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .actions .button.reset {
+                  margin: 0 0 0 8px;
+                  background: #363636;
+                  color: #999; }
+                  @media only screen and (max-width: 1023px) {
+                    .nutrition-calc-wrapper .nutrition-table .head .filter .filter-form .filters .filter-options .actions .button.reset {
+                      margin: 0 0 0 4%; } }
+    .nutrition-calc-wrapper .nutrition-table .head .cal {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      text-align: center;
+      width: 60px; }
+      .nutrition-calc-wrapper .nutrition-table .head .cal:nth-child(even) {
+        background: rgba(20, 20, 20, 0.2); }
+      .nutrition-calc-wrapper .nutrition-table .head .cal .label {
+        text-align: left;
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        position: relative;
+        top: 110px;
+        left: 27px;
+        width: 60px;
+        height: 77px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #b0b0b0; }
+    @media only screen and (max-width: 1023px) {
+      .nutrition-calc-wrapper .nutrition-table .footer .labels {
+        display: none; } }
+    .nutrition-calc-wrapper .nutrition-table .footer .labels .filter {
+      position: absolute;
+      width: 470px;
+      left: 0;
+      bottom: 70px;
+      height: 200px; }
+      .nutrition-calc-wrapper .nutrition-table .footer .labels .filter .label {
+        border-top: 1px solid #504f4f;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        height: 200px;
+        display: block;
+        position: relative;
+        top: 13px; }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .nutrition-calc-wrapper .nutrition-table .footer .labels .filter .label {
+            width: 350px; } }
+        @media only screen and (max-width: 1023px) {
+          .nutrition-calc-wrapper .nutrition-table .footer .labels .filter .label {
+            width: 100%; } }
+    .nutrition-calc-wrapper .nutrition-table .footer .labels .cal {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      text-align: center;
+      width: 70px;
+      border-top: 1px solid #504f4f; }
+      .nutrition-calc-wrapper .nutrition-table .footer .labels .cal:nth-child(even) {
+        background: rgba(20, 20, 20, 0.2); }
+      .nutrition-calc-wrapper .nutrition-table .footer .labels .cal .label {
+        text-align: left;
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        position: relative;
+        top: 110px;
+        left: 27px;
+        width: 60px;
+        height: 77px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #b0b0b0; }
+    .nutrition-calc-wrapper .nutrition-table .footer .sums {
+      height: 56px; }
+      .nutrition-calc-wrapper .nutrition-table .footer .sums .filter {
+        position: absolute;
+        width: 470px;
+        left: 0;
+        box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+        background: #5a5a57; }
+@-moz-document url-prefix() {
+  .nutrition-calc-wrapper .nutrition-table .footer .sums .filter {
+    margin: -34px 0 0 0; } }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          @-moz-document url-prefix() {
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .filter {
+              margin: -29px 0 0 0; } } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          @-moz-document url-prefix() {
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .filter {
+              margin: -24px 0 0 0; } } }
+        @media only screen and (max-width: 1023px) {
+          @-moz-document url-prefix() {
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .filter {
+              margin: -29px 0 0 0; } } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .nutrition-calc-wrapper .nutrition-table .footer .sums .filter {
+            width: 350px; } }
+        @media only screen and (max-width: 1023px) {
+          .nutrition-calc-wrapper .nutrition-table .footer .sums .filter {
+            width: 100%;
+            margin: 0; } }
+        .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .content {
+          text-transform: uppercase;
+          text-align: left;
+          height: 56px;
+          line-height: 2.4;
+          margin: 0 0 0 10px;
+          text-indent: 10px;
+          float: left;
+          width: 80px; }
+          @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .content {
+              line-height: 2.6; } }
+          @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .content {
+              line-height: 3; } }
+          @media only screen and (max-width: 1023px) {
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .content {
+              margin: 0;
+              line-height: 2.7; } }
+        .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .totals-sum-wrapper {
+          position: absolute;
+          top: 20px;
+          right: 25px;
+          visibility: hidden;
+          height: 56px;
+          color: #fff;
+          text-transform: uppercase;
+          white-space: nowrap; }
+          .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .totals-sum-wrapper .plus-popup {
+            position: relative;
+            top: 1px;
+            left: 2px;
+            cursor: pointer;
+            color: #7e7e7e; }
+            @media only screen and (max-width: 1023px) {
+              .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .totals-sum-wrapper .plus-popup {
+                top: -3px;
+                overflow: visible; } }
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .totals-sum-wrapper .plus-popup:hover {
+              color: #5a5a57; }
+        @media only screen and (max-width: 1023px) {
+          .nutrition-calc-wrapper .nutrition-table .footer .sums .filter .totals-sum-wrapper {
+            visibility: visible; } }
+      .nutrition-calc-wrapper .nutrition-table .footer .sums .cell {
+        background: #5a5a57; }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .nutrition-calc-wrapper .nutrition-table .footer .sums .cell {
+            display: none; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .nutrition-calc-wrapper .nutrition-table .footer .sums .cell:first-child {
+            display: block; } }
+        .nutrition-calc-wrapper .nutrition-table .footer .sums .cell .content {
+          height: 56px;
+          border-left: 1px solid #464644;
+          border-right: 1px solid #666;
+          line-height: 3.3; }
+          @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .cell .content {
+              line-height: 4; } }
+          @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            .nutrition-calc-wrapper .nutrition-table .footer .sums .cell .content {
+              line-height: 4.5; } }
+    @media only screen and (max-width: 1023px) {
+      .nutrition-calc-wrapper .nutrition-table .arrows {
+        display: none; } }
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-left,
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-right,
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-left,
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-right {
+      position: absolute;
+      height: 15px;
+      width: 9px;
+      background: transparent url("../img/arrow-sprite.png") no-repeat;
+      opacity: 0.3;
+      background-size: 100%; }
+      @media only screen and (max-width: 1023px) {
+        .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-left,
+        .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-right,
+        .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-left,
+        .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-right {
+          display: none; } }
+    .nutrition-calc-wrapper .nutrition-table .arrows .active {
+      cursor: pointer;
+      opacity: 1; }
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-left,
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-right {
+      top: 90px; }
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-right,
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-left {
+      bottom: 150px; }
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-left,
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-left {
+      left: 450px;
+      background-position: 0 -15px; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-left,
+        .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-left {
+          left: 330px; } }
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-right,
+    .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-right {
+      right: -19px;
+      background-position: 0 0; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .nutrition-calc-wrapper .nutrition-table .arrows .arrow-top-right,
+        .nutrition-calc-wrapper .nutrition-table .arrows .arrow-bottom-right {
+          right: -21px; } }
+    .nutrition-calc-wrapper .nutrition-table .body .item-row {
+      height: 60px; }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .nutrition-calc-wrapper .nutrition-table .body .item-row .cell {
+          display: none; } }
+      .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:nth-child(even) {
+        background: rgba(20, 20, 20, 0.2); }
+      .nutrition-calc-wrapper .nutrition-table .body .item-row .cell .label,
+      .nutrition-calc-wrapper .nutrition-table .body .item-row .cell .content {
+        height: 58px;
+        border-top: 1px solid #504f4f;
+        border-bottom: 1px solid #1b1b1a; }
+      .nutrition-calc-wrapper .nutrition-table .body .item-row .cell .label {
+        display: block;
+        vertical-align: middle; }
+      .nutrition-calc-wrapper .nutrition-table .body .item-row .cell .content {
+        display: table-cell;
+        vertical-align: middle;
+        width: 60px; }
+        .nutrition-calc-wrapper .nutrition-table .body .item-row .cell .content .display {
+          visibility: hidden; }
+      .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child {
+        position: absolute;
+        width: 470px;
+        left: 0; }
+@-moz-document url-prefix() {
+  .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child {
+    margin: -39px 0 0 0; } }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          @-moz-document url-prefix() {
+            .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child {
+              margin: -38px 0 0 0; } } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child {
+            width: 350px; }
+          @-moz-document url-prefix() {
+            .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child {
+              margin: -38px 0 0 0; } } }
+        @media only screen and (max-width: 1023px) {
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child {
+            width: 100%;
+            margin: 0; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child {
+            display: table;
+            width: 100%; } }
+        .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label {
+          text-align: left;
+          position: relative;
+          width: 470px;
+          box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2); }
+          @media only screen and (max-width: 1023px) {
+            .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label {
+              width: 100%; } }
+          @media only screen and (max-width: 1023px) {
+            .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .label-arrow {
+              position: absolute;
+              right: 20px;
+              top: 0;
+              width: 10px;
+              height: 100%;
+              background: transparent url("../img/arrow-right.png") no-repeat;
+              background-position: center center;
+              background-size: 10px; } }
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .add-button,
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .remove-button {
+            background: none;
+            border: none medium;
+            color: #878484;
+            text-transform: uppercase;
+            cursor: pointer;
+            outline: none;
+            width: 50px;
+            position: absolute;
+            top: 22px;
+            left: 10px; }
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .remove-button {
+            cursor: pointer;
+            height: 20px;
+            width: 20px;
+            background: transparent url("../img/nutrition-remove-icon.png") no-repeat 0 0;
+            background-size: 20px;
+            position: absolute;
+            top: 18px;
+            left: 20px; }
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .image {
+            width: 58px;
+            height: 58px;
+            vertical-align: middle;
+            margin: 0 0 0 60px;
+            float: left; }
+            @media only screen and (max-width: 1439px) {
+              .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .image {
+                width: 46px;
+                height: 46px;
+                margin: 6px 0 0 58px; } }
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .copy-wrapper {
+            height: 58px;
+            display: table-cell;
+            vertical-align: middle; }
+          .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .copy {
+            cursor: pointer;
+            margin: 2px 0 0 15px;
+            line-height: 1;
+            width: 90%;
+            display: block;
+            float: left;
+            color: #fff; }
+            .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .copy:hover {
+              color: #b0b0b0; }
+            @media only screen and (min-width: 768px) and (max-width: 1023px) {
+              .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .copy {
+                width: 195px; } }
+            @media only screen and (max-width: 1023px) {
+              .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .copy {
+                width: 100%;
+                padding: 0 0 0 10px;
+                margin: 2px 0 0 0; } }
+            @media only screen and (min-width: 320px) and (max-width: 463px) {
+              .nutrition-calc-wrapper .nutrition-table .body .item-row .cell:first-child .label .copy {
+                width: 90%;
+                margin: 2px 0 0 0; } }
+      .nutrition-calc-wrapper .nutrition-table .body .item-row.no-border-top .cell .label,
+      .nutrition-calc-wrapper .nutrition-table .body .item-row.no-border-top .cell .content {
+        height: 59px;
+        border-top: none medium; }
+      .nutrition-calc-wrapper .nutrition-table .body .item-row.added .cell {
+        background: rgba(46, 46, 46, 0.65); }
+        .nutrition-calc-wrapper .nutrition-table .body .item-row.added .cell:nth-child(odd) {
+          background: rgba(20, 20, 20, 0.2); }
+        .nutrition-calc-wrapper .nutrition-table .body .item-row.added .cell .content .display {
+          visibility: visible; }
+      .nutrition-calc-wrapper .nutrition-table .body .item-row.disabled .cell {
+        opacity: 0.4; }
+    .nutrition-calc-wrapper .nutrition-table .body .divider {
+      height: 30px;
+      background: #2c2c2c; }
+      .nutrition-calc-wrapper .nutrition-table .body .divider .first {
+        background: #2c2c2c;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: left; }
+        .nutrition-calc-wrapper .nutrition-table .body .divider .first:first-child {
+          position: absolute;
+          width: 100%;
+          left: 0; }
+        .nutrition-calc-wrapper .nutrition-table .body .divider .first .label,
+        .nutrition-calc-wrapper .nutrition-table .body .divider .first .content {
+          text-transform: uppercase;
+          height: 30px;
+          line-height: 2;
+          text-indent: 10px; }
+          @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            .nutrition-calc-wrapper .nutrition-table .body .divider .first .label,
+            .nutrition-calc-wrapper .nutrition-table .body .divider .first .content {
+              line-height: 2; } }
+          @media only screen and (max-width: 1023px) {
+            .nutrition-calc-wrapper .nutrition-table .body .divider .first .label,
+            .nutrition-calc-wrapper .nutrition-table .body .divider .first .content {
+              line-height: 2.3; } }
+
+/*# sourceMappingURL=nutrition.css.map */

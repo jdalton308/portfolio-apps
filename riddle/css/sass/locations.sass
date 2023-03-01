@@ -1,0 +1,252 @@
+@import "media-queries"
+@import "prefixes"
+
+.locations-page
+
+  .locations
+    position: relative
+    display: block
+    left: 0
+    @include transition(left 0.5s ease-in-out)
+
+    +mobile-landscape-and-below
+      margin: 0 0 -10px 0
+
+    .main-img
+      margin: 0
+
+      +mobile-landscape-and-below
+        display: none
+
+    .main-img-bg
+      display: none
+      background: transparent url('../img/locations/splash.jpg') no-repeat 0 0
+
+      +mobile-landscape-and-below
+        display: block
+        margin: 0
+        height: 230px
+        width: inherit
+        background-size: 767px
+        background-position: center 0
+
+      +mobile-portrait
+        background-size: 720px
+        background-position: 0 -8px
+
+    .locations-content
+      padding: 34px 0
+
+      .h3
+        text-transform: uppercase
+        width: 420px
+        margin: 0 auto 30px auto
+        text-align: center
+        color: #4c4949
+        display: none
+
+        +tablet-portrait
+          display: block
+
+        +mobile-landscape-and-below
+          width: 320px
+          display: block
+
+      .h4
+        color: #4c4949
+
+      .t10b
+        color: #f06423
+        text-transform: uppercase
+
+      .t10
+        color: #4c4949
+
+      a
+        color: #4c4949
+        text-decoration: none
+      
+      .button-orange
+        background-color: #f06423
+        display: inline-block
+        cursor: pointer
+        color: #ffffff
+        font-size: 13px
+        padding: 15px 25px 12px
+        text-decoration: none
+        height: auto
+        line-height: 1
+        margin: 16px auto
+        
+        &:hover
+          background-color: #cd4a0d
+        
+        &:active
+          position: relative
+          top: 1px
+          
+        +mobile-portrait
+          display: block
+
+      .states
+        width: 980px
+        margin: 0 auto
+
+        +tablet-portrait
+          width: 700px
+
+        +mobile-landscape
+          width: 500px
+
+        +mobile-portrait
+          width: 270px
+
+        .state
+          float: left
+          display: block
+          width: 45%
+          margin: 0 0 0 5%
+
+          +mobile-landscape-and-below
+            float: none
+
+          +mobile-landscape
+            width: 100%
+
+          +mobile-portrait
+            width: 100%
+
+          .state-name
+            margin: 0 0 20px 0
+            padding: 15px 0 0 0
+            position: relative
+
+            +mobile-landscape-and-below
+              border-top: 1px solid #f06423
+
+              /* bordered triangle */
+              &:after,
+              &:before
+                top: 0
+                left: 7%
+                border: solid transparent
+                content: " "
+                height: 0
+                width: 0
+                position: absolute
+                pointer-events: none
+
+              &:after
+                border-color: rgba(255, 255, 255, 0)
+                border-width: 5px
+                margin-left: -5px
+                background: transparent url('../img/light-bg-400.jpg') repeat
+                @include transform(rotate(45deg))
+                top: -6px
+
+              &:before
+                border-top-color: #f06423
+                border-width: 8px
+                margin-left: -8px
+          &.washingtondc
+            +tablet-landscape-and-above
+              margin-top: -70px
+
+          .areas
+
+            .area
+              margin: 0 0 30px 0
+              padding: 0 0 30px 0
+              border-bottom: 1px solid #cbcbcb
+
+              &:last-child
+                +tablet-landscape-and-below
+                  border-bottom: none medium
+
+              +tablet-landscape-and-below
+                border-bottom: none medium
+
+              +mobile-landscape-and-below
+                margin: 15px 0
+                padding: 0
+                border-bottom: 1px solid #cbcbcb
+
+              .new
+                text-transform: uppercase
+                color: #fff
+                padding: 6px 10px 3px 10px
+                background: #ed642f
+                margin: 0 0 10px 0
+                width: 85px
+                display: block
+                @include border-radius(7px)
+                text-align: center
+                letter-spacing: 1.5px
+                line-height: 15px
+                white-space: nowrap
+
+              .title
+                margin: 0 0 5px 0
+
+              .info
+                line-height: 1.5
+
+                .location
+                  color: #9f9f9f
+                  float: left
+                  font-size: 20px
+                  margin: -6px 0 6px
+                  width: 100%
+
+                .address,
+                .contact
+                  float: left
+                  display: block
+                  width: 220px
+
+                  .map,
+                  .tel,
+                  .order
+                    background: transparent url('../img/locations-sprite.png') no-repeat
+                    padding: 0 0 0 25px
+                    background-size: 20px
+                    height: 20px
+                    display: block
+
+                  .map
+                    background-position: 0 1px
+
+                  .tel
+                    background-position: 0 -27px
+                    margin-top: 4px
+                    +mobile-landscape-and-below
+                      font-family: 'Zemestro Std Medium', Helvetica, Arial, 'sans-serif'
+                      font-size: 14px
+
+                  .order
+                    background-position: 0 -54px
+
+                  +tablet-portrait
+                    float: none
+
+                  +mobile-landscape
+                    float: left
+
+                .address
+                  +tablet-portrait
+                    margin: 0 0 10px 0
+
+                  +mobile-landscape-and-below
+                    margin: 0 0 14px 0
+
+                .contact
+                  li
+                    +mobile-landscape-and-below
+                      margin: 0 0 10px 0
+
+                    &:last-child
+                      +mobile-landscape-and-below
+                        margin: 0 0 12px 0
+
+                  +mobile-portrait
+                    padding: 0

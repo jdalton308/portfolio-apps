@@ -1,0 +1,410 @@
+
+//// COLORS ////
+
+$black:       #000;
+$grey-dark:   #2d2d2d;
+$grey:        #322f31;
+$grey-shadow: #111;
+$grey-light:  #808080;
+$white:       #FFF;
+
+$brown:       #644539;
+$brown2:      #4b2d0b;
+$brown-dark:  #462a07;
+$brown-wood:  rgba(190, 169, 162, 0.7);
+$orange:      #e96e31;
+$maroon:      #451400;
+$red:         #a9341a;
+$red-dark:    #a14212;
+$green:       #384a1a;
+$green-light: lighten($green, 30%);
+
+$text-color:  $grey-light;
+
+$penalty-cover: rgba(169,52,26, 0.6);
+$penalty-cover-clear: rgba(169,52,26, 0.0);
+
+$notice-banner-background: #e6e1dd;
+$notice-banner-color: #5c4236;
+$notice-banner-link-color: #54392d;
+
+
+
+
+// Font family variables are found in _typography.scss
+
+
+//// BREAKPOINTS ////
+
+$mobile-small: 500px;
+$mobile:  768px;
+$tablet:  1024px;
+
+
+//// SIZING ////
+
+$mobile-header: 62px;
+$mobile-footer: 54px;
+
+$desktop-header: 93px;
+$desktop-footer: 87px;
+
+$mobile-headfoot-height: $mobile-header + $mobile-footer;
+$small-mobile-headfoot: 102px;
+$desktop-headfoot-height: $desktop-header + $desktop-footer;
+
+
+
+//// MIXINS ////
+
+@mixin transition($time: 0.3s) {
+  -webkit-transition: $time all;
+  -ms-transition: $time all;
+  transition: $time all;
+}
+
+@mixin transform($props) {
+  -webkit-transform: $props;
+  -ms-transform: $props;
+  transform: $props;
+}
+
+@mixin animate($keyframe, $length) {
+  -webkit-animation: $keyframe $length infinite;
+  animation: $keyframe $length infinite;
+}
+
+@mixin centerEl() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin icon-pit() {
+  content: "\e902";
+  font-family: 'Guac';
+  display: block;
+}
+@mixin icon-twit() {
+  content: "\e903";
+  font-family: 'Guac';
+  display: block;
+}
+@mixin icon-fb() {
+  content: "\f230";
+  font-family: 'Guac';
+  display: block;
+}
+
+
+
+//// KEYFRAMSE ////
+
+@-webkit-keyframes quarterTurn {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes quarterTurn {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes showEl {
+  0% {
+    background-color: $white;
+  }
+  45% {
+    background-color: $white;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+@keyframes showEl {
+  0% {
+    background-color: $white;
+  }
+  45% {
+    background-color: $white;
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+
+@-webkit-keyframes seesaw {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  30% {
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  70% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes seesaw {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  30% {
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+  50% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+  70% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+
+
+@-webkit-keyframes redflash {
+  0% {
+    color: $brown-dark;
+  }
+  25% {
+    color: $red;
+  }
+  50% {
+    color: $brown-dark;
+  }
+  75% {
+    color: $red;
+  }
+  100% {
+    color: $brown-dark;
+  }
+}
+@keyframes redflash {
+  0% {
+    color: $brown-dark;
+  }
+  25% {
+    color: $red;
+  }
+  50% {
+    color: $brown-dark;
+  }
+  75% {
+    color: $red;
+  }
+  100% {
+    color: $brown-dark;
+  }
+}
+
+@-webkit-keyframes bg-flash {
+  0% {
+    background-color: $penalty-cover-clear;
+  }
+  25% {
+    background-color: $penalty-cover;
+  }
+  50% {
+    background-color: $penalty-cover-clear;
+  }
+  75% {
+    background-color: $penalty-cover;
+    opacity: 1;
+  }
+  100% {
+    background-color: $penalty-cover-clear;
+    opacity: 0;
+  }
+}
+@keyframes bg-flash {
+  0% {
+    background-color: $penalty-cover-clear;
+  }
+  25% {
+    background-color: $penalty-cover;
+  }
+  50% {
+    background-color: $penalty-cover-clear;
+  }
+  75% {
+    background-color: $penalty-cover;
+    opacity: 1;
+  }
+  100% {
+    background-color: $penalty-cover-clear;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadebeat {
+  0% {
+    font-size: 8.0rem;
+  }
+  3% {
+    font-size: 7.5rem;
+  }
+  31% {
+    font-size: 7.5rem;
+  }
+  34% {
+    font-size: 8.0rem;
+  }
+  37% {
+    font-size: 7.5rem;
+  }
+  64% {
+    font-size: 7.5rem;
+  }
+  67% {
+    font-size: 8.0rem;
+  }
+  70% {
+    font-size: 7.5rem;
+  }
+  100% {
+    font-size: 7.5rem;
+  }
+}
+@keyframes fadebeat {
+  0% {
+    font-size: 7.5rem;
+  }
+  3% {
+    font-size: 8.0rem;
+  }
+  5% {
+    font-size: 7.5rem;
+  }
+  31% {
+    font-size: 7.5rem;
+  }
+  34% {
+    font-size: 8.0rem;
+  }
+  37% {
+    font-size: 7.5rem;
+  }
+  64% {
+    font-size: 7.5rem;
+  }
+  67% {
+    font-size: 8.0rem;
+  }
+  70% {
+    font-size: 7.5rem;
+  }
+  100% {
+    font-size: 7.5rem;
+  }
+}
+
+@-webkit-keyframes fadebeatMobile {
+  0% {
+    font-size: 3.5rem;
+  }
+  3% {
+    font-size: 4.0rem;
+  }
+  5% {
+    font-size: 3.5rem;
+  }
+  31% {
+    font-size: 3.5rem;
+  }
+  34% {
+    font-size: 4.0rem;
+  }
+  37% {
+    font-size: 3.5rem;
+  }
+  64% {
+    font-size: 3.5rem;
+  }
+  67% {
+    font-size: 4.0rem;
+  }
+  70% {
+    font-size: 3.5rem;
+  }
+  100% {
+    font-size: 3.5rem;
+  }
+}
+@keyframes fadebeatMobile {
+  0% {
+    font-size: 3.5rem;
+  }
+  3% {
+    font-size: 4.0rem;
+  }
+  5% {
+    font-size: 3.5rem;
+  }
+  31% {
+    font-size: 3.5rem;
+  }
+  34% {
+    font-size: 4.0rem;
+  }
+  37% {
+    font-size: 3.5rem;
+  }
+  64% {
+    font-size: 3.5rem;
+  }
+  67% {
+    font-size: 4.0rem;
+  }
+  70% {
+    font-size: 3.5rem;
+  }
+  100% {
+    font-size: 3.5rem;
+  }
+}

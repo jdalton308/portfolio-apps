@@ -1,0 +1,216 @@
+@-o-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.sidebar-open {
+  overflow: hidden;
+  position: fixed; }
+  .sidebar-open .sh-header {
+    z-index: 10;
+    height: 100%; }
+    @media only screen and (max-width: 1439px) {
+      .sidebar-open .sh-header {
+        left: -30%; } }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open .sh-header {
+        left: -90%; } }
+    .sidebar-open .sh-header .sh-nav {
+      height: 100%; }
+      @media only screen and (max-width: 1439px) {
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper {
+          position: absolute;
+          top: 0;
+          right: -30%;
+          width: 30%;
+          background: #343330;
+          overflow: auto;
+          height: 100%; } }
+  @media only screen and (max-width: 1439px) and (max-width: 1023px) {
+    .sidebar-open .sh-header .sh-nav .main-items-wrapper {
+      right: -90%;
+      width: 90%; } }
+      .sidebar-open .sh-header .sh-nav .main-items-wrapper .item {
+        float: none;
+        display: block;
+        height: 54px;
+        border-top: 1px solid #3a3a3a;
+        border-bottom: 1px solid #232321;
+        line-height: 3.5; }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .sidebar-open .sh-header .sh-nav .main-items-wrapper .item {
+            line-height: 2.6; } }
+        @media only screen and (max-width: 1023px) {
+          .sidebar-open .sh-header .sh-nav .main-items-wrapper .item {
+            line-height: 2.6; } }
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .item a {
+          width: 100%;
+          height: 100%;
+          display: block;
+          margin: 0; }
+      .sidebar-open .sh-header .sh-nav .main-items-wrapper .item:hover {
+        background: #6b6a67; }
+      .sidebar-open .sh-header .sh-nav .main-items-wrapper .active.item:after {
+        display: none; }
+      .sidebar-open .sh-header .sh-nav .main-items-wrapper .main-items {
+        float: none;
+        display: block;
+        margin: 0; }
+      .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items {
+        float: none;
+        display: block; }
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items .twitter,
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items .facebook {
+          border: none medium;
+          float: left;
+          display: inline; }
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items .twitter:hover,
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items .facebook:hover {
+          background-color: transparent; }
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items .twitter .icon {
+          width: 23px;
+          height: 19px;
+          background-position: 0 -2px;
+          margin: 21px 10px 0 0;
+          background-size: 68px 42px; }
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items .facebook .icon {
+          width: 11px;
+          height: 21px;
+          background-position: -57px 0;
+          margin: 19px 0 0 0;
+          background-size: 68px 42px; }
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items .item {
+          line-height: 3; }
+        .sidebar-open .sh-header .sh-nav .main-items-wrapper .social-items .item:last-child {
+          border-bottom: none medium; }
+  .sidebar-open .sh-footer {
+    left: -30%;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out; }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open .sh-footer {
+        left: -90%; } }
+  .sidebar-open.about-page .about {
+    left: -30%;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out; }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open.about-page .about {
+        left: -90%; } }
+  .sidebar-open.careers-page .careers {
+    left: -30%;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out; }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open.careers-page .careers {
+        left: -90%; } }
+  .sidebar-open.food-page .food {
+    left: -30%;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out; }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open.food-page .food {
+        left: -90%; } }
+  .sidebar-open.home-page .home {
+    left: -30%;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out; }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open.home-page .home {
+        left: -90%; } }
+  .sidebar-open.inspiration-page .inspiration {
+    left: -30%;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out; }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open.inspiration-page .inspiration {
+        left: -90%; } }
+  .sidebar-open.locations-page .locations {
+    left: -30%;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out; }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open.locations-page .locations {
+        left: -90%; } }
+  .sidebar-open.news-page .news {
+    left: -30%;
+    -moz-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
+    -ms-transition: left 0.5s ease-in-out;
+    -webkit-transition: left 0.5s ease-in-out;
+    transition: left 0.5s ease-in-out; }
+    @media only screen and (max-width: 1023px) {
+      .sidebar-open.news-page .news {
+        left: -90%; } }

@@ -1,0 +1,218 @@
+@-o-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  to {
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.home-page .home {
+  position: relative;
+  display: block;
+  left: 0;
+  -moz-transition: left 0.5s ease-in-out;
+  -o-transition: left 0.5s ease-in-out;
+  -ms-transition: left 0.5s ease-in-out;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out; }
+  .home-page .home .intro-wrapper {
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .home-page .home .intro-wrapper .intro {
+      position: relative;
+      width: 580px;
+      margin: 0 auto;
+      text-align: center; }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .home-page .home .intro-wrapper .intro {
+          width: 500px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .home-page .home .intro-wrapper .intro {
+          width: 270px; } }
+      @media only screen and (max-width: 1023px) {
+        .home-page .home .intro-wrapper .intro {
+          display: none; } }
+      .home-page .home .intro-wrapper .intro .h1 {
+        margin: 0 0 30px 0;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); }
+        @media only screen and (max-width: 1439px) {
+          .home-page .home .intro-wrapper .intro .h1 {
+            margin: 0 0 15px 0; } }
+        @media only screen and (max-width: 1023px) {
+          .home-page .home .intro-wrapper .intro .h1 {
+            margin: 0 0 15px 0; } }
+      .home-page .home .intro-wrapper .intro .food-link {
+        color: white;
+        text-decoration: none;
+        font-family: "Zemestro Std Book", Helvetica, Arial, "sans-serif"; }
+  .home-page .home .img-wrapper {
+    position: relative;
+    overflow: hidden; }
+    .home-page .home .img-wrapper .main-img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden; }
+      .home-page .home .img-wrapper .main-img .img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent url("../img/home/splash.jpg") no-repeat bottom center;
+        background-size: 2020px; }
+        @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+          .home-page .home .img-wrapper .main-img .img {
+            background-size: 1540px;
+            background-position: right -100px; } }
+        @media only screen and (min-width: 1024px) {
+          .home-page .home .img-wrapper .main-img .img {
+            background-size: 1840px; } }
+        @media only screen and (min-width: 1600px) {
+          .home-page .home .img-wrapper .main-img .img {
+            background-size: 2600px; } }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .home-page .home .img-wrapper .main-img .img {
+            background-size: 1840px;
+            background-position: right center; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .home-page .home .img-wrapper .main-img .img {
+            background-size: 1840px;
+            background-position: right center; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .home-page .home .img-wrapper .main-img .img {
+            background-size: 1300px;
+            background-position: -716px -80px; } }
+    .home-page .home .img-wrapper .arrow-wrapper {
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+      width: 100%;
+      height: 40px;
+      display: block; }
+      @media only screen and (min-width: 1024px) and (max-width: 1439px) {
+        .home-page .home .img-wrapper .arrow-wrapper {
+          bottom: 40px; } }
+      .home-page .home .img-wrapper .arrow-wrapper .arrow {
+        background: transparent url("../img/arrow-down.png") no-repeat;
+        background-size: 30px;
+        width: 30px;
+        height: 16px;
+        display: block;
+        margin: 10px auto 0 auto;
+        cursor: pointer; }
+  .home-page .home .promos-wrapper {
+    position: relative;
+    top: 35px;
+    margin: 0 0 103px 0; }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .home-page .home .promos-wrapper {
+        margin: 0 0 88px 0; } }
+    @media only screen and (max-width: 1023px) {
+      .home-page .home .promos-wrapper {
+        margin: 0 0 87px 0; } }
+    .home-page .home .promos-wrapper .promos {
+      width: 1000px;
+      margin: 0 auto; }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        .home-page .home .promos-wrapper .promos {
+          width: 700px; } }
+      @media only screen and (min-width: 464px) and (max-width: 767px) {
+        .home-page .home .promos-wrapper .promos {
+          width: 568px; } }
+      @media only screen and (min-width: 320px) and (max-width: 463px) {
+        .home-page .home .promos-wrapper .promos {
+          width: 320px; } }
+      .home-page .home .promos-wrapper .promos .promo {
+        float: left;
+        display: block;
+        width: 490px;
+        margin: 0 20px 0 0;
+        color: #4c4949; }
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+          .home-page .home .promos-wrapper .promos .promo {
+            width: 340px; } }
+        @media only screen and (min-width: 464px) and (max-width: 767px) {
+          .home-page .home .promos-wrapper .promos .promo {
+            width: 500px;
+            float: none;
+            margin: 0 auto 40px auto; } }
+        @media only screen and (min-width: 320px) and (max-width: 463px) {
+          .home-page .home .promos-wrapper .promos .promo {
+            width: 300px;
+            float: none;
+            margin: 0 auto 40px auto; } }
+        .home-page .home .promos-wrapper .promos .promo img {
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+          width: 100%; }
+          @media only screen and (min-width: 464px) and (max-width: 767px) {
+            .home-page .home .promos-wrapper .promos .promo img {
+              max-width: 500px; } }
+          @media only screen and (min-width: 320px) and (max-width: 463px) {
+            .home-page .home .promos-wrapper .promos .promo img {
+              max-width: 300px; } }
+        .home-page .home .promos-wrapper .promos .promo:last-child {
+          margin: 0; }
+          @media only screen and (max-width: 1023px) {
+            .home-page .home .promos-wrapper .promos .promo:last-child {
+              margin: 0 auto; } }
+        .home-page .home .promos-wrapper .promos .promo .title {
+          margin: 25px 0 10px 0; }
+        .home-page .home .promos-wrapper .promos .promo a {
+          color: #4c4949;
+          text-decoration: none; }

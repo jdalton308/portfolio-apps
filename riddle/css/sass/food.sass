@@ -1,0 +1,949 @@
+@import "media-queries"
+@import "prefixes"
+
+.food-page
+
+  .food
+    position: relative
+    display: block
+    left: 0
+    @include transition(left 0.5s ease-in-out)
+    margin: 0 0 -20px 0
+
+    .main-img
+      margin: 0
+
+      +mobile-landscape-and-below
+        display: none
+
+    .main-img-bg
+      display: none
+      background: transparent url('../img/food/splash.jpg') no-repeat 0 0
+
+      +mobile-landscape-and-below
+        display: block
+        margin: 0
+        height: 230px
+        width: inherit
+        background-size: 767px
+        background-position: 0 0
+
+      +mobile-portrait
+        background-size: 645px
+        background-position: -53px 0
+
+    .intro
+      position: absolute
+      width: 600px
+      text-align: center
+      top: 85px
+      right: 40px
+      z-index: 3
+
+      +tablet-landscape
+        width: 460px
+        top: 45px
+
+      +tablet-portrait
+        position: static
+        width: 90%
+        margin: 0 auto
+        padding: 56px 0 25px 0
+        top: 0
+        color: #999
+        width: 540px
+        display: block
+
+      +mobile-landscape-and-below
+        position: static
+        width: 90%
+        margin: 0 auto
+        padding: 25px 0
+        top: 0
+
+      .h2
+        text-shadow: 0px 1px 2px rgba(0,0,0,.5)
+
+      .t2
+        margin: 10px 0 0 0
+
+        +mobile-landscape-and-below
+          color: #9f9f9f
+
+    .tab-content
+      position: relative
+
+      &.sticky
+        top: 70px
+        padding: 0 0 70px 0
+
+      .h3
+        //No arrow for nutrition calculator for mobile-landscape-and-below
+        padding: 34px 0 20px 0
+        margin: 0 auto
+        border-top: 1px solid #6e6e6d
+        width: 980px
+        position: relative
+
+        +tablet-landscape
+          width: 980px
+
+        +tablet-portrait
+          width: 700px
+
+        /* bordered triangle */
+        &:after,
+        &:before
+          top: 0
+          left: 50%
+          border: solid transparent
+          content: " "
+          height: 0
+          width: 0
+          position: absolute
+          pointer-events: none
+
+        &:after
+          border-color: rgba(255, 255, 255, 0)
+          border-width: 5px
+          margin-left: -5px
+          background: transparent url('../img/dark-bg-400.jpg') repeat
+          @include transform(rotate(45deg))
+          top: -6px
+
+          +mobile-landscape-and-below
+            top: -7px
+
+        &:before
+          border-color: rgba(110, 110, 109, 0)
+          border-top-color: #6e6e6d
+          border-width: 8px
+          margin-left: -8px
+
+        +mobile-landscape-and-below
+          border-top: 2px solid #6e6e6d
+
+        &.first
+          border-top: none medium
+
+          &.test
+            font-family: 'Zemestro Std Medium'
+
+          +tablet-landscape-and-below
+            margin: 13px auto 0 auto
+            border-top: 1px solid #6e6e6d
+
+            +mobile-landscape-and-below
+              border-top: 2px solid #6e6e6d
+
+          &:after,
+          &:before
+            display: none
+
+            +tablet-landscape-and-below
+              display: block
+
+        +tablet-portrait
+          width: 700px
+
+        +mobile-landscape-and-below
+          width: 548px
+
+        +mobile-portrait
+          width: 300px
+
+      .food-note-pos
+        position: absolute
+        right: 25px
+        top: 25px
+
+      .food-note
+        position: absolute
+        right: 25px
+        top: 25px
+        color: #9f9f9f
+        width: 115px
+
+        .wrapper
+          margin: 25px 0 0 0
+
+          .icon
+            margin: 0
+            text-transform: uppercase
+
+            .spice-icon
+              margin: -7px 2px 0 0
+
+            .vegan-icon
+              margin: -1px 9px 0 0
+
+        +tablet-landscape-and-below
+          position: static
+
+          .copy,
+          .wrapper
+            display: inline
+            float: left
+            margin: 0
+
+        +tablet-landscape
+          width: 980px
+          margin: 25px auto -13px auto
+
+          .copy
+            width: 490px
+
+          .wrapper
+            width: 260px
+            margin: 0
+            position: relative
+            left: 290px
+            +tablet-landscape
+              width: 210px
+
+            .icon
+              width: 130px
+              float: left
+              display: block
+              margin: 0
+              &:nth-child(2)
+                +tablet-landscape
+                  width: 75px
+
+              .spice-icon
+                margin: -4px 2px 0 0
+
+              .vegan-icon
+                margin: -1px 4px 0 0
+
+        +tablet-portrait
+          width: 700px
+          margin: 25px auto -12px auto
+
+          .copy
+            width: 350px
+
+          .wrapper
+            width: 260px
+            position: relative
+            left: 184px
+            +tablet-portrait
+              width: 200px
+              left: 176px
+
+            .icon
+              width: 105px
+              float: left
+              display: inline
+              margin: 0
+              +tablet-portrait
+                width: 100px
+
+              .spice-icon
+                margin: -6px 2px 0 0
+
+              .vegan-icon
+                margin: -1px 4px 0 0
+
+        +mobile-landscape-and-below
+          width: 568px
+          margin: 25px auto 25px auto
+
+          .copy
+            width: 243px
+            height: 35px
+            padding: 10px 20px 9px 20px
+            line-height: 1.3
+            border-right: 1px solid #1d1e1d
+
+          .wrapper
+            width: 263px
+            height: 28px
+            padding: 6px 0 20px 20px
+            border-left: 1px solid #4e4f4e
+
+            .icon
+              width: 100%
+
+              .spice-icon
+                margin: -4px 4px 0 -2px
+
+              .vegan-icon
+                margin: 0 9px 0 0
+
+        +mobile-portrait
+          width: 320px
+
+          .copy
+            width: 119px
+            padding-top: 0
+            height: 60px
+
+          .wrapper
+            width: 138px
+            height: 44px
+
+            .icon
+              margin: 9px 0 15px 0
+
+
+      .options-wrapper
+
+        +mobile-landscape-and-below
+          width: 568px
+          margin: -20px auto 0 auto
+          overflow: hidden
+          visibility: hidden
+          position: relative
+
+        +mobile-portrait
+          width: 320px
+
+      .options
+        width: 980px
+        margin: 0 auto
+        padding: 0 0 80px 0
+
+        +tablet-landscape
+          width: 940px
+
+        +tablet-portrait
+          width: 700px
+
+        +mobile-landscape-and-below
+          height: 100%
+          overflow: hidden
+          position: relative
+          padding: 0 0 35px 0
+
+        .option
+          display: block
+          float: left
+          width: 215px
+          margin: 0 40px 0 0
+
+          &:last-child
+            margin: 0
+
+          img
+            max-width: 266px
+            margin: 0 0 0 -26px
+            position: relative
+            z-index: 1
+
+          article
+            position: relative
+
+          .h4
+            margin: 0 0 18px 0
+            text-align: center
+            position: relative
+
+            +tablet-portrait
+              font-size: 19px
+              margin: 0 0 12px 0
+
+              .text
+                position: relative
+                top: -4px
+
+            +tablet-landscape
+              margin: 0 0 12px 0
+
+            +mobile-landscape-and-below
+              margin: 18px auto
+              width: 568px
+
+            +mobile-landscape
+              width: 220px
+
+            +mobile-portrait
+              width: 300px
+
+            .spice-icon,
+            .vegan-icon
+              margin: 0
+              float: none
+              display: inline-block
+
+            .spice-icon
+              position: relative
+              top: 1px
+              margin: 0
+
+              +tablet-portrait
+                top: -3px
+
+            .vegan-icon
+              position: relative
+              top: 0
+
+              +tablet-portrait
+                top: -4px
+
+                &.alone
+                  top: 0
+
+          .t2
+            color: #9f9f9f
+
+            .reg
+              font-family: Courier
+
+            +tablet-portrait
+              font-size: 16px
+
+            +mobile-landscape-and-below
+              margin: 0 auto
+              width: 320px
+
+            +mobile-landscape
+              width: 220px
+
+            +mobile-portrait
+              margin: 0 auto
+              width: 280px
+
+          .nutrition
+            background: transparent
+            border: none medium
+            line-height: 2.5
+            margin: 10px 0 0 0
+            cursor: pointer
+            outline: none
+            letter-spacing: 1.2px
+
+          +tablet-landscape
+            width: 220px
+            margin: 0 20px 0 0
+
+            img
+              max-width: 206px
+              margin: 0 0 0 7px
+
+          +tablet-portrait
+            width: 160px
+            margin: 0 20px 0 0
+
+            img
+              max-width: 159px
+              margin: 0 20px 0 0
+
+          +mobile-landscape-and-below
+            float: left
+            display: block
+            margin: 0
+            width: 640px
+            height: 100%
+            position: relative
+
+          +mobile-landscape
+            img
+              max-width: 264px
+              margin: 0
+
+          +mobile-portrait
+            width: 320px
+            margin: 0
+
+            img
+              max-width: 260px
+              margin: 0
+
+          .plus-popup
+            color: #7e7e7e
+
+            &:hover
+              color: #3f3f3f
+
+          .sesonal
+            position: absolute
+            top: -10px
+            right: -10px
+            width: 109px
+            height: 109px
+            background: transparent url('../img/sesonal-item.png') no-repeat
+            background-size: 109px
+
+            +tablet-portrait
+              top: -20px
+              right: -10px
+
+            +mobile-landscape
+              top: 0
+              right: 110px
+
+            +mobile-portrait
+              top: 0
+              right: 0
+
+          .note
+            display: none
+
+            +mobile-landscape-and-below
+              display: block
+              margin: 35px auto 0 auto
+
+      .indicators
+        display: none
+        position: relative
+        top: 240px
+        z-index: 3
+
+        +mobile-landscape-and-below
+          display: block
+
+        .indicator
+          width: 7px
+          height: 7px
+          background-color: #fff
+          display: inline-block
+          margin: 0 5px 0 0
+          @include border-radius(7px)
+          opacity: .3
+
+          &.active
+            opacity: 1
+
+          &:last-child
+            margin: 0
+
+      .note
+        +mobile-landscape-and-below
+          display: none
+
+      .arrow-left-wrapper,
+      .arrow-right-wrapper
+        display: none
+        outline: none
+
+        +mobile-landscape-and-below
+          display: block
+          height: 100%
+          width: 30px
+          position: absolute
+          top: 0
+          cursor: pointer
+
+        .arrow-left-icon,
+        .arrow-right-icon
+          position: absolute
+          top: 50%
+          margin: -31px 0 0 0
+          background: transparent url('../img/arrow-sprite.png') no-repeat
+          background-size: 50%
+          width: 19px
+          height: 14px
+
+        .arrow-left-icon
+          background-position: 0 -15px
+
+        .arrow-right-icon
+          background-position: 0 0
+
+        &:active
+          .arrow-left-icon,
+          .arrow-right-icon
+            opacity: 1
+
+      .arrow-left-wrapper
+        left: 2px
+
+      .arrow-right-wrapper
+        right: 12px
+
+      .grey-bar
+        position: absolute
+        bottom: 85px
+        left: 0
+        width: 100%
+        height: 56px
+        background: #5a5a57
+        display: none
+
+        +tablet-portrait
+          bottom: 70px
+
+        +mobile-landscape-and-below
+          display: none
+
+      .base-wrapper,
+      .meat-wrapper,
+      .sauce-wrapper,
+      .garnishes-wrapper,
+      .topping-wrapper,
+      .drinks-wrapper,
+      .dessert-wrapper,
+      .nutrition-calc-wrapper,
+      .vegetable-wrapper
+        position: relative
+        text-align: center
+        padding: 20px 0 0 0
+
+        +mobile-landscape-and-below
+          padding: 0
+
+      .nutrition-calc-wrapper
+        width: 90%
+        padding: 0
+        margin: 0 auto 15px auto
+        position: relative
+        z-index: 1
+
+        +tablet-landscape
+          width: 980px
+
+        +tablet-portrait
+          width: 700px
+          margin: 0 auto 0 auto
+
+        +mobile-landscape-and-below
+          width: 100%
+          margin: 0 auto 0 auto
+
+        .copy
+          width: 100%
+          color: #9f9f9f
+          margin: 0 auto 25px auto
+
+          +tablet-portrait
+            width: 540px
+
+          +mobile-landscape
+            width: 528px
+
+          +mobile-portrait
+            width: 280px
+
+
+      .base-wrapper
+        .arrow-left-icon,
+        .arrow-right-icon
+          margin: -75px 0 0 0
+
+      .meat-wrapper,
+      .vegetable-wrapper
+
+        .arrow-left-icon,
+        .arrow-right-icon
+          margin: -75px 0 0 0
+
+        .options-wrapper
+
+          .options
+            width: 840px
+            margin: 0 auto
+            padding: 0 0 20px 0
+
+            +tablet-portrait
+              width: 620px
+              padding: 0 0 0 0
+
+            +mobile-landscape-and-below
+              padding: 0 0 35px 0
+
+            .option
+              margin: 0 200px 60px 0
+              width: 320px
+
+              &:nth-child(even)
+                margin: 0
+
+              img
+                max-width: 340px
+                margin: 0 0 0 -10px
+
+                +tablet-landscape
+                  width: 260px
+                  margin: 0 auto
+
+              +tablet-portrait
+                width: 260px
+                margin: 0 100px 50px 0
+
+                img
+                  max-width: 192px
+                  margin: 0 auto
+
+              +mobile-landscape-and-below
+                margin: 0
+
+                img
+                  width: 280px
+                  margin: 0 auto
+
+      .sauce-wrapper
+
+        .indicators
+          top: 180px
+
+        .options-wrapper
+
+          .options
+            +mobile-landscape-and-below
+              padding: 0
+
+            .option
+
+              img
+                width: 228px
+
+                +tablet-landscape
+                  width: 184px
+
+                +tablet-portrait
+                  width: 134px
+
+                +mobile-landscape-and-below
+                  width: 216px
+
+      .garnishes-wrapper
+
+        .indicators
+          top: 180px
+
+        .options-wrapper
+
+          .options
+
+            .option
+
+              img
+                width: 216px
+                margin: 0 auto
+
+                +tablet-landscape
+                  width: 162px
+
+                +tablet-portrait
+                  width: 128px
+
+                +mobile-landscape-and-below
+                  width: 196px
+
+      .sauce-wrapper
+
+        .arrow-left-icon,
+        .arrow-right-icon
+          margin: -75px 0 0 0
+
+      .sauce-wrapper,
+      .garnishes-wrapper,
+      .drinks-wrapper
+
+        .arrow-left-icon,
+        .arrow-right-icon
+          margin: -85px 0 0 0
+
+        .options-wrapper
+
+          .options
+            width: 980px
+
+            +tablet-portrait
+              width: 700px
+
+            .option
+              width: 300px
+              margin: 0 40px 0 0
+
+              &:last-child
+                margin: 0
+
+              img
+                display: block
+                margin: 0 auto 20px auto
+
+                +mobile-landscape-and-below
+                  margin: 0 auto 30px auto
+
+              +tablet-portrait
+                width: 220px
+                margin: 0 20px 0 0
+
+              +mobile-landscape-and-below
+                margin: 0
+
+              .t2
+                font-size: 14px
+
+      .sauce-wrapper
+        .options-wrapper
+
+          .options
+            width: 840px
+            +tablet-portrait
+              width: 620px
+
+            .option
+              margin: 0 200px 60px 0
+              width: 320px
+              +tablet-portrait
+                margin: 0 100px 50px 0
+                width: 260px
+              +mobile-landscape
+                margin: 0
+              +mobile-portrait
+                margin: 0
+
+              &:nth-child(even)
+                margin: 0
+
+      .topping-wrapper
+
+        .indicators
+          top: 145px
+
+        .arrow-left-icon,
+        .arrow-right-icon
+          margin: -67px 0 0 0
+
+        .options
+
+          +tablet-portrait
+            width: 700px
+
+          +mobile-landscape-and-below
+            width: 320px
+            height: 320px
+            padding: 0
+
+          .option
+
+            img
+              margin: 0 0 20px 0
+              width: 176px
+
+              +tablet-landscape
+                width: 140px
+                margin: 0 auto
+
+              +tablet-portrait
+                width: 110px
+                margin: 0  auto
+
+              +mobile-landscape-and-below
+                width: 196px
+                margin: 0 auto
+
+            .nutrition
+              margin: 0
+
+            +tablet-portrait
+              width: 160px
+              margin: 0 20px 0 0
+
+              &:last-child
+                margin: 0
+
+            +mobile-landscape-and-below
+              margin: 0
+
+      .dessert-wrapper
+
+        .h3
+          padding: 34px 0 40px 0
+
+        .options-wrapper
+          visibility: visible !important
+
+          .options
+            width: 220px
+
+            .option
+              width: 220px
+
+              img
+                width: 220px
+                margin: 0 auto
+                padding: 0
+
+                +tablet-landscape
+                  width: 340px
+
+                +tablet-portrait
+                  width: 264px
+
+                +mobile-landscape-and-below
+                  width: 200px
+
+      .drinks-wrapper
+
+        .indicators
+          top: 225px
+
+        .h3
+          padding: 34px 0 40px 0
+
+          &.first
+            border: none medium
+            margin: 0 auto
+
+            &:after,
+            &:before
+              display: none
+
+        .arrow-left-icon,
+        .arrow-right-icon
+          margin: -28px 0 0 0
+
+        .options-wrapper
+
+          .options
+            +tablet-landscape-and-below
+              padding: 0 0 50px 0
+
+
+            +mobile-landscape-and-below
+              padding: 0 0 35px 0
+
+            .option
+
+              img
+                width: 211px
+                margin: 0 auto 24px auto
+
+                +tablet-landscape
+                  width: 162px
+                  margin: 0 auto 24px auto
+
+                +tablet-portrait
+                  width: 123px
+                  margin: 0 auto 24px auto
+
+                +mobile-landscape-and-below
+                  width: 174px
+                  margin: 0 auto 40px auto
+
+      .garnishes-wrapper
+
+        .arrow-left-icon,
+        .arrow-right-icon
+          margin: -95px 0 0 0
+
+.page-tabs.food-tabs
+  @include box-shadow(0, 3px, 3px, rgba(0,0,0,.2))
+  .tab
+    width: 33% !important
+    &:first-child
+      width: 34% !important
+    .tab-links
+      border-right: 1px solid #5e5d5d
+      +mobile-portrait
+        line-height: 22px !important
+        padding: 16px 0 7px 0
+    &:nth-child(2)
+      .tab-links
+        +mobile-portrait
+          height: 66px
+          padding: 27px 0 0
+    &:nth-child(3)
+      .tab-links
+        +tablet-landscape
+          border-right: none
+        +tablet-portrait
+          border-right: none
+        +mobile-portrait
+          border-right: none
+          height: 66px
+          padding: 27px 0 0

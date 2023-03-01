@@ -1,0 +1,144 @@
+@import "media-queries"
+@import "prefixes"
+
+html
+  width: 100%
+
+  +mobile-landscape-and-below
+    text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%
+
+body
+  width: 100%
+  background: #2c2b28 url('../img/dark-bg-400.jpg') repeat
+
+  .cycle-slideshow
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 100
+    background: #fff url('../img/light-bg-400.jpg') repeat
+
+    +tablet-landscape-and-below
+      display: none
+
+    +mobile-landscape-and-below
+      display: none
+
+    .slide
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      overflow: hidden
+      background: url(../img/intro/01.jpg) no-repeat center center fixed
+      -webkit-background-size: cover
+      -moz-background-size: cover
+      -o-background-size: cover
+      background-size: cover
+
+      img
+        display: none
+
+      &.one
+        background-image: url(../img/intro/01.jpg)
+
+      &.two
+        background-image: url(../img/intro/02.jpg)
+
+      &.three
+        background-image: url(../img/intro/03.jpg)
+
+      &.four
+        background-image: url(../img/intro/04.jpg)
+
+      &.five
+        background-image: url(../img/intro/05.jpg)
+
+      &.six
+        background-image: url(../img/intro/06.jpg)
+
+      &.seven
+        background-image: url(../img/intro/07.jpg)
+
+      &.eight
+        background-image: url(../img/intro/08.jpg)
+
+    .stamp
+      position: relative
+      z-index: 1
+
+  #mfPreviewBar
+    display: none
+
+  .cf:before,
+  .cf:after
+    content: " "
+    display: table
+
+  .cf:after
+    clear: both
+
+  .main-wrapper
+    top: 70px
+
+    +tablet-portrait
+      top: 56px
+
+    +mobile-landscape-and-below
+      top: 56px
+
+  .main-img
+    width: 100%
+    display: block
+    position: relative
+    z-index: 2
+
+  .intro
+    display: none
+
+    +mobile-landscape-and-below
+      display: block
+
+  &.light-background
+    background: transparent url('../img/light-bg-400.jpg')
+
+  &.dark-background
+    background: transparent url('../img/dark-bg-400.jpg')
+
+@import "util"
+
+@import "fonts"
+
+@import "nav"
+
+@import "sub-nav"
+
+@import "sidebar"
+
+@import "modal"
+
+@import "footer"
+
+@import "home"
+
+@import "food"
+
+@import "about"
+
+@import "inspiration"
+
+@import "news"
+
+@import "nutrition"
+
+@import "careers"
+
+@import "locations"
+
+@import "talk-to-us"
+
+@import "riddles"

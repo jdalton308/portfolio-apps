@@ -1,0 +1,217 @@
+
+// General Styles
+//------------------------
+
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+body {
+	font-family: $body-fonts;
+	font-size: 16px;
+	color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: 1.3em;
+	font-weight: 700;
+	margin: 0;
+}
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 2.3rem;
+}
+h3 {
+	font-size: 1.8rem;
+}
+h4 {
+	font-size: 1.3rem;
+}
+
+a {
+	color: $text-color;
+	text-decoration: none;
+
+	&:visited {
+		color: $text-color;
+	}
+}
+
+button,
+.button {
+	display: inline-block;
+	padding: 15px 25px;
+	font-size: 1.5rem;
+	line-height: 1em;
+	font-weight: 700;
+	background-color: $text-color;
+	font-family: $body-fonts;
+	color: $white;
+	cursor: pointer;
+
+	border-radius: 0;
+	border: 0;
+	@include transition();
+
+	&:hover {
+		background-color: $grey;
+	}
+}
+
+
+
+// View-Specific Styles
+//------------------------
+
+.view-intro,
+.view-how,
+.view-win,
+.view-thanks {
+	width: 100%;
+	height: 100%;
+	padding: 40vh 10px 10px;
+	text-align: center;
+
+	h1 {
+		font-size: 15vh;
+		line-height: 1em;
+		max-width: 75%;
+		margin: 0 auto 12vh;
+	}
+	button {
+		font-size: 6vh;
+	}
+}
+.view-win {
+	padding-top: 25vh;
+}
+
+.view-game {
+	padding: 2.5vh 4vh;
+
+	.message-overlay {
+		position: fixed;
+		z-index: 6;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding-top: 40vh;
+		text-align: center;
+
+		color: $white;
+		background-color: rgba(0,0,0, 0.5);
+
+		.message {
+			font-size: 15vh;
+			font-weight: 700;
+			margin-bottom: 12vh;
+		}
+		button {
+			font-size: 6vh;
+		}
+	}
+
+	.timer {
+		height: 3vh;
+		width: 100%;
+		margin-bottom: 2.5vh;
+		background-image: repeating-linear-gradient(-45deg, $off-white, $off-white 5px, #EEE 5px, #EEE 10px);
+		
+		.timer-bar {
+			height: 100%;
+			width: 100%;
+			// padding: 1.5vh 20px;
+			font-size: 3vh;
+			color: $white;
+			background-color: $light-grey;
+			@include animate(blink, 2s);
+		}
+	}
+	.game-area {
+		width: 100%;
+		// height: 71vh;
+		margin-bottom: 2.5vh;
+
+		.play-photo,
+		.ref-photo {
+			display: inline-block;
+			width: 50%;
+			height: 100%;
+			position: relative;
+
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.play-photo {
+			background-color: $lighter-green;
+			cursor: pointer;
+		}
+		.ref-photo {
+			background-color: $light-green;
+		}
+		.touch-area {
+			position: absolute;
+			z-index: 5;
+			width: 8%;
+			height: 8%;
+			border-radius: 40%;
+			// border: 1px solid $green;
+			@include transition(0.2s);
+
+			&.selected {
+				background-color: $green;
+				border: 3px solid $light-green;
+			}
+		}
+		.play-photo {
+			.touch-area {
+
+			}
+		}
+	}
+	.status-bar {
+		height: 10vh;
+
+		.checkboxes {
+			display: inline-block;
+			height: 100%;
+
+			.box {
+				display: inline-block;
+				height: 100%;
+				width: 8vh;
+				margin-right: 20px;
+				text-align: center;
+				background-color: $off-white;
+				border: 1px solid $green;
+
+				.box-check {
+					height: 100%;
+
+					&.checked {
+						background-color: $green;
+					}
+				}
+			}
+		}
+		button {
+			float: right;
+			height: 100%;
+			padding: 2vh 20px;
+			font-size: 6vh;
+		}
+	}
+}

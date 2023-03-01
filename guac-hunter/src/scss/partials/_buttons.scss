@@ -1,0 +1,82 @@
+
+button,
+.button {
+  display: inline-block;
+  padding: 7px 20px;
+  min-width: 280px;
+  
+  @extend h3;
+  color: $white;
+
+  background-color: $orange;
+  border-radius: 0;
+  border: 0;
+  cursor: pointer;
+  @include transition();
+
+  &:active {
+    background-color: darken($orange, 15%);
+  }
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  &:focus {
+    outline: none;
+  }
+
+
+  // 'Quit' Button
+
+  &.give-up {
+    min-width: 0;
+    padding: 7px 27px 4px;
+    background-color: $brown-dark;
+    opacity: 0.9;
+
+    font-size: 1rem;
+    line-height: 1em;
+    color: lighten($brown-wood, 30%);
+  }
+
+  &#give-up-stay {
+    display: block;
+    margin-bottom: 10px;
+  }
+  &#give-up-leave {
+    background-color: $brown2;
+  }
+
+
+
+  @media (min-width: $mobile) {
+    padding: 15px 20px;
+    min-width: 350px;
+    line-height: 1em;
+
+    &:hover {
+      background-color: darken($orange, 15%);
+      
+      &:disabled {
+        background-color: $orange;
+      }
+    }
+    &:disabled {
+    }
+
+    &.give-up {
+      padding: 15px 65px 12px;
+      font-size: 1.6rem;
+
+      &:hover {
+        background-color: darken($brown-dark, 10%);
+      }
+    }
+
+     
+    &#give-up-leave:hover {
+      background-color: darken($brown2, 10%);
+    }
+  }
+
+}

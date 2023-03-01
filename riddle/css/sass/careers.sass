@@ -1,0 +1,458 @@
+@import "media-queries"
+@import "prefixes"
+
+.careers-page
+
+  .careers
+    position: relative
+    display: block
+    left: 0
+    @include transition(left 0.5s ease-in-out)
+    margin: 0 0 -10px 0
+
+    +tablet-portrait
+      margin: 0 0 -14px 0
+
+    +mobile-landscape
+      margin: 0 0 -34px 0
+
+    +mobile-portrait
+      margin: 0 0 36px 0
+
+    .main-img
+      margin: 0
+
+      +mobile-landscape-and-below
+        display: none
+
+    .main-img-bg
+      display: none
+      background: transparent url('../img/careers/splash.jpg') no-repeat 0 0
+
+      +mobile-landscape-and-below
+        display: block
+        margin: 0
+        height: 230px
+        width: inherit
+        background-size: 767px
+        background-position: center
+
+      +mobile-portrait
+        background-size: 767px
+        background-position: -380px -10px
+
+    .careers-content
+      width: 980px
+      margin: 0 auto
+      padding: 50px 0
+
+      +tablet-portrait
+        width: 700px
+
+      +mobile-landscape
+        width: 100%
+        padding: 20px 0
+
+      +mobile-portrait
+        width: 100%
+        margin: 34px auto 20px auto
+        padding: 0
+
+      .title,
+      .copy
+        width: 630px
+        text-align: center
+        margin: 0 auto
+
+        +tablet-portrait
+          width: 540px
+
+        +mobile-landscape
+          width: 450px
+
+        +mobile-portrait
+          width: 280px
+
+      .pay
+        +mobile-landscape-and-below
+          cursor: pointer
+
+          &.active
+            height: 20px
+            color: #ed642f
+
+            /* bordered triangle */
+            &:after,
+            &:before
+              top: 5px
+              left: 21px
+              border: solid transparent
+              content: " "
+              height: 0
+              width: 0
+              position: absolute
+              pointer-events: none
+
+              +mobile-landscape-and-below
+                top: 13px
+
+            &:before
+              border-bottom-color: #bbb9b9
+              border-width: 11px
+              margin-left: -14px
+
+
+      .title
+        margin: 0 auto 11px auto
+        text-transform: uppercase
+
+      .h2
+        color: #4c4949
+
+      .t2,
+      .t14,
+      .t8
+        color: #4c4949
+
+      .pay
+        +mobile-landscape-and-below
+          font-size: 16px
+
+      .t14
+        +mobile-landscape-and-below
+          display: none
+
+      .t10b
+        color: #f06423
+
+      .path
+        margin: 45px auto 0 auto
+
+        .title
+          width: 100%
+          padding: 20px 0 0 0
+          position: relative
+          border-top: 1px solid #cbcbcb
+
+          /* bordered triangle */
+          &:after,
+          &:before
+            top: 0
+            left: 50%
+            border: solid transparent
+            content: " "
+            height: 0
+            width: 0
+            position: absolute
+            pointer-events: none
+
+          &:after
+            border-color: rgba(255, 255, 255, 0)
+            border-width: 5px
+            margin-left: -5px
+            background: transparent url('../img/light-bg-400.jpg') repeat
+            @include transform(rotate(45deg))
+            top: -6px
+
+          &:before
+            border-color: rgba(110, 110, 109, 0)
+            border-top-color: #cbcbcb
+            border-width: 8px
+            margin-left: -8px
+
+      .search
+
+        .title
+          width: 100%
+          padding: 15px 0
+          position: relative
+          border-bottom: 1px solid #cbcbcb
+
+          +mobile-landscape-and-below
+            padding: 15px 0 10px 0
+
+          /* bordered triangle */
+          &:after,
+          &:before
+            bottom: -17px
+            left: 50%
+            border: solid transparent
+            content: " "
+            height: 0
+            width: 0
+            position: absolute
+            pointer-events: none
+
+          &:after
+            border-color: rgba(255, 255, 255, 0)
+            border-width: 5px
+            margin-left: -5px
+            background: transparent url('../img/light-bg-400.jpg') repeat
+            @include transform(rotate(45deg))
+            bottom: -5px
+
+          &:before
+            border-color: rgba(110, 110, 109, 0)
+            border-top-color: #cbcbcb
+            border-width: 8px
+            margin-left: -8px
+
+      .buttons
+        width: 590px
+        margin: 30px auto
+
+        +mobile-landscape
+          width: 500px
+
+        +mobile-portrait
+          width: 320px
+
+        .button
+          width: 285px
+          height: 58px
+          float: left
+          line-height: 4.3
+
+          +mobile-landscape
+            width: 500px
+            float: none
+            margin: 0 auto 20px auto
+
+          +mobile-portrait
+            width: 280px
+            float: none
+            margin: 0 auto 20px auto
+
+          &:last-child
+            float: right
+
+            +mobile-landscape-and-below
+              float: none
+
+      .roles
+        width: 850px
+        height: 750px
+        margin: 50px auto
+        overflow: hidden
+        position: relative
+
+        +tablet-landscape
+          width: 952px
+          margin: -30px auto 0 auto
+
+        +tablet-portrait
+          width: 700px
+          margin: -170px auto 0 auto
+
+        +mobile-landscape-and-below
+          width: 290px
+          height: 200px
+          margin: 10px auto 0 auto
+
+        .steps
+          width: 100%
+          height: 750px
+          position: absolute
+          top: 30px
+          left: -15px
+          background: transparent url('../img/careers/steps/steps.png') no-repeat
+          background-position: 0 0
+          background-size: 850px 620px
+
+          +tablet-landscape
+            top: 0
+            left: 0
+            background-position: 0 35px
+            background-size: 892px 615px
+
+          +tablet-portrait
+            top: 0
+            left: 0
+            background-size: 700px 460px
+            background-position: -15px 190px
+
+          +mobile-landscape-and-below
+            top: 0
+            left: 0
+            background-size: 290px 180px
+            background-position: -10px 0px
+
+        .role
+          float: left
+          width: 125px
+          display: block
+          margin: 0 20px 0 0
+          position: relative
+          height: 650px
+
+          +tablet-landscape
+            width: 142px
+
+          +tablet-portrait
+            width: 100px
+
+          +mobile-landscape-and-below
+            width: 40px
+            margin: 0 10px 0 0
+            height: 160px
+
+          &:last-child
+            margin: 0
+
+          .details
+            position: relative
+            top: 660px
+
+            +mobile-landscape-and-below
+              top: 185px
+
+            .plus-popup
+              top: -1px
+
+              +mobile-landscape-and-below
+                display: none
+
+          .bar-wrapper
+            position: absolute
+            width: 100%
+            top: 0
+            height: 650px
+            overflow: hidden
+
+            +mobile-landscape-and-below
+              height: 160px
+              top: 20px
+
+            .bar
+              background: #ed642f
+              width: 100%
+              position: absolute
+              bottom: 0
+
+              +mobile-landscape-and-below
+                bottom: 0
+                cursor: pointer
+
+            &.one
+
+              .bar
+                height: 42px
+
+                +tablet-landscape
+                  height: 44px
+
+                +tablet-portrait
+                  height: 32px
+
+                +mobile-landscape-and-below
+                  height: 13px
+
+            &.two
+
+              .bar
+                height: 72px
+
+                +tablet-landscape
+                  height: 75px
+
+                +tablet-portrait
+                  height: 55px
+
+                +mobile-landscape-and-below
+                  height: 24px
+
+            &.three
+
+              .bar
+                height: 140px
+
+                +tablet-landscape
+                  height: 148px
+
+                +tablet-portrait
+                  height: 110px
+
+                +mobile-landscape-and-below
+                  height: 44px
+
+            &.four
+
+              .bar
+                height: 192px
+
+                +tablet-landscape
+                  height: 204px
+
+                +tablet-portrait
+                  height: 150px
+
+                +mobile-landscape-and-below
+                  height: 60px
+
+            &.five
+
+              .bar
+                height: 332px
+
+                +tablet-landscape
+                  height: 350px
+
+                +tablet-portrait
+                  height: 260px
+
+                +mobile-landscape-and-below
+                  height: 104px
+
+            &.six
+
+              .bar
+                height: 515px
+
+                +tablet-landscape
+                  height: 544px
+
+                +tablet-portrait
+                  height: 404px
+
+                +mobile-landscape-and-below
+                  height: 162px
+
+    .careers-image
+      width: 100%
+
+      +mobile-landscape
+        width: 568px
+        margin: 0 auto
+
+      img
+        width: 100%
+
+        +mobile-landscape-and-below
+          margin: 0
+          height: 230px
+          width: auto
+          position: relative
+          left: -58px
+
+        +mobile-portrait
+          left: 0
+          height: auto
+          width: 100%
+
+.modal-appended
+
+  &.careers-page
+
+    .modal-close
+      display: none
+
+    .careers
+
+      .careers-content
+
+        .path
+
+          .roles
+            overflow: visible
+
+        .pay

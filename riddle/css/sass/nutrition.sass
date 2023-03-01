@@ -1,0 +1,682 @@
+@import "media-queries"
+@import "prefixes"
+
+.nutrition-calc-wrapper-outer
+  position: relative
+  max-width: 1430px
+  margin: 0 auto
+
+  +tablet-landscape
+    width: 956px
+
+  .nutrition-calc-wrapper-inner
+    overflow-x: scroll
+    overflow-y: hidden
+    margin: 0 0 0 470px
+    box-shadow: inset -2px 0px 2px rgba(0,0,0,0.3)
+
+    +tablet-portrait
+      margin: 0 0 0 350px
+
+    +mobile-landscape-and-below
+      width: 100%
+      margin-bottom: 30px
+
+.food-page
+  .food
+    .tab-content
+      .nutrition-calc-wrapper
+        .h3
+          &.first
+            margin: 0 auto
+            +tablet-landscape-and-below
+              border: none medium
+
+            &:after,
+            &:before
+              display: none
+
+.nutrition-calc-wrapper
+  width: 90%
+  margin: 0 auto
+
+  +mobile-landscape-and-below
+    width: 100%
+
+  .nutrition-table
+    width: 100%
+    table-layout: fixed
+    margin: 0 auto
+    border-top: 1px solid #707070
+
+    .head
+
+      .filter-open
+        +mobile-landscape-and-below
+          height: 433px
+          display: block
+
+        +mobile-portrait
+          height: 447px
+
+        .cal
+          +mobile-landscape-and-below
+            height: 384px
+
+      .filter-closed
+
+        +mobile-landscape-and-below
+          height: 112px
+          display: block
+
+        .cal
+          +mobile-landscape-and-below
+            height: 60px
+
+          +mobile-landscape
+            display: none
+
+      .filter
+        width: 470px
+        position: absolute
+        left: 0
+        top: 0
+        box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2)
+        height: 200px
+        border-top: 1px solid #707070
+
+        +tablet-portrait
+          width: 350px
+
+        +mobile-landscape-and-below
+          width: 100%
+          text-indent: 10px
+
+        .filter-form
+          width: 320px
+          position: absolute
+          z-index: 1
+          top: 25px
+
+          +mobile-landscape-and-below
+            width: 100%
+            position: relative
+            top: 0
+
+          .filters
+            text-align: left
+
+            .pdf-item
+              margin: 0 0 20px 0
+              letter-spacing: 1.1px
+
+              +mobile-landscape-and-below
+                height: 56px
+                line-height: 4.25
+                margin: 0
+                border-bottom: 1px solid #212121
+
+              .pdf
+                color: #7e7e7e
+                text-decoration: none
+                background: transparent url('../img/pdf-icon.png') no-repeat right 4px
+                padding: 5px 22px 0 0
+
+            .open,
+            .close
+              position: relative
+              width: 230px
+              cursor: pointer
+              letter-spacing: 1.1px
+              background: transparent
+
+              +mobile-landscape-and-below
+                width: 100%
+                height: 56px
+                line-height: 4.25
+                border-top: 1px solid #505050
+
+              /* bordered triangle */
+              &:after,
+              &:before
+                top: 2px
+                right: 6px
+                border: solid transparent
+                content: " "
+                height: 0
+                width: 0
+                position: absolute
+                pointer-events: none
+
+                +mobile-landscape-and-below
+                  right: 18px
+                  top: 23px
+
+              &:before
+                border-top-color: #7e7e7e
+                border-width: 8px
+
+            .close
+              +mobile-landscape-and-below
+                box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2)
+
+              /* bordered triangle */
+              &:after,
+              &:before
+                top: -6px
+                right: 6px
+                border: solid transparent
+                content: " "
+                height: 0
+                width: 0
+                position: absolute
+                pointer-events: none
+
+                +mobile-landscape-and-below
+                  right: 18px
+                  top: 14px
+
+              &:before
+                border-bottom-color: #7e7e7e
+                border-width: 8px
+
+            .filter-options
+              margin: 25px 0 0 0
+              width: 280px
+              background: #272727
+              padding: 0 20px 20px 20px
+              display: none
+
+              +mobile-landscape-and-below
+                width: 100%
+                margin: 0
+                padding: 30px 0 20px 0
+
+              .filter-option
+                margin: 15px 0
+                height: 20px
+                text-transform: uppercase
+
+                +mobile-landscape-and-below
+                  margin: 15px 0 0 20px
+
+                input
+                  display: none
+                  margin: 0 16px 0 0
+
+                .t9
+                  position: relative
+                  top: 1px
+
+                .indicator
+                  display: block
+                  float: left
+                  margin: 0 10px 0 0
+                  width: 20px
+                  height: 20px
+                  background: #fff
+                  cursor: pointer
+
+                  &.checked
+                    background: #fff url('../img/x.gif') no-repeat 3px 3px
+
+              .copy
+                color: #fff
+                margin: 30px 0 0 0
+                padding: 30px 0 15px 0
+                line-height: 1.2
+
+                +mobile-landscape-and-below
+                  padding: 0 0 15px 20px
+                  margin: 0
+                  text-indent: 0
+
+              .lower
+                color: #999
+                margin: 30px 0 0 0
+                line-height: 1.2
+
+                +mobile-landscape-and-below
+                  padding: 0 20px
+                  text-indent: 0
+
+              .actions
+                margin: 30px 0 0 0
+                text-align: left
+
+                +mobile-landscape-and-below
+                  padding: 0 20px
+
+                .button
+                  width: 136px
+                  float: left
+                  cursor: pointer
+
+                  +mobile-landscape-and-below
+                    width: 48%
+
+                  &.reset
+                    margin: 0 0 0 8px
+                    background: #363636
+                    color: #999
+
+                    +mobile-landscape-and-below
+                      margin: 0 0 0 4%
+
+      .cal
+        position: relative
+        height: 200px
+        overflow: hidden
+        text-align: center
+        width: 60px
+
+        &:nth-child(even)
+          background: rgba(20, 20, 20, 0.2)
+
+        .label
+          text-align: left
+          @include rotate(-90)
+          position: relative
+          top: 110px
+          left: 27px
+          width: 60px
+          height: 77px
+          white-space: nowrap
+          text-transform: uppercase
+          letter-spacing: 1px
+          color: #b0b0b0
+
+    .footer
+
+      .labels
+
+        +mobile-landscape-and-below
+          display: none
+
+        .filter
+          position: absolute
+          width: 470px
+          left: 0
+          bottom: 70px
+          height: 200px
+
+          .label
+            border-top: 1px solid #504f4f
+            box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2)
+            height: 200px
+            display: block
+            position: relative
+            top: 13px
+
+            +tablet-portrait
+              width: 350px
+
+            +mobile-landscape-and-below
+              width: 100%
+
+        .cal
+          position: relative
+          height: 200px
+          overflow: hidden
+          text-align: center
+          width: 70px
+          border-top: 1px solid #504f4f
+
+          &:nth-child(even)
+            background: rgba(20, 20, 20, 0.2)
+
+          .label
+            text-align: left
+            @include rotate(-90)
+            position: relative
+            top: 110px
+            left: 27px
+            width: 60px
+            height: 77px
+            white-space: nowrap
+            text-transform: uppercase
+            letter-spacing: 1px
+            color: #b0b0b0
+
+      .sums
+        height: 56px
+
+        .filter
+          position: absolute
+          width: 470px
+          left: 0
+          box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2)
+          background: #5a5a57
+
+          @-moz-document url-prefix()
+            margin: -34px 0 0 0
+
+          +tablet-landscape
+            @-moz-document url-prefix()
+              margin: -29px 0 0 0
+
+          +tablet-portrait
+            @-moz-document url-prefix()
+              margin: -24px 0 0 0
+
+          +mobile-landscape-and-below
+            @-moz-document url-prefix()
+              margin: -29px 0 0 0
+
+          +tablet-portrait
+            width: 350px
+
+          +mobile-landscape-and-below
+            width: 100%
+            margin: 0
+
+          .content
+            text-transform: uppercase
+            text-align: left
+            height: 56px
+            line-height: 2.4
+            margin: 0 0 0 10px
+            text-indent: 10px
+            float: left
+            width: 80px
+
+            +tablet-landscape
+              line-height: 2.6
+
+            +tablet-portrait
+              line-height: 3
+
+            +mobile-landscape-and-below
+              margin: 0
+              line-height: 2.7
+
+          .totals-sum-wrapper
+            position: absolute
+            top: 20px
+            right: 25px
+            visibility: hidden
+            height: 56px
+            color: #fff
+            text-transform: uppercase
+            white-space: nowrap
+
+            .plus-popup
+              position: relative
+              top: 1px
+              left: 2px
+              cursor: pointer
+              color: #7e7e7e
+
+              +mobile-landscape-and-below
+                top: -3px
+                overflow: visible
+
+              &:hover
+                color: #5a5a57
+
+          +mobile-landscape-and-below
+
+            .totals-sum-wrapper
+              visibility: visible
+
+        .cell
+          background: #5a5a57
+
+          +mobile-landscape
+            display: none
+
+          &:first-child
+            +mobile-landscape
+              display: block
+
+          .content
+            height: 56px
+            border-left: 1px solid #464644
+            border-right: 1px solid #666
+            line-height: 3.3
+
+            +tablet-landscape
+              line-height: 4
+
+            +tablet-portrait
+              line-height: 4.5
+
+    .arrows
+      +mobile-landscape-and-below
+        display: none
+
+      .arrow-top-left,
+      .arrow-top-right,
+      .arrow-bottom-left,
+      .arrow-bottom-right
+        position: absolute
+        height: 15px
+        width: 9px
+        background: transparent url('../img/arrow-sprite.png') no-repeat
+        opacity: .3
+        background-size: 100%
+
+        +mobile-landscape-and-below
+          display: none
+
+      .active
+        cursor: pointer
+        opacity: 1
+
+      .arrow-top-left,
+      .arrow-top-right
+        top: 90px
+
+      .arrow-bottom-right,
+      .arrow-bottom-left
+        bottom: 150px
+
+      .arrow-top-left,
+      .arrow-bottom-left
+        left: 450px
+        background-position: 0 -15px
+
+        +tablet-portrait
+          left: 330px
+
+      .arrow-top-right,
+      .arrow-bottom-right
+        right: -19px
+        background-position: 0 0
+
+        +tablet-portrait
+          right: -21px
+
+    .body
+
+      .item-row
+        height: 60px
+
+        .cell
+
+          +mobile-landscape
+            display: none
+
+          &:nth-child(even)
+            background: rgba(20, 20, 20, 0.2)
+
+          .label,
+          .content
+            height: 58px
+            border-top: 1px solid #504f4f
+            border-bottom: 1px solid #1b1b1a
+
+          .label
+            display: block
+            vertical-align: middle
+
+          .content
+            display: table-cell
+            vertical-align: middle
+            width: 60px
+
+            .display
+              visibility: hidden
+
+          &:first-child
+            position: absolute
+            width: 470px
+            left: 0
+
+            @-moz-document url-prefix()
+              margin: -39px 0 0 0
+
+            +tablet-landscape
+              @-moz-document url-prefix()
+                margin: -38px 0 0 0
+
+            +tablet-portrait
+              width: 350px
+              @-moz-document url-prefix()
+                margin: -38px 0 0 0
+
+            +mobile-landscape-and-below
+              width: 100%
+              margin: 0
+
+            +mobile-landscape
+              display: table
+              width: 100%
+
+            .label
+              text-align: left
+              position: relative
+              width: 470px
+              box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2)
+
+              +mobile-landscape-and-below
+                width: 100%
+
+              .label-arrow
+                +mobile-landscape-and-below
+                  position: absolute
+                  right: 20px
+                  top: 0
+                  width: 10px
+                  height: 100%
+                  background: transparent url('../img/arrow-right.png') no-repeat
+                  background-position: center center
+                  background-size: 10px
+
+              .add-button,
+              .remove-button
+                background: none
+                border: none medium
+                color: #878484
+                text-transform: uppercase
+                cursor: pointer
+                outline: none
+                width: 50px
+                position: absolute
+                top: 22px
+                left: 10px
+
+              .remove-button
+                cursor: pointer
+                height: 20px
+                width: 20px
+                background: transparent url('../img/nutrition-remove-icon.png') no-repeat 0 0
+                background-size: 20px
+                position: absolute
+                top: 18px
+                left: 20px
+
+              .image
+                width: 58px
+                height: 58px
+                vertical-align: middle
+                margin: 0 0 0 60px
+                float: left
+
+                +tablet-landscape-and-below
+                  width: 46px
+                  height: 46px
+                  margin: 6px 0 0 58px
+
+              .copy-wrapper
+                height: 58px
+                display: table-cell
+                vertical-align: middle
+
+              .copy
+                cursor: pointer
+                margin: 2px 0 0 15px
+                line-height: 1
+                width: 90%
+                display: block
+                float: left
+                color: #fff
+
+                &:hover
+                  color: #b0b0b0
+
+                +tablet-portrait
+                  width: 195px
+
+                +mobile-landscape-and-below
+                  width: 100%
+                  padding: 0 0 0 10px
+                  margin: 2px 0 0 0
+
+                +mobile-portrait
+                  width: 90%
+                  margin: 2px 0 0 0
+
+        &.no-border-top
+
+          .cell
+
+            .label,
+            .content
+              height: 59px
+              border-top: none medium
+
+        &.added
+
+          .cell
+            background: rgba(46, 46, 46, 0.65)
+
+            &:nth-child(odd)
+              background: rgba(20, 20, 20, 0.2)
+
+            .content
+
+              .display
+                visibility: visible
+
+        &.disabled
+
+          .cell
+            opacity: 0.4
+
+      .divider
+        height: 30px
+        background: #2c2c2c
+
+        .first
+          background: #2c2c2c
+          box-shadow: 0 2px 4px rgba(0,0,0,.2)
+          text-align: left
+
+          &:first-child
+            position: absolute
+            width: 100%
+            left: 0
+
+          .label,
+          .content
+            text-transform: uppercase
+            height: 30px
+            line-height: 2
+            text-indent: 10px
+
+            +tablet-portrait
+              line-height: 2
+
+            +mobile-landscape-and-below
+              line-height: 2.3

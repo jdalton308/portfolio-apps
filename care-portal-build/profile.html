@@ -1,0 +1,49 @@
+
+<!-- PATIENT PROFILE VIEW -->
+
+<section class="section-patient-profile">
+
+  <a href="/patients" class="back-bar">
+    BACK TO ALL PATIENTS
+  </a>
+
+  <div class="profile-header">
+    <div class="profile-photo-container">
+      <img src="/assets/img/People1_0007_Man3.jpg" alt="Allen, Nicholas">
+      <div class="icon-cont">
+        <a href="#" class="icon video-icon"></a>
+        <a href="#" class="icon email-icon"></a>
+        <a href="#" class="icon schedule-icon"></a>
+      </div>
+    </div>
+    <div class="profile-header-name-cont">
+      <h2>Allen, Nicholas</h2>
+      <h3>1535632018</h3>
+      <div class="profile-header-buttons">
+        <button type="button" ng-click="toggleDetails()">VIEW PROFILE</button>
+        <button type="button">SEND REFERRAL</button>
+      </div>
+    </div>
+  </div> <!-- end header -->
+
+  <jd-profile-details ng-show="detailsShowing"></jd-profile-details>
+
+  <nav class="profile-nav">
+    <div class="profile-nav-item" ng-class="{current: profileView=='vitals'}" ng-click="profileView='vitals'">VITALS</div>
+
+    <div class="profile-nav-item" ng-class="{current: profileView=='oab'}" ng-click="profileView='oab'">OAB</div>
+
+    <div class="profile-nav-item" ng-class="{current: profileView=='parkinsons'}">PARKINSON'S</div>
+
+    <div class="profile-nav-item" ng-class="{current: profileView=='back'}">BACK PAIN</div>
+
+    <div class="profile-nav-item" ng-class="{current: profileView=='goals'}">GOALS</div>
+    
+    <div class="profile-nav-item" ng-class="{current: profileView=='activities'}">ACTIVITIES</div>
+  </nav> <!-- end nav -->
+
+  <!-- Views -->
+  <jd-profile-vitals ng-if="profileView=='vitals'"></jd-profile-vitals>
+  <jd-profile-oab ng-if="profileView=='oab'"></jd-profile-oab>
+  
+</section>

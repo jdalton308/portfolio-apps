@@ -1,0 +1,64 @@
+<div class="create-group-cont">
+
+  <div class="max-width">
+    <div class="step-one" ng-hide="groupTwo">
+      <h5>Create custom groupings of patients</h5>
+      <input type="text" placeholder="Name Group" ng-model="newGroupName">
+      <button type="button" class="dark" ng-click="showGroupTwo()">CONTINUE</button>
+      <div class="error-message" ng-show="groupOneError">Please enter a </div>
+    </div>
+    
+    <div class="step-two" ng-show="groupTwo">
+      <div class="button-cont">
+        <div class="close-button white" ng-click="hideNewGroup()"></div>
+        <button class="dark" ng-click="hideNewGroup()">CREATE</button>
+      </div>
+      <h5>{{newGroupName}}</h5>
+    
+      <div class="create-instructions" ng-hide="groupCreated">
+        <figure class="plus-patient" ng-click="groupCreated=true">
+          <span class="plus">+</span>
+          <span class="text">PATIENT</span>
+        </figure>
+        <div class="instruct-copy">
+          Create your personalized groups by dragging and dropping the patients from below.
+        </div>
+      </div>
+    
+      <div class="new-group" ng-show="groupCreated">
+        <div class="member-item">
+          <img src="/assets/img/People1_0002_Woman3.jpg" alt="alt text" class="member-pic">
+          <div class="name">Adams, Maggie</div>
+        </div>
+        <div class="member-item">
+          <img src="/assets/img/People1_0007_Man3.jpg" alt="alt text" class="member-pic">
+          <div class="name">Allen, Nicholas</div>
+        </div>
+        <div class="member-item">
+          <img src="/assets/img/People1_0012_Man1.jpg" alt="alt text" class="member-pic">
+          <div class="name">Almond, Steve</div>
+        </div>
+        <div class="member-item">
+          <img src="/assets/img/People1_0000_Woman5.jpg" alt="alt text" class="member-pic">
+          <div class="name">Anderson, Louis</div>
+        </div>
+        <div class="member-item">
+          <img src="/assets/img/default_profile.png" alt="alt text" class="member-pic">
+          <div class="name">Arnold, Jeff</div>
+        </div>
+        <div class="member-item">
+          <img src="/assets/img/People1_0001_Woman4.jpg" alt="alt text" class="member-pic">
+          <div class="name">Baker, Lauren</div>
+        </div>
+        <div class="member-item">
+          <img src="/assets/img/People1_0003_Woman2.jpg" alt="alt text" class="member-pic">
+          <div class="name">Bell, Alexandra</div>
+        </div>
+        <figure class="plus-patient">
+          <span class="plus">+</span>
+          <span class="text">PATIENT</span>
+        </figure>        
+      </div>
+    </div>
+  </div>
+</div> <!-- end create group cont -->

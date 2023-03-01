@@ -1,0 +1,891 @@
+
+#game {
+  background-color: $grey;
+
+  .overlay {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    color: $white;
+    background-color: rgba(0,0,0, 0.9);
+
+    .give-up-close {
+      position: absolute;
+      top: 13px;
+      right: 13px;
+      width: 40px;
+      height: 40px;
+
+      .line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 2px;
+        height: 90%;
+        background-color: $white;
+
+        &:first-child {
+          @include transform(rotate(45deg));
+        }
+        &:last-child {
+          @include transform(rotate(-45deg));
+        }
+      }
+
+    }
+
+    &.how-to {
+      .centered-text {
+        min-width: 358px;
+      }
+
+      .logo-cont {
+        margin-top: 20px;
+        text-align: center;
+
+        img {
+          height: 50px;
+
+          &:first-child {
+            margin-right: 30px;
+          }
+        }
+      }
+
+      h2 {
+        padding: 0 61px;
+        line-height: 1em;
+        margin-bottom: 22px;
+        background-image:
+          url('/assets/img/icon-arrow-long-back.png'),
+          url('/assets/img/icon-arrow-long-front.png');
+        background-position:
+          left 48%,
+          99% 48%;
+        background-size: 57px auto;
+        background-repeat: no-repeat;
+      }
+
+      button.got-it {
+        min-width: 280px;
+      }
+
+      ol {
+        display: block;
+        max-width: 310px;
+        margin: 0 auto 12px 48px;
+
+
+        // Variables for .list-number:
+        //-------------------
+        $line-weight: 2px;
+        $line-length: 10px;
+        $hash-overlap: -7px;
+        $desk-hash-overlap: -10px;
+        //--------------------
+
+        li {
+          position: relative;
+          padding-left: 30px;
+          margin-bottom: 16px;
+          text-align: left;
+          font-size: 0.8rem;
+
+          &:last-child {
+            margin-bottom: 25px;
+          }
+
+          .list-number {
+            position: absolute;
+            top: -4px;
+            left: -10px;
+            width: 26px;
+            height: 26px;
+            border: $line-weight solid $white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0.75rem;
+            line-height: 22px;
+
+            .hash {
+              position: absolute;
+              background-color: $white;
+
+              &.north,
+              &.south {
+                left: calc(50% - 1px);
+                width: $line-weight;
+                height: $line-length;
+              }
+              &.east,
+              &.west {
+                top: calc(50% - 1px);
+                height: $line-weight;
+                width: $line-length;
+              }
+              &.north {
+                top: $hash-overlap;
+              }
+              &.south {
+                bottom: $hash-overlap;
+              }
+              &.east {
+                right: $hash-overlap;
+              }
+              &.west {
+                left: $hash-overlap;
+              }
+            }
+          } // end .list-number
+        }
+      } // end ol
+      @media (min-width: $mobile) {
+        h2 {
+          margin-bottom: 70px;
+        }
+        .logo-cont {
+          margin-top: 45px;
+
+          img {
+            height: 130px;
+
+            &:first-child {
+              margin-right: 45px;
+            }
+          }
+        }
+        ol {
+          max-width: 340px;
+          margin-left: 60px;
+
+          li {
+            margin-bottom: 50px;
+            font-size: 1rem;
+            line-height: 1.3em;
+
+            &:last-child {
+              margin-bottom: 64px;
+            }
+
+            .list-number {
+              top: 0;
+              left: -30px;
+              width: 34px;
+              height: 34px;
+              font-size: 1rem;
+              line-height: 28px;
+
+              .hash {
+                &.north {
+                  top: -10px;
+                }
+                &.south {
+                  bottom: -10px;
+                }
+                &.east {
+                  right: -10px;
+                }
+                &.west {
+                  left: -10px;
+                }
+              }
+            }
+          }
+        }
+        button.got-it {
+          min-width: 355px;
+        }
+      }
+    } // end .how-to
+
+
+    &.give-up-overlay {
+      .centered-text {
+        text-align: center;
+
+        h2 {
+          margin-bottom: 15px;
+        }
+      }
+      .button {
+        display: block;
+      }
+    } // end .give-up-overlay
+
+
+    &.result {
+      padding-top: 40px;
+      background-color: $grey;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      overflow-y: auto;
+
+      &.success0 {
+        background-image: url('/assets/img/success-avocados.png');
+        background-size: 470px auto; // leaving px size for < android 4.3
+        background-size: auto 37vh;
+      }
+      &.success1 {
+        background-image: url('/assets/img/success-salad.png');
+        background-size: 425px auto; // leaving px size for < android 4.3
+        background-size: auto 25vh;
+      }
+      &.success2,
+      &.wrong2 {
+        background-image: url('/assets/img/result-guac.jpg');
+        background-size: 220px auto; // leaving px size for < android 4.3
+        background-size: auto 28vh;
+      }
+      &.wrong0 {
+        background-image: url('/assets/img/fail-avocado.png');
+        background-size: 165px auto; // leaving px size for < android 4.3
+        background-size: auto 29vh;
+      }
+      &.wrong1 {
+        background-image: 
+          url('/assets/img/fail-prep-side.png'),
+          url('/assets/img/fail-guac-side.png');
+        background-position:
+          left bottom,
+          right bottom;
+        background-size: // leaving px size for < android 4.3
+          175px auto,
+          195px auto;
+        background-size: 
+          auto 59vh,
+          auto 59vh;
+      }
+
+      .text {
+        width: 80%;
+        max-width: 460px;
+        margin: 0 auto;
+
+        h2 {
+          line-height: 1.1em;
+          margin-bottom: 12px;
+        }
+        p {
+          margin-bottom: 20px;
+          line-height: 1.2em;
+        }
+      }
+
+      @media (min-width: $mobile) {
+        padding-top: 30vh;
+
+        .text {
+          max-width: 572px;
+        }
+
+        &.success0 {
+          background-image: url('/assets/img/success-avocados.png');
+          background-size: auto 34vh;
+        }
+        &.success1 {
+          background-image: url('/assets/img/success-salad.png');
+          background-size: auto 20vh;
+        }
+        &.success2,
+        &.wrong2 {
+          background-image: url('/assets/img/result-guac.jpg');
+          background-size: auto 34vh;
+        }
+        &.wrong0 {
+          background-image: url('/assets/img/fail-avocado.png');
+          background-size: auto 25vh;
+        }
+        &.wrong1 {
+          background-image: 
+            url('/assets/img/fail-prep-side.png'),
+            url('/assets/img/fail-guac-side.png');
+          background-position:
+            left bottom,
+            right bottom;
+          background-size:
+            370px auto,
+            405px auto;
+        }
+      } // end media query
+    } // end .result
+  }
+
+  .title-bar {
+    position: relative;
+    z-index: 6;
+    background-image: url('/assets/img/game-wood-top-panel.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .title-cont,
+    .timer {
+      display: inline-block;
+    }
+    .title-cont {
+      float: left;
+      padding: 5px 0 5px 20px;
+      
+      img,
+      h1 {
+        display: inline-block;
+        vertical-align: top;
+      }
+      img {
+        height: 52px;
+        margin-right: 4px;
+      }
+      h1.title {
+        position: relative;
+        top: 3px;
+        font-size: 2.25rem; // 45px
+        line-height: 1.13em; // 52px;
+        padding: 0 27px;
+        opacity: 0.9;
+
+        background-image:
+          url('/assets/img/icon-arrow-back.png'),
+          url('/assets/img/icon-arrow-head.png');
+        background-position:
+          left 48%,
+          right 48%;
+        background-size: 23px auto;
+        background-repeat: no-repeat;
+ 
+        .green {
+          color: $green;
+        }
+        .orange {
+          color: $red-dark;
+        }
+      }
+    }
+    .timer-cont {
+      float: right;
+      width: 83px;
+      padding: 13px 20px 6px 0;
+      text-align: left;
+
+      .timer {
+        display: inline-block;
+        line-height: 1em;
+        color: $brown-dark;
+
+        &.penalty {
+          animation: 0.75s redflash;
+          @include animate(redflash, 0.75s);
+        }
+      }
+    }
+    @media (max-width: $mobile-small) {
+      .title-cont {
+        img {
+          height: 40px;
+        }
+      }
+    }
+    @media (min-width: $mobile) {
+      .title-cont {
+        padding: 8px 5px 5px 65px;
+
+        img {
+          height: 80px;
+          margin-right: 10px;
+        }
+        h1.title {
+          top: 0;
+          font-size: 3.4rem; //68px;
+          line-height: 1em;
+          padding: 8px 32px 0 30px;
+          background-size: 28px auto;
+          background-position:
+            left 50%,
+            right 50%;
+        }
+      }
+      .timer-cont {
+        width: 190px;
+        padding: 15px 65px 5px 0;
+      }
+    }
+  } // end .title-bar
+
+
+  .photo-cont {
+    @include centerEl();
+    top: 51%;
+    width: 100%;
+    height: 220px; // if it doesn't support vh units, it's probably an older, smaller device
+    @supports (height: 100vh) {
+      height: calc(100vh - #{$mobile-headfoot-height});
+    }
+    overflow: hidden;
+    text-align: center;
+
+    .countdown-cont {
+      position: absolute;
+      z-index: 5;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $grey;
+      @include transition(0.5s);
+
+      &.hide {
+        bottom: 100%;
+      }
+
+      .countdown {
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        @include transform(translate(-50%, 50%));
+        color: $white;
+
+        &.animate {
+          -webkit-animation: fadebeatMobile 3s ease-out forwards;
+          animation: fadebeatMobile 3s ease-out forwards;
+        }
+      }
+    }
+
+    .penalty-overlay {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $penalty-cover-clear;
+      -webkit-animation: bg-flash 0.75s forwards;
+      animation: bg-flash 0.75s forwards;
+
+      h2 {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        color: $white;
+        @include centerEl();
+      }
+    }
+
+    .images {
+      position: absolute;
+      top: 200%;
+      left: 0;
+      width: 100%;
+      @include transition(0.5s);
+      @include transform(translate(0%, -50%));
+
+      &.show {
+        top: 51%;
+      }
+    }
+
+    .game-img {
+      display: inline-block;
+      position: relative;
+      height: 100%;
+      max-height: 100%;
+      max-width: 49%;
+      cursor: pointer;
+      @include transition();
+
+      img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: 220px;
+        @supports (height: 100vh) {
+          height: calc(100vh - #{$mobile-headfoot-height + 20});
+        }
+        max-height: 260px;
+      }
+
+      &.over {
+        cursor: default;
+
+        &:before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0, 0.4);
+        }
+
+        .spot {
+          &.found,
+          &.missed {
+            .avo {
+              box-shadow: 0 0 40px 15px $black;
+              background-color: rgba(255,255,255, 0.2);
+            }
+          }
+        }
+
+      }
+    }
+    .left {
+      margin-right: 2px;
+    }
+
+    .spot {
+      position: absolute;
+      z-index: 4;
+      padding: 5px;
+
+      .avo {
+        position: relative;
+        opacity: 0;
+        width: 29px;
+        height: 35px;
+        border: 2px solid $white;
+        border-radius: 50% 50% / 60% 60% 40% 40%;
+        @include transition(0.2s);
+      }
+
+      .hair {
+        position: absolute;
+        background-color: $white;
+        @include transition();
+
+        &.north,
+        &.south {
+          left: calc(50% - 1px);
+          width: 2px;
+        }
+        &.east,
+        &.west {
+          top: calc(60% - 1px);
+          height: 2px;
+          width: calc(70% - 6px);
+        }
+        
+        &.north {
+          top: -25%;
+          height: calc(85% - 8px);
+        }
+        &.south {
+          bottom: -20%;
+          height: calc(60% - 5px);
+        }
+        &.west {
+          left: -20%;
+        }
+        &.east {
+          right: -20%;
+        }
+      }
+
+      &.found,
+      &.missed {
+        .avo {
+          opacity: 1;
+        }
+      }
+      &.missed {
+        .avo {
+          border-color: $orange; 
+        }
+
+        .hair {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-width: $mobile-small) {
+      // On small screens, remove positioning of footer and .photo-cont
+      height: 200px;
+      @supports (height: 100vh) {
+        height: calc(100vh - #{$small-mobile-headfoot});
+      }
+      position: relative;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      @include transform(none);
+
+      .images {
+        img {
+          height: auto;
+        }
+      }
+    }
+
+    @media (min-width: $mobile) {
+      height: calc(100vh - #{$desktop-headfoot-height});
+      top: 50.5%;
+
+      .images {
+        img {
+          height: calc(100vh - #{$desktop-headfoot-height});
+          max-height: 410px;
+        }
+      }
+      .countdown-cont {
+        h1.countdown {
+          font-size: 7.5rem; // 150px
+
+          &.animate {
+            -webkit-animation: fadebeat 3s ease-out forwards;
+            animation: fadebeat 3s ease-out forwards;
+          }
+        }
+      }
+      .spot {
+        padding: 15px;
+        border-radius: 10px;
+        // @include transform(translate(32%, 5%)); //seems to center the crosshairs better
+
+        .avo {
+          width: 37px;
+          height: 46px;
+          border-width: 3px;
+        }
+
+        .hair {
+
+          &.north,
+          &.south {
+            left: calc(50% - 1.5px);
+            width: 3px;
+          }
+          &.east,
+          &.west {
+            top: calc(60% - 1.5px);
+            height: 3px;
+            width: calc(70% - 10px);
+          }
+          &.south {
+            height: calc(60% - 10px);
+          }
+        }
+      }
+    }
+  } // end .photo-cont
+
+  &.current {
+    .status-bar {
+      position: fixed;
+    }
+
+    @media (max-width: $mobile-small) {
+      .status-bar {
+        position: relative;
+      }
+    }
+  }
+
+  .status-bar {
+    // position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px 11px;
+    text-align: center;
+
+    background-image: url('/assets/img/game-wood-bottom-panel.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+
+    .checkboxes,
+    .round-num,
+    .button-cont {
+      display: inline-block;
+      width: 33.3333%;
+      float: left;
+    }
+
+    .checkboxes {
+      text-align: left;
+
+      .box {
+        position: relative;
+        display: inline-block;
+        overflow: visible;
+        height: 27px;
+        width: 22px;
+        margin-right: 4px;
+        background-color: transparent;
+        border: 2px solid $brown;
+        border-radius: 50% 50% / 60% 60% 40% 40%;
+
+        .hair,
+        .pit-icon {
+          display: none;
+        }
+        .pit-icon {
+          &:before {
+            @include icon-pit();
+            font-size: 0.6rem; 
+            color: $brown;
+          }
+        }
+        .hair {
+          position: absolute;
+          background-color: $brown;
+
+          &.north,
+          &.south {
+            left: calc(50% - 1px);
+            width: 2px;
+          }
+          &.east,
+          &.west {
+            top: calc(60% - 1px);
+            height: 2px;
+            width: calc(70% - 6px);
+          }
+          
+          &.north {
+            top: -20%;
+            height: calc(80% - 6px);
+          }
+          &.south {
+            bottom: -20%;
+            height: calc(60% - 6px);
+          }
+          &.west {
+            left: -20%;
+          }
+          &.east {
+            right: -20%;
+          }
+        }
+        .pit-icon,
+        .missed-pit {
+          position: absolute;
+          top: calc(60% - 6px);
+          left: calc(50% - 6px);
+          width: 12px;
+          height: 12px;
+        }
+        .missed-pit {
+          border-radius: 50%;
+        }
+
+        &.found {
+          // add crosshairs and checkmark
+          .hair,
+          .pit-icon {
+            display: block;
+          }
+        }
+        &.missed {
+          border-color: $red;
+          opacity: 0.8;
+
+          .missed-pit {
+            display: block;
+            background-color: $red;
+          }
+        }
+      }
+    }
+
+    .round-num {
+      line-height: 0.9em;
+      color: $brown-dark;
+      opacity: 0.9;
+      white-space: nowrap;
+
+      &.red {
+        color: $red;
+      }
+    }
+    .button-cont {
+      text-align: right;
+
+      button.give-up {
+        display: none;
+        // float: right;
+      }
+    }
+
+    @media (max-width: $mobile-small) {
+      // On small screens, remove positioning of footer and .photo-cont
+      position: relative;
+
+      &:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+    }
+    @media (min-width: $mobile) {
+      padding: 15px 65px 15px;
+
+      .checkboxes {
+        padding-top: 3px;
+
+        .box {
+          height: 50px;
+          width: 41px;
+          margin-right: 10px;
+          border-width: 3px;
+
+          .pit-icon {
+            &:before {
+              font-size: 1.21rem;
+            }
+          }
+          .hair {
+
+            &.north,
+            &.south {
+              left: calc(50% - 1.5px);
+              width: 3px;
+            }
+            &.east,
+            &.west {
+              top: calc(60% - 1.5px);
+              height: 3px;
+              width: calc(70% - 12px);
+            }
+            &.north {
+              top: -20%;
+              height: calc(80% - 12px);
+            }
+            &.south {
+              bottom: -20%;
+              height: calc(60% - 12px);
+            }
+          }
+          .pit-icon,
+          .missed-pit {
+            top: calc(60% - 12px);
+            left: calc(50% - 12px);
+            width: 24px;
+            height: 24px;
+          }
+        } // end .box
+          
+      }
+
+      .round-num {
+        padding: 5px 0 0;
+        line-height: 0.75em;
+      }
+    }
+  } // end .status-bar
+
+}

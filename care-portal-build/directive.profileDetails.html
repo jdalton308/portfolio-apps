@@ -1,0 +1,340 @@
+
+<!-- PROFILE DETAILS SLIDEDOWN -->
+
+<div class="profile-details">
+	<div class="close-row" ng-click="detailsShowing=false">
+		COLLAPSE
+	</div>
+
+	<div class="details-section" ng-class="{edit: editingGeneral}" >
+		<div class="edit-button white" ng-click="editingGeneral=true" ng-hide="isEditingDetails()"></div>
+
+		<h4>GENERAL INFO</h4>
+
+		<div class="section-fields container-fluid">
+
+			<div class="row">
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">LAST NAME</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.last}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.last">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">FIRST NAME</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.first}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.first">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">MIDDLE NAME</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.middle}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.middle">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">QUALIFICATIONS</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.qualification}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.qualification">
+					</div>
+				</div>
+			</div> <!-- end row -->
+
+			<div class="row">
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">GENDER</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.gender}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.gender">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">BIRTHDATE</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.dob}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.dob">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">AGE</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.age}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="number" ng-model="profileDetails.general.age">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">RACE</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.race}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.race">
+					</div>
+				</div>
+
+			</div> <!-- end row -->
+
+			<div class="row">
+				
+				<div class="field-group col-sm-3">
+					<div class="details-label">LANGUAGE</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.lang}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.lang">
+					</div>
+				</div>
+				
+				<div class="field-group col-sm-3">
+					<div class="details-label">OCCUPATION</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.occupation}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.occupation">
+					</div>
+				</div>
+				
+				<div class="field-group col-sm-3">
+					<div class="details-label">WORK LOCATION</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.location}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.location">
+					</div>
+				</div>
+				
+				<div class="field-group col-sm-3">
+					<div class="details-label">WORK PHONE NUMBER</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.phone}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="text" ng-model="profileDetails.general.phone">
+					</div>
+				</div>
+
+			</div> <!-- end row -->
+			<div class="row">
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">EMAIL</div>
+					<div class="details-detail" ng-hide="editingGeneral">{{profileDetails.general.email}}</div>
+					<div class="details-edit" ng-show="editingGeneral">
+						<input type="email" ng-model="profileDetails.general.email">
+					</div>
+				</div>
+				
+			</div> <!-- end row -->
+			<div class="row button-row" ng-show="editingGeneral">
+				<button class="cancel-btn" type="button" ng-click="editingGeneral=false">CANCEL</button>
+				<button type="button" class="blue" ng-click="editingGeneral=false">SAVE</button>
+			</div> <!-- end row -->
+		</div>
+	</div> <!-- end .details-section -->
+
+	<div class="details-section" ng-class="{edit: editingPersonal}">
+		<div class="edit-button white" ng-click="editingPersonal=true" ng-hide="isEditingDetails()"></div>
+
+		<h4>CONTACT</h4>
+		
+		<div class="section-fields container-fluid">
+			<div class="row">
+
+				<div class="field-group address-group col-sm-3">
+					<div class="details-label">HOME ADDRESS</div>
+					<div class="details-detail" ng-hide="editingPersonal">
+						<span class="address-line">{{profileDetails.personal.address.street1}}</span>
+						<span class="address-line">{{profileDetails.personal.address.street2}}</span>
+						<span class="address-line">{{profileDetails.personal.address.city}}, {{profileDetails.personal.address.state}}</span>
+						<span class="address-line">{{profileDetails.personal.address.zip}}</span>
+					</div>
+					<div class="details-edit location-edit-cont" ng-show="editingPersonal">
+						<div class="input-group">
+							<input type="text" placeholder="Street1" ng-model="profileDetails.personal.address.street1">
+						</div>
+						<div class="input-group">
+							<label for="street2">ADDRESS LINE 2</label>
+							<input type="text" id="street2" placeholder="Street2" ng-model="profileDetails.personal.address.street2">
+						</div>
+						<div class="input-group">
+							<label for="city">CITY</label>
+							<input type="text" id="city" placeholder="City" ng-model="profileDetails.personal.address.city">
+						</div>
+						<div class="state-zip-cont">
+							<div class="input-group state-group">
+								<label for="state">STATE</label>
+								<div class="styled-select-cont">
+									<select name="state" id="state" placeholder="State">
+										<option value="CA">CA</option>
+										<option value="MN">MN</option>
+									</select>
+								</div>
+							</div>
+							<div class="input-group zip-group">
+								<label for="zip">ZIP CODE</label>
+								<input type="text" id="zip" placeholder="ZIP" ng-model="profileDetails.personal.address.zip">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">PHONE NUMBER</div>
+					<div class="details-detail" ng-hide="editingPersonal">{{profileDetails.personal.phone}}</div>
+					<div class="details-edit" ng-show="editingPersonal">
+						<input type="text" ng-model="profileDetails.personal.phone">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">EMAIL</div>
+					<div class="details-detail" ng-hide="editingPersonal">{{profileDetails.personal.email}}</div>
+					<div class="details-edit" ng-show="editingPersonal">
+						<input type="email" ng-model="profileDetails.personal.email">
+					</div>
+				</div>
+
+			</div>
+			<div class="row button-row" ng-show="editingPersonal">
+				<button class="cancel-btn" type="button" ng-click="editingPersonal=false">CANCEL</button>
+				<button type="button" class="blue" ng-click="editingPersonal=false">SAVE</button>
+			</div> <!-- end row -->
+		</div>
+	</div> <!-- end .details-section -->
+
+	<div class="details-section" ng-class="{edit: editingInsurance}">
+		<div class="edit-button white" ng-click="editingInsurance = true" ng-hide="isEditingDetails()"></div>
+		<h4>INSURANCE</h4>
+		<div class="section-fields container-fluid">
+			<div class="row">
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">PROVIDER</div>
+					<div class="details-detail"  ng-hide="editingInsurance">{{profileDetails.insurance.provider}}</div>
+					<div class="details-edit" ng-show="editingInsurance">
+						<input type="text" ng-model="profileDetails.insurance.provider">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">CO-PAY</div>
+					<div class="details-detail"  ng-hide="editingInsurance">{{profileDetails.insurance.copay}}</div>
+					<div class="details-edit" ng-show="editingInsurance">
+						<input type="text" ng-model="profileDetails.insurance.provider">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">GROUP ID</div>
+					<div class="details-detail"  ng-hide="editingInsurance">{{profileDetails.insurance.groupid}}</div>
+					<div class="details-edit" ng-show="editingInsurance">
+						<input type="text" ng-model="profileDetails.insurance.provider">
+					</div>
+				</div>
+
+				<div class="field-group col-sm-3">
+					<div class="details-label">PATIENT ID</div>
+					<div class="details-detail"  ng-hide="editingInsurance">{{profileDetails.insurance.patientid}}</div>
+					<div class="details-edit" ng-show="editingInsurance">
+						<input type="text" ng-model="profileDetails.insurance.provider">
+					</div>
+				</div>
+
+			</div>
+			<div class="row button-row" ng-show="editingInsurance">
+				<button class="cancel-btn" type="button" ng-click="editingInsurance=false">CANCEL</button>
+				<button type="button" class="blue" ng-click="editingInsurance=false">SAVE</button>
+			</div> <!-- end row -->
+		</div>
+	</div> <!-- end .details-section -->
+
+	<div class="details-section container-fluid">
+		<h4>CARE NETWORK</h4>
+		<div class="section-fields network-table">
+			
+			<div class="network-item">
+				<img src="/assets/img/doctor2.png" alt="alt text" class="network-photo">
+				<div class="network-name-cont">
+					<h5 class="network-name">Adkins, Anne, CPNP</h5>
+					<div class="network-title">Primary Care</div>
+				</div>
+				<div class="icon-cont">
+					<div class="icon video-icon"></div>
+					<div class="icon email-icon"></div>
+					<div class="icon schedule-icon"></div>
+				</div>
+			</div> <!-- end network-item -->
+			
+			<div class="network-item">
+				<img src="/assets/img/doctor1.png" alt="alt text" class="network-photo">
+				<div class="network-name-cont">
+					<h5 class="network-name">Baker, Margret, MD</h5>
+					<div class="network-title">Professor of Urology and Chief, Pediatric Urology</div>
+				</div>
+				<div class="icon-cont">
+					<div class="icon video-icon"></div>
+					<div class="icon email-icon"></div>
+					<div class="icon schedule-icon"></div>
+				</div>
+			</div> <!-- end network-item -->
+			
+			<div class="network-item">
+				<img src="/assets/img/doctor3.png" alt="alt text" class="network-photo">
+				<div class="network-name-cont">
+					<h5 class="network-name">Chen, Lindsey, MD, PhD</h5>
+					<div class="network-title">Ob/Gyn</div>
+				</div>
+				<div class="icon-cont">
+					<div class="icon video-icon"></div>
+					<div class="icon email-icon"></div>
+					<div class="icon schedule-icon"></div>
+				</div>
+			</div> <!-- end network-item -->
+			
+			<div class="network-item">
+				<img src="/assets/img/doctor6.png" alt="alt text" class="network-photo">
+				<div class="network-name-cont">
+					<h5 class="network-name">Moore, Larry, MD</h5>
+					<div class="network-title">Gastroenterologist</div>
+				</div>
+				<div class="icon-cont">
+					<div class="icon video-icon"></div>
+					<div class="icon email-icon"></div>
+					<div class="icon schedule-icon"></div>
+				</div>
+			</div> <!-- end network-item -->
+			
+			<div class="network-item">
+				<img src="/assets/img/People1_0001_Woman4.jpg" alt="alt text" class="network-photo">
+				<div class="network-name-cont">
+					<h5 class="network-name">Nicholas, Jennifer</h5>
+					<div class="network-title">Wife</div>
+				</div>
+				<div class="icon-cont">
+					<div class="icon video-icon"></div>
+					<div class="icon email-icon"></div>
+					<div class="icon schedule-icon"></div>
+				</div>
+			</div> <!-- end network-item -->
+			
+			<div class="network-item">
+				<img src="/assets/img/People1_0003_Woman2.jpg" alt="alt text" class="network-photo">
+				<div class="network-name-cont">
+					<h5 class="network-name">Nicholas, Mary</h5>
+					<div class="network-title">Daughter</div>
+				</div>
+				<div class="icon-cont">
+					<div class="icon video-icon"></div>
+					<div class="icon email-icon"></div>
+					<div class="icon schedule-icon"></div>
+				</div>
+			</div> <!-- end network-item -->
+
+		</div>
+	</div> <!-- end .details-section -->
+</div>

@@ -1,0 +1,132 @@
+#intro {
+  height: 100%;
+  overflow: hidden;
+
+  .back-pole {
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: -53px;
+    width: 130px;
+    min-height: 100vh;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+  }
+
+  .top-sign,
+  .bottom-sign {
+    margin: 0 auto;
+    text-align: center;
+    background-repeat: no-repeat;
+    // box-shadow: 0 0 30px $black;
+  }
+
+  .top-sign {
+    height: 154px;
+    width: 440px;
+    // margin-bottom: 22px;
+    padding-top: 27px;
+    background-image: url('/assets/img/intro-wood-top.png');
+    background-size: cover;
+    background-position: center center;
+    color: $maroon;
+    box-shadow: 0 0 60px $grey-shadow;
+
+    h2 {
+      display: inline-block;
+      margin-bottom: 3px;
+      opacity: 0.9;
+      padding: 0 23px;
+      background-image:
+        url('/assets/img/icon-arrow-red-back.png'),
+        url('/assets/img/icon-arrow-red-front.png');
+      background-position:
+        0% 49%,
+        100% 49%;
+      background-size: 21px auto;
+      background-repeat: no-repeat;
+    }
+    p {
+      display: inline-block;
+      max-width: 259px;
+
+      &.repeat {
+        max-width: 335px;
+      }
+    }
+  }
+  .bottom-sign {
+    display: block;
+    height: 75px;
+    width: 372px;
+    padding-top: 19px;
+    background-image: url('/assets/img/intro-play-now.png');
+    background-size: contain;
+    background-position: 70% 50%;
+
+    h3 {
+      color: lighten($brown-wood, 10%);
+      @include transition();
+    }
+
+    @media (max-width: $mobile-small) {
+      h3 {
+        padding-top: 5px;
+      }
+    }
+  }
+
+  @media (min-width: $mobile) {
+    .back-pole {
+      top: -72px;
+      width: 170px;
+    }
+
+    .top-sign {
+      height: 202px;
+      width: 571px;
+      padding-top: 35px;
+
+      h2 {
+        margin-bottom: 3px;
+        padding: 0 26px;
+        background-size: 23px auto;
+        background-position:
+          0% 50%,
+          100% 50%;
+      }
+      p {
+        max-width: 304px;
+
+        &.repeat {
+          max-width: 390px;
+        }
+      }
+    }
+    .bottom-sign {
+      height: 110px;
+      width: 570px;
+      padding-top: 33px;
+      background-position: 63% 50%;
+
+      &:hover {
+        animation: 1s seesaw;
+      }
+    }
+  }
+
+  // FOR DEV
+  .test-button {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    opacity: 0.7;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

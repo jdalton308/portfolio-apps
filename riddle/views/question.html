@@ -1,0 +1,20 @@
+<section class="main-wrapper riddles scroller question">
+
+    <img src="/img/riddles/header_riddlepage.png" alt="TODAY'S RIDDLE" class="header-image">
+
+    <h2>
+        Which ShopHouse ingredient is this?
+    </h2>
+    <div class="divider"></div>
+    <p class="riddle">
+        {{lang.question}}
+    </p>
+    <div class="divider"></div>
+
+    <form class="answer-form">
+        <div class="error-message">{{answer.error}}</div>
+        <input type="text" ng-model="answer.answer" class="answer-input" ng-class="{error: answer.error}" placeholder="YOUR ANSWER" ng-keyup="testInput()">
+        <button ng-click="checkAnswer()" ng-disabled="!answer.answer">SUBMIT</button>
+    </form>
+
+</section>

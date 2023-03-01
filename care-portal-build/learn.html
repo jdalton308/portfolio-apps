@@ -1,0 +1,283 @@
+
+<!-- LEARN SECTION -->
+
+<section class="section-main-header">
+	<div class="main-title-holder">
+		<h1>LEARN/HELP</h1>
+		<h5>85 Lorem ipsum</h5>
+	</div>
+	<div class="header-imgs">
+		<img src="/assets/img/device1.png" alt="Medtronic device">
+		<img src="/assets/img/device2.png" alt="Medtronic device">
+	</div>
+</section>
+
+<section class="section-header-boxes">
+	<div class="box no-hover two-line">
+		<div class="box-number">2</div>
+		<div class="box-label">Bookmarked Favorites</div>
+	</div>
+	<div class="box no-hover two-line">
+		<div class="box-number">6</div>
+		<div class="box-label">Care Pathway Tutorials</div>
+	</div>
+	<div class="box no-hover two-line">
+		<div class="box-number">42</div>
+		<div class="box-label">New FAQ Added</div>
+	</div>
+	<div class="box no-hover two-line">
+		<div class="box-number">24</div>
+		<div class="box-label">New Articles on InterStim II</div>
+	</div>
+</section>
+
+<div class="learn-page">
+	<section class="section-person-list max-width">
+		<nav class="top-level-arrow-nav">
+			<a href="" class="top-level-left">
+			  <i class="fa fa-angle-left"></i>
+			</a>
+			<a href="" scroll-to="list-title" offset="30" class="top-level-center">
+			  VIEW RESOURCES
+			</a>
+			<a href="" class="top-level-right">
+			  <i class="fa fa-angle-right"></i>
+			</a>
+		</nav>
+	
+		<div class="title-row container-fluid">
+			<h3 class="list-title" id="list-title">BOOKMARKED FAVORITES</h3>
+
+			<div class="person-filter-inputs">
+			    <div class="view-change-container">
+					<div class="select-list" ng-class="{current: !bookmarkGrid}" ng-click="bookmarkGrid=false">
+						<div class="list-icon">
+							<div class="bar"></div>
+							<div class="bar"></div>
+							<div class="bar"></div>
+						</div>
+					</div>
+
+					<div class="select-grid" ng-class="{current: bookmarkGrid}" ng-click="bookmarkGrid=true">
+						<div class="grid-icon">
+							<div class="box"></div>
+							<div class="box"></div>
+							<div class="box"></div>
+							<div class="box"></div>
+						</div>
+					</div>
+
+			    </div>
+			</div>
+				
+		</div> <!-- end title-row -->
+	
+		<div class="person-list" ng-class="{grid: bookmarkGrid}">
+			<div class="person-item">
+				<div class="name-col">
+					<div class="doc-file-icon" ng-hide="bookmarkGrid"></div>
+					<img src="/assets/img/mark_bladder.jpg" alt="" ng-show="bookmarkGrid">
+					<div class="name-copy-container">
+						<div class="full-name">Anderson, Brighton hospital...</div>
+						<div class="phone" ng-hide="bookmarkGrid">lorem ipsum enean id rutrum nunc. Aenean faucibus tincidunt neque. Maecenas lacinia liberoetium. P...</div>
+						<div class="phone" ng-show="bookmarkGrid">WordDoc</div>
+					</div>
+				</div>
+				<div class="mid-col leaks-col">
+					WordDoc
+				</div>
+				<div class="icon-cont">
+					<div class="icon-col">
+						<a href="" class="icon down-icon"></a>
+					</div>
+					<div class="icon-col">
+						<a href="#" class="icon email-icon"></a>
+					</div>
+					<div class="icon-col">
+						<a href="#" class="icon forward-icon"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="person-item">
+				<div class="name-col">
+					<div class="video-file-icon" ng-hide="bookmarkGrid"></div>
+					<img src="/assets/img/mark_treatment.jpg" alt="" ng-show="bookmarkGrid">
+					<div class="name-copy-container">
+						<div class="full-name">Anderson Interview</div>
+						<div class="phone" ng-hide="bookmarkGrid">lorem ipsum enean id rutrum nunc. Aenean faucibus tincidunt neque. Maecenas lacinia liberoetium. P...</div>
+						<div class="phone" ng-show="bookmarkGrid">Video</div>
+					</div>
+				</div>
+				<div class="mid-col leaks-col">
+					Video
+				</div>
+				<div class="icon-cont">
+					<div class="icon-col">
+						<a href="" class="icon down-icon"></a>
+					</div>
+					<div class="icon-col">
+						<a href="#" class="icon email-icon"></a>
+					</div>
+					<div class="icon-col">
+						<a href="#" class="icon forward-icon"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="person-item">
+				<div class="name-col">
+					<div class="doc-file-icon" ng-hide="bookmarkGrid"></div>
+					<img src="/assets/img/mark_docs.jpg" alt="" ng-show="bookmarkGrid">
+					<div class="name-copy-container">
+						<div class="full-name">Board Approves Paper on...</div>
+						<div class="phone" ng-hide="bookmarkGrid">lorem ipsum enean id rutrum nunc. Aenean faucibus tincidunt neque. Maecenas lacinia liberoetium. P...</div>
+						<div class="phone" ng-show="bookmarkGrid">PDF</div>
+					</div>
+				</div>
+				<div class="mid-col leaks-col">
+					PDF
+				</div>
+				<div class="icon-cont">
+					<div class="icon-col">
+						<a href="" class="icon down-icon"></a>
+					</div>
+					<div class="icon-col">
+						<a href="#" class="icon email-icon"></a>
+					</div>
+					<div class="icon-col">
+						<a href="#" class="icon forward-icon"></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="person-item">
+				<div class="name-col">
+					<div class="doc-file-icon" ng-hide="bookmarkGrid"></div>
+					<img src="/assets/img/mark_sacral_video.jpg" alt="" ng-show="bookmarkGrid">
+					<div class="name-copy-container">
+						<div class="full-name">Optimization of Initail Biops...</div>
+						<div class="phone" ng-hide="bookmarkGrid">lorem ipsum enean id rutrum nunc. Aenean faucibus tincidunt neque. Maecenas lacinia liberoetium. P...</div>
+						<div class="phone" ng-show="bookmarkGrid"></div>
+					</div>
+				</div>
+				<div class="mid-col leaks-col">
+					<!-- spacer col -->
+				</div>
+				<div class="icon-cont">
+					<div class="icon-col">
+						<a href="" class="icon down-icon"></a>
+					</div>
+					<div class="icon-col">
+						<a href="#" class="icon email-icon"></a>
+					</div>
+					<div class="icon-col">
+						<a href="#" class="icon forward-icon"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</section>
+
+	<section class="devices-section container-fluid">
+		<div class="max-width">
+			<h3 class="short-title">YOUR DEVICES &amp; SERVICES</h3>
+			<div class="row">
+			
+				<div class="col-md-6">
+					<div class="learn-device-module">
+						<div class="device-top">
+							<div class="device-img-cont">
+								<img src="/assets/img/device1.png" alt="OAB device">
+							</div>
+							<div class="device-name-cont">
+								<h3>InterStim<sup>&reg;</sup> II Neurostimulator</h3>
+								<div class="device-details">
+									<span class="detail-item">IMPLANT</span> | <span class="detail-item"><span class="grey-out">IMPLANT DATE:</span> MAR 15, 2014</span>
+								</div>
+								<a href="" class="blue-link">PRODUCT DETAILS</a>
+							</div>
+						</div>
+						<div class="device-bottom">
+							<div class="doc-file-icon"></div>
+							<div class="related-name-cont">
+								<h5>Verify External Neurostimulator Manual</h5>
+								<div class="related-details">lorem ipsum enean id rutrum...</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- end col -->
+			
+				<div class="col-md-6">
+					<div class="learn-device-module">
+						<div class="device-top">
+							<div class="device-img-cont">
+								<img src="/assets/img/portal_icon.png" alt="OAB device">
+							</div>
+							<div class="device-name-cont">
+								<h3 class="short-name">Connected Care Portal</h3>
+								<div class="device-details">
+									<span class="grey-out">MEMBER SINCE:</span> <span class="detail-item">JUN 12, 2012</span>
+								</div>
+								<a href="" class="blue-link">CONNECTED CARE PORTAL HELP</a>
+							</div>
+						</div>
+						<div class="device-bottom">
+							<div class="video-file-icon"></div>
+							<div class="related-name-cont">
+								<h5>Tutorial Video</h5>
+								<div class="related-details">lorem ipsum enean id rutrum...</div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- end col -->
+			</div> <!-- end row -->
+		</div>
+	</section>
+
+	<section class="care-pathway-section">
+		<div class="max-width">
+			<h3>CARE PATHWAY</h3>
+			<div class="care-pathway">
+				<img src="/assets/img/carepathway.png" alt="care pathway">
+			</div>
+		</div>
+	</section>
+
+	<section class="contact-section">
+		<div class="max-width">
+			<h3>COMPANY SUPPORT CONTACTS</h3>
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="contact-item">
+						<h5>Conect Via Phone</h5>
+						<p>Lorem ipsum dolor sit amet, imperdiet euismod duconsectetur adipiscing elit. Ut ut mollis volutpat lorem.</p>
+						<a href="" class="blue-link blue call-link">CALL</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="contact-item">
+						<h5>Connect Via Message</h5>
+						<p>Lorem ipsum dolor sit amet, imperdiet euismod duconsectetur adipiscing elit. Ut ut mollis volutpat lorem.</p>
+						<a href="" class="blue-link blue email-link">SEND MESSAGE</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="contact-item">
+						<h5>Share Screen/Mayday</h5>
+						<p>Lorem ipsum dolor sit amet, imperdiet euismod duconsectetur adipiscing elit. Ut ut mollis volutpat lorem.</p>
+						<a href="" class="blue-link blue video-link">VIDEO CHAT</a>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="contact-item">
+						<h5>Health Tracker and Other Apps</h5>
+						<p>Lorem ipsum dolor sit amet, imperdiet euismod duconsectetur.</p>
+						<a href="" class="blue-link">VIEW ALL</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
