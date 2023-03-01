@@ -1,0 +1,20 @@
+{
+  "name": "portfolio-apps",
+  "version": "1.0.0",
+  "description": "Summary of [firebase docs](https://firebase.google.com/docs/hosting/multisites) for multiple sites",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "firebase deploy --only hosting",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdalton308/portfolio-apps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdalton308/portfolio-apps/issues"
+  },
+  "homepage": "https://github.com/jdalton308/portfolio-apps#readme"
+}
